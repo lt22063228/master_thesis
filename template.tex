@@ -1,0 +1,1003 @@
+%% Thesis Template of Nanjing University
+%%   for using NJUthesis package with LaTeX2e
+%%
+%% Created by Wenbo Yang <http://solrex.org>
+%% Homepage: http://share.solrex.org/njuthesis/
+%%
+%% $Id: template.tex,v 0.2 2010/05/01 Exp $
+
+
+\documentclass[dvipdfm, oneside, master]{NJUthesis}
+% 可选参数：
+%   nobackinfo 取消封二页导师签名信息
+%   oneside/twoside 单面/双面打印
+%   phd/master 博士/硕士论文
+% 下面三个选一个：
+% dvipdfm 使用 dvipdfm(x) 生成最终的 PDF 文档 (缺省设置，不建议修改）
+% dvips 使用 dvips 生成最终的 PS 文档
+% pdftex 使用 pdfLaTeX 生成最终的 PDF 文档
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 导言区
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 小节标题靠左对齐
+\CTEXsetup[format+={\flushleft}]{section}
+
+% 设置链接颜色
+\hypersetup{
+% pdf 属性
+             pdftitle={LaTeX Thesis Template of Nanjing University}, %
+            pdfauthor={Chang Liu}
+}
+
+% 表格
+\usepackage{longtable, multirow}
+% 英文使用 Times 字体
+\usepackage{times}
+% 源代码
+\usepackage{fancyvrb}
+% 自定义列表样式
+\usepackage{enumitem}
+%旋转
+\usepackage{rotating}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+
+\newtheorem{myThm}{Theorem}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 封面部分
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 国家图书馆封面内容字符串
+% 仅博士需要填写并保证模板参数选择了 phd
+\classification{}
+\confidential{}
+\UDC{}
+\titlelinea{南京大学学位论文}
+\titlelineb{~\LaTeX{}~模板}
+\titlelinec{}
+\advisorinfo{南京大学~计算机科学与技术系}
+\chairman{XXX 教授}
+\reviewera{某某某某　副研究员}
+\reviewerb{XXX 教授}
+\reviewerc{XXX 教授}
+\reviewerd{XXX 教授}
+\nlcfootdate{2010~年~5~月~1~日}
+
+% 南大中文封面内容字符串
+\title{基于聚类信息结合的视频推荐与缓存技术的研究}
+\author{林涛}
+\studentnum{~MF1333025}
+\grade{2013}
+\advisor{陆桑璐~~教授~~叶保留~~教授}
+\major{计算机技术}
+\researchfield{分布式计算与并行处理}
+\footdate{2016~年~5~月}
+\submitdate{2016~年~5~月~10~日}
+\defenddate{2016~年~6~月~1~日}
+
+% 英文封面内容字符串
+\englishtitle{Research On Foot Step Sensing Based Anchor-free Indoor Localization Scheme}
+\englishtitle{Research On Clustering Incorporation Based Video Recommmendation and Video Caching}
+\englishauthor{Tao Lin}
+\englishadvisor{Professor Sanglu Lu, Professor BaoLiu Ye}
+\englishinstitute{Department of Computer Science and Technology\\
+ Nanjing University}
+\englishdegree{Master}
+\englishmajor{Computer Technology}
+\englishdate{May 2016}
+
+% 制作封面命令
+\maketitle
+
+% 制作英文封面命令
+\makeenglishtitle
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 前言部分
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frontmatter
+
+% 中文摘要
+\begin{abstract}
+
+
+
+\keywords{}
+
+\end{abstract}
+
+% 英文摘要
+\begin{englishabstract}
+
+Currently, conventional indoor localization schemes mainly leverage WiFi-based or Bluetooth-based schemes to locate the users in the indoor environment.
+These schemes require to deployment the infrastructures such as the WiFi APs and Bluetooth beacons in advance to assist indoor localization. This property hinders the indoor localization schemes in that they are not scalable to any other situations without these infrastructures.
+
+In this paper, we propose FootStep-Tracker, an anchor-free indoor localization scheme purely based on sensing the user's footsteps. By embedding the tiny SensorTag into the user's shoes, FootStep-Tracker is able to accurately perceive the user's moving trace, including the moving direction and distance, by leveraging the accelerometers and gyroscopes. Furthermore, by detecting the user's activities such as ascending/descending the stairs and taking an elevator, FootStep-Tracker can effectively correlate with the specified positions such as stairs and elevators, and further determine the exacted moving traces in the indoor map by leveraging the space constraints in the map.
+
+Realistic experiment results show that, FootStep-Tracker is able to achieve an average localization accuracy of 1m for indoor localization, without any infrastructures having been deployed in advance.
+
+\englishkeywords{Indoor Localization, Wearable Computing, Activity Recognition}
+
+\end{englishabstract}
+
+% 生成目录命令
+\tableofcontents
+
+% 以下两个目录可根据具体情况注释掉
+% 生成表格目录命令
+\listoftables
+% 生成插图目录命令
+\listoffigures
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 正文部分
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mainmatter
+
+\chapter{绪论}
+\label{C:intro}
+
+近些年来，物联网、可穿戴技术和室内定位技术正在引领科技领域的新一轮浪潮，正在逐步改变我们的工作、娱乐、生活方式。
+物联网（Internet of Things，IoT）是互联网、传统电信网等信息承载体，让所有能行使独立功能的普通物体实现互联互通的网络\cite{IOTdaolun}。
+在包括商业、运输、教育、能源、家居等诸多领域，物联网技术下的可穿戴技术和室内定位技术提供给人们更加方便、安全、高效的生产方式。
+如图所示，根据IDC的一项报告显示，自2003年起，物联网的市场规模就呈现爆炸式增长，预计在2020年，其市场收入额将达到七万亿美元。
+
+% \begin{figure}[!ht]
+% \centering
+% \includegraphics[width = 0.8\textwidth]{Figure/IoTMarket.jpg}
+% \caption{物联网市场\cite{IotMarket}}
+% \label{fig:IoTMarker}
+% \end{figure}
+
+然而作为物联网技术中的关键技术——室内定位技术，到目前为止还没有切实有效，可以大规模低成本部署的解决方案。
+自2012年Google公司发布其可穿戴设备Google Glass之后，可穿戴计算成为了业内火爆的研究方向。
+手表、眼睛、手环、鞋子、衣服等新兴的可穿戴计算技术和产品为低成本的，无需额外部署辅助定位设施的室内定位系统提供了新的前进方向。
+
+\section{研究背景：室内定位}
+
+室内定位系统（IPS，indoor positioning system）是在室内环境中，利用无线电波、磁场信号、声学信号或移动设备感知的传感器信号，对物体或者人进行定位。
+
+近些年来，室内定位系统被广泛的用以支持多种应用场景，例如情景感知，基于位置的服务（LBS, Location Based Service）。精确的室内定位系统具有很大的学术和商业前景。正如GPS（Global Positioning System）改变了人们在室外的导航方式一样，室内定位系统将改变人们在室内的导航方式。在过去的15年中，不论在学术界还是工业界，都产生了许多室内定位解决方案。遗憾的是，到目前为止我们还没有见到任何一种方案被大规模的部署投入实际使用。
+
+传统的室内定位方案主要是利用WiFi 和蓝牙进行在室内环境中的对用户的定位。这些方案大多需要部署一些额外设施，如WiFi Ap，蓝牙beacon 等来辅助进行室内定位。然而，对于一些室内环境，不太容易部署大量的室内定位设施，或部署起来成本过高。这也就是说，这些室内定位方案对于没有大量辅助设施部署的室内环境不具有可扩展性。因此，我们亟需设计一种新的室内定位方案，其不需要任何辅助的室内定位设施，也可以完成在室内对用户的高精度定位。
+
+\section{研究背景：可穿戴设备}
+
+可穿戴设备（Wearable computer）为可穿戴于身上出外进行活动的微型电子设备\cite{WearableComputer}。
+如图\ref{fig:MenAndDevice}所示，根据cisco的一项报告，平均每人所拥有的智能设备数量已经从2003年的0.08台每人增长到了2015年的 3.47台每人。
+根据其预期，到2020年，平均每人将拥有6.58台智能设备，这其中的绝大多是都是可穿戴设备。可穿戴设备对于人们的生活带来了诸多便利。首先，可穿戴设备对于用户使用起来更加的方便，智能手环、手表等智能设备较传统的电脑来说更加便于携带。其次，可穿戴设备可以增强人体的能力，伴随着强大的云服务，可穿戴设备也具有了强大的计算能力，从而给人了赋予了人体不具有的“超能力”。第三，可穿戴设备可以24佩戴，并且具有监控人体运动和各项生理指标的功能，给我们带来了更全面有效的健康和医疗检测服务。
+
+% \begin{figure}[!ht]
+% \centering
+% \includegraphics[width = 0.8\textwidth]{Figure/MenAndDevice.jpg}
+% \caption{人与智能设备\cite{ciscoIoT}}
+% \label{fig:MenAndDevice}
+% \end{figure}
+
+\section{研究目的及意义}
+
+最近，为了研发无辅助锚节点的室内定位系统，一些研究者已经开始利用具有嵌入式传感器的移动可穿戴设备，例如智能手机、智能手环等对用户进行室内定位。然而，这些室内定位的工作大都收到了一定的制约并具有一些局限性。首先，一些研究工作将智能设备，例如智能手机，放入用户的口袋或者背包中，并通过传感器感知用户行为的运动。由于传感器的位置和角度随意放置，这种方案不能十分精确的感知用户的行动距离和行动方向。其次，这些方案大多假设用户在行走时的步长不变，将估算到的用户步数乘以一个固定的步长，进而估算用户的行动距离。这种方案无法对用户多样化的行为方式进行感知，例如用户可能时而以较小的步长散步，时而以较大的步长慢跑。
+
+因此，研究一种无需定位锚节点辅助的室内定位方案十分必要。本文所提出的系统能够有效的感知人体在行动时的运动情况，包括行动距离与行动方向。此外，其还具有较强的可扩展性，对于不同的用户的不同行动习惯，都可以进行高精度的定位。
+
+\section{本文的工作}
+
+本文提出了FootStep-Tracker，一种无锚节点的室内定位系统。其完全利用传感器设备感知用户的脚步运动，从而进行室内定位。我们创新的解决方案基于如下的观察，用户的行动与用户脚部的动作密切相关，例如跑步、走路、转弯等动作，在脚部的运动方式上都有很大差别。我们利用嵌入用户脚部的小型传感器，例如加速度计、陀螺仪等感知用户的行为，从而进一步进行对用户的室内定位。如图\ref{fig:sensortag}所示，我们将小型的传感器芯片SensorTag\cite{sensortag}分别嵌入用户双脚的鞋垫中，通过蓝牙将传感器采集到的数据发送给给用户手持的智能手机，进而在智能手机上进行数据的分析计算，完成对用户的室内定位与追踪。FootStep-Tracker通过嵌入的加速度计和陀螺仪，可以精确的感知用户的行走轨迹，包含行走方向与行走距离。更进一步，通过检测用户的行为，例如上下楼梯或者乘坐电梯，FootStep-Tracker可以根据室内环境中特定的位置，例如电梯和楼梯，进行对估算位置的校准。FootStep-Tracker还可以利用室内空间的拓扑结构对估算出的肯能的多条用户行为轨迹进行过滤筛选，进而收敛为准确的行为轨迹。
+
+% \begin{figure}
+% \centering
+% \includegraphics[width = 0.6\textwidth]{Figure/deployment.eps}
+% \caption{FootStep-Tracker中采用的SensorTag传感器。}
+% \label{fig:sensortag}
+% \end{figure}
+
+本文首先通过对于用户在室内行动时脚部运动的传感器数据进行大量的采集观察，分析了人在运动时行为特征，并提出了数学模型以刻画人走路和转弯的动作，同时将实际实验得到的传感器数据与理论模型结合，提出了一种无锚节点的室内定位系统FootStep-Tracker。该系统包含行为分类器、脚部切割、步长估算器、方向估算器和参考地点估算器五个部分。最后，利用德州仪器公司生产的传感器芯片SensorTag\cite{sensortag} 和Android智能手机对系统进行了实现。
+
+\subsection{无锚节点的室内定位方案FootStep-Tracker}
+
+在我们的系统FootStep-Tracker中，我们关注如何利用嵌入到鞋子中的低功耗惯性传感器，根据已有的室内地图，进行对用户的室内高精度定位。
+
+首先，智能手机根据通过蓝牙传送来的传感器采集到的数据，通过行为分类器将用户的行为分为两个行为组，分别为：
+
+\begin{enumerate}
+  \item 走路，即用户在平地上的行走活动，包括并不限于直走、转弯、跑步等。
+  \item 参考行为，包括用户在搭乘电梯，或者在上下楼梯。
+\end{enumerate}
+
+当用户的行为为走路时，我们用提出的脚步切割和步长估算器来估算用户每一步行走的距离。
+同时，我们利用两个脚上分别佩戴，独自估算距离的左右两个模块互相补充校正，有效的减少传感器带来的定位误差累计。
+此外，我们用提出的方向估算方法来估算用户的行动方向。
+根据估算得到的行动距离和行动方向，我们能够还原出用户相对于初始运动起点的运动轨迹。同时，我们可以利用行为分类方法得到用户的参考行为，从而在得到在室内地图中的一些参考地点信息。例如，当用户乘坐电梯时，行为分类器检测到这一行为，并将电梯作为用户此时的参考地点，将相对的行为轨迹根据此时的参考地点，固定位绝对的位置。跟进一步，我们利用室内地图的空间限制去祛除不可能的候选行为轨迹，从而在室内地图中确定用户唯一的绝对运动轨迹。
+
+\subsubsection{基于脚步感知的行为分类器}
+
+我们首先分析了人在几种相关行为中的不同特征，以及在进行相应的行为时，传感器所采集到的人体脚部的加速度计和陀螺仪数据。采用固定长度的滑动窗口，将采集到的传感器数据流进行切分。
+对于每个窗口中的加速度计和陀螺仪数据，行为分类器有选择性的提取与用户行为相关的特征值，包括均值，方差等，进而利用多种数据分类方法，包括决策树，隐马尔可夫模型等对用户当前的行为进行分类。
+
+行为分类器的分类准确率较高，我们的真实实验得出，针对不同用户的不同动作，行为分类器可以达到96.2\%的分类准确率。
+
+\subsubsection{基于脚步感知的脚步切割}
+
+我们通过分析人在走路时，加速度计和陀螺仪的数据特征，发现数据中的周期性变化。利用这种周期性，脚步切割部分将原始的惯性传感器数据根据用户走路的模式进行分段，使得每一个分段数据都包含了整个从抬脚到落地的脚步运动过程的数据。
+
+\subsubsection{基于脚步感知的步长估算器}
+
+从传感器采集到的加速度数据推算得到行动距离，最简单的算法就是将加速度根据采样时间间隔进行两次积分。
+然而这种做法往往得到很大误差。
+首先，人在走路时的特征是因人而异的。
+具体来说，每个人抬脚的高度不同、步幅不同、八字脚的程度不同等都会导致两次积分的结果与实际步长产生较大偏差。
+步长估算器用以估算用户在水平地面上每一步的行走距离。为了使得减少不同行走习惯带来的估算误差，我们构建了一个几何运动模型，以刻画用户单脚在走路时，单步的移动和旋转运动。我们利用加速度计来估算脚在空中的移动距离，并利用陀螺仪估算投影的角度，将脚部在空中的移动距离投影到水平面上，进而估算得到单步步长。
+
+\subsubsection{基于脚步感知的方向估算器}
+
+当用户走路并转弯时，方向估算器估算用户的转弯角度。然而，陀螺仪传感器感应到的是脚步的转弯信息，而并非整个人体的转弯角度。
+为了解决这个问题，我们构建了一个几何运动模型来描述脚部运动时的角度变化与人体角度变化的关系，进而利用传感器数据，估算出用户的行走方向。此外，我们利用双脚分别嵌入的两个传感器，分别估算人体的转弯，从而相互校准，减少传感器带来的误差累计。
+
+\subsubsection{基于脚步感知的参考地点估算器}
+
+参考地点估算器根据采集到的用户脚部传感器数据，通过行为分类器，得到用户当前的行为。当用户进行一些特定的行为时，例如上下电梯，上下楼梯，我们就可以得到用户当前在室内地图中的可能地点，即所说的参考地点，例如电梯和楼梯。进一步，利用室内地图中的拓扑限制，利用类似于Snake Game\cite{snake}的筛选策略，就可以相对的用户运动轨迹就可以确定为室内地图中绝对的运动轨迹。
+
+\subsection{基于脚步感知的无锚节点室内定位系统实现}
+
+我们利用真实的实验设备实现了FootStep-Trakcer系统。如图\ref{fig:imp_overview} 所示，该系统包括脚步感知装置以及智能终端。脚步感知装置包括加速度传感器、陀螺仪，以及蓝牙通信模块。智能终端包括处理器，显示屏和蓝牙通信模块，并能够加载室内地图。其中脚步感知装置采用德州仪器公司生产的CC2541 Soc SensorTag实现，智能终端采用三星公司的Galxy S5 Android 智能手机。脚步感知装置前入在用户脚部的鞋店中，实时采集用户脚步移动的感知数据，并通过蓝牙通信模块将感知数据传输至智能终端。智能终端基于收集的感知数据，感知用户的移动行为，基于用户的特殊行为模式估算可能的参考位置。智能终端基于收集的感知数据，对用户的移动方向和移动距离进行估算，计算出用户的移动轨迹，并结合室内地图的拓扑结构和参考位置，将用户移动轨迹确定在室内地图中，实现室内定位机制。
+
+% \begin{figure}[!ht]
+% \centering
+% \includegraphics[width = 0.7\textwidth]{Figure/imp_overview.jpg}
+% \caption{FootStep-Tracker系统实现框架。}
+% \label{fig:imp_overview}
+% \end{figure}
+
+\section{本文组织结构}
+
+本文主要研究的内容是基于脚步识别的无锚节点室内定位方案，全文一共分为五章，内容与组织结构如下：
+
+本文第一章绪论。本章从课题的研究背景开始，对当下国内为对于物联网、可穿戴计算和室内定位的研究和产业现状进行介绍。对本研究的目的和意义进行介绍说明，并对研究过程中的问题和研究的主要内容进行简要的介绍。
+
+本文第二章相关工作，主要介绍以物联网、可穿戴计算为背景的室内定位方案，以及介绍了常见的行人导航和室内定位的基本算法。
+
+本文第三章基于脚步感知的无锚节点室内定位系统，详细给出研究中的问题和解决方案。对FootStep-Tracker的几个部分行为分类器、脚部切割、步长估算器和方向估算器的工作方法进行详细阐释，并给出了实验及结果分析。
+
+本文第四章基于脚步感知的无锚节点室内定位系统实现，介绍了在真实环境下利用德州仪器公司生产的SensorTag\cite{sensortag}和Android智能手机对本系统进行的具体实现。
+
+本文第五章总结与展望，对本文中提出的基于脚步感知的无锚节点室内定位系统进行总结，并对其中的一些部分探讨未来可进一步研究的工作展望。
+
+\chapter{相关工作}
+\label{C:related}
+
+\chapter{基于脚步感知的无锚节点室内定位系统}
+\label{C:system}
+
+\section{问题场景描述}
+
+近年来，随着物联网技术、可穿戴技术和室内定位技术的发展，越来越多的用户利用他们所携带的移动设备，如智能手机、智能手表等，享受到了便利的服务。精确地室内定位导航，量身定制的商家广告推送，及时的位置分享与高效的防走失系统等都给人们带来了极大地生活生产便利。然而，传统的室内定位方案大多都利用了辅助的定位设施，例如WiFi Ap，蓝牙Beacon，RFID阅读器和标签等。其定位精度在一定程度上与辅助设备的质量与部署密度成正比。这就在一定程度上限制了定位服务的可扩展性。然而随着可穿戴技术的发展，人们随身携带或者穿戴的智能设备给室内定位带来的新的可能性。利用用户随身的智能设备，而非利用提前部署在环境中的定位辅助设施进行定位对于一些不利用设备部署和成本有限的环境而言具有重大意义。
+
+本章提出了FootStep-Tracker，一种基于脚步感知的无锚节点室内定位系统。利用嵌入到用户鞋子中的传感器芯片采集的加速度和陀螺仪数据，FootStep-Tracker可以估算出用户的行动轨迹，包括行动距离与行动方向。进一步通过行为分类器估算出的参考地点和室内地图中的拓扑限制，将相对的用户行为轨迹确定为绝对的室内位置。本系统不需要部署任何的定位辅助设施，完全利用用户鞋子内嵌入的传感器芯片和用户手持并加载了室内地图的智能手机，就可以在室内环境中对用户进行高精度的定位。整个系统不许额外部署成本，可扩展性强，智能手机提供图形交互界面，与用户交互体验良好。
+
+\section{系统概述}
+
+图\ref{fig:system_overview}给出了本系统的系统框架。行为分类器利用传感器芯片采集的加速度和陀螺仪数据，将用户的行为分为如下两个行为组：
+
+\begin{enumerate}
+  \item 走路，即用户在平地上的行走活动，包括并不限于直走、转弯、跑步等。
+  \item 参考行为，包括用户在搭乘电梯，或者在上下楼梯。
+\end{enumerate}
+
+当用户走路时，脚部切割、步长估算器和方向估算器一起估算出用户的行动轨迹。当用户上下楼梯或者乘坐电梯上下楼时，结合预先加载的室内地图与行动轨迹，FootStep-Tracker得出用户的实时位置。进而对用户进行后续的实时定位与追踪。
+
+% \begin{figure}[!ht]
+% \centering
+% \includegraphics[width = 0.9\textwidth]{Figure/system_overview.eps}
+% \caption{FootStep-Tracker系统框架。输入传感器数据和室内地图，FootStep-Tracker输出用户在给定地图中的实时位置。}
+% \label{fig:system_overview}
+% \end{figure}
+
+\section{系统部署}
+
+FootStep-Tracker处理由用户脚部嵌入的传感器芯片感知的传感器数据。
+不失一般性，我们采用德州仪器公司生产的CC2541 SensorTag\cite{sensortag}作为传感器芯片。
+我们设定加速度计和陀螺仪的采样频率为20Hz，通过蓝牙将采集的传感器数据发送给用户手持的智能手机。
+智能手机负责分析计算传感器数据并提供与用户交互接口。
+如图\ref{fig:axes}，为了方便下文讨论，我们首先给出SensorTag部署在鞋子中时，其坐标系。我们将SnesorTag的x轴沿着脚的左右方向摆放，y轴沿着脚的前后方向摆放，z轴沿着垂直方向摆放。我们记三轴的加速度分别为$a_x$，$a_y$和$a_z$，三轴陀螺仪角速度为$g_x$，$g_y$和$g_z$
+
+% \begin{figure}[!ht]
+% \centering
+% 	\begin{minipage}{0.5\linewidth}
+%         \centerline{\includegraphics[width=0.8\textwidth]{Figure/sensortag_axis_a.eps}}
+%         \centerline{(a) 加速度计坐标轴.}
+%     \end{minipage}%
+% 	\begin{minipage}{0.5\linewidth}
+%         \centerline{\includegraphics[width=0.8\textwidth]{Figure/sensortag_axis_g.eps}}
+%         \centerline{(b) 陀螺仪坐标轴.}
+%     \end{minipage}
+% \caption{SensorTag坐标轴部署.}
+% \label{fig:axes}
+% \end{figure}
+
+\section{行为分类器}
+\label{sec:activity_classifier}
+
+\subsection{研究动机}
+
+为了估算用户的行为轨迹和估算参考地点，我们首先需要知道用户当前的行为，如走路或者乘坐电梯。
+在我们的室内定位场景中，我们需要将用户的行为分为两大行为类：走路和参考行为。
+当用户正在走路时，我们利用传感器采集的加速度和陀螺仪数据估算用户的行为轨迹。
+如果用户正在进行参考行为，包括上下楼梯和乘坐电梯，我们则在室内地图中寻找相应的参考地点。
+除此之外，当用户被检测到在平地上静止，我们则继续监测用户的行为并不作特殊处理。
+
+\subsection{实验观察}
+
+加速度计的z轴与上文提及的六种行为，即走路、上楼梯、下楼梯、上电梯、下电梯和静止具有很强的相关性。
+这是因为当用户静止站立时，加速度z轴的方向与垂直方向一致，即为重力的相反方向。
+此时的加速度是一个常数，与走路和上下楼梯时周期性变化的加速度具有很大的区分度。
+而当用户向上或向下运动时，例如上下楼梯，脚的行动方向也是垂直方向的。
+此时z轴加速度可以很好地感知这一行为。
+
+如图图\ref{fig:Moving Pattern}所示，我们首先采集了用户在进行以上六种行为时，加速度z 轴的数据。
+图\ref{fig:Moving Pattern} (a) 所示为用户静止站立时，加速度z轴的数据。
+需要注意的是，这里的加速度数值包含了用户一直承受的重力加速度。
+当用户静止站立时，$a_z$几乎保持一个常数不变，其读数大约等于重力加速度$-9.8m/s^2$。
+图\ref{fig:Moving Pattern} (b)-(d) 所示为用户走路或上下楼梯时加速度z 轴的读数。
+此时，$a_z$随着用户的脚步周期性变化。
+此外，如图中的红色方框所示，下楼梯时，加速度变化的最为剧烈，即具有最大的方差。
+而上楼梯时，加速度则具有最小的方差。
+图\ref{fig:Moving Pattern} (e) 所示为用户乘坐电梯上行时的加速度z轴读数。图中的红色方框中显示，z轴加速度首先小于重力加速度一段时间，然后等于重力加速度，最后其大于重力加速度一段时间。
+这是因为当电梯向上加速以上升时，在电梯中的用户首先是在超重状态下，在此时，重力加速度“变大”，其z轴方向的加速度读数为一个更小的负数。
+然后的一段时间，电梯以常数速度上升，此时用户与电梯相对静止，受到的z轴加速度为重力加速度。
+最后，电梯减速直至静止。
+此时，用户在失重状态下，此时重力加速度“变小”，其z轴加速度为一个相对于重力加速度较大的负数。
+图\ref{fig:Moving Pattern} (f)显示了电梯下行时的加速度z轴读数。此时读数的变化与电梯上行时正好相反，用户首先失重，最后超重。读数较重力先变大，再相等，最后变小。
+
+% \begin{figure}[!ht]
+% \centering
+% 	\begin{minipage}{0.33\linewidth}
+%         \centerline{\includegraphics[width=0.98\textwidth]{Figure/az_standstill.eps}}
+%         \centerline{(a) 静止站立}
+%     \end{minipage}
+% 	\begin{minipage}{0.33\linewidth}
+%         \centerline{\includegraphics[width=0.98\textwidth]{Figure/az_walk.eps}}
+%         \centerline{(b) 走路}
+%     \end{minipage}%
+% 	\begin{minipage}{0.33\linewidth}
+%         \centerline{\includegraphics[width=0.98\textwidth]{Figure/az_upstairs.eps}}
+%         \centerline{(c) 上楼梯}
+%     \end{minipage}
+%     \begin{minipage}{0.33\linewidth}
+%         \centerline{\includegraphics[width=0.98\textwidth]{Figure/az_downstairs.eps}}
+%         \centerline{(d) 下楼梯}
+%     \end{minipage}%
+%     \begin{minipage}{0.33\linewidth}
+%         \centerline{\includegraphics[width=0.98\textwidth]{Figure/az_eleup.eps}}
+%         \centerline{(e) 乘电梯向上}
+%     \end{minipage}
+%     \begin{minipage}{0.33\linewidth}
+%         \centerline{\includegraphics[width=0.98\textwidth]{Figure/az_eledown.eps}}
+%         \centerline{(f) 乘电梯向下}
+%     \end{minipage}
+% \caption{用户不同行为时沿垂直方向的加速度（z轴，包含重力加速度，约为$-9.8m/s^2$）。}
+% \label{fig:Moving Pattern}
+% \end{figure}
+
+\subsection{解决方案}
+
+为了将用户当前的行为进行分类，我们首先需要将传感器采集到的数据流进行分段。我们采用滑动窗口进行分割，并利用多种分类方式对窗口进行行为分类。
+通常情况下，人类的步频在1Hz到3Hz之间。电梯的加速和减速过程通常持续2秒左右。我们用一个窗口大小为40的滑动窗口来分割数据。每个窗口包含2秒内的数据，以保证整个窗口可以包含整个电梯加速减速和走路的过程。
+
+如图\ref{fig:activity_classifier}中的圆角矩形所示，我们将加速度z轴的数据窗口分为8 个类。表\ref{table:classes}标出了这些类别简称与具体解释。首先，我们注意到上楼梯（UST），下楼梯（DST）和走路（WALK）较电梯超重 （EHG），电梯失重（EWL）和静止（SS）很明显具有较大的方差。
+
+% \begin{figure}[!ht]
+% \centering
+% \includegraphics[width=1\textwidth]{Figure/classification.eps}
+% \caption{行为分类器框架}
+% \label{fig:activity_classifier}
+% \end{figure}
+
+\begin{table}[!ht]
+\centering
+\caption{行为类别简称与解释}
+\begin{tabular}{|l|l|}
+\hline
+简称 & 解释\\
+\hline
+UST & 上楼梯 \\
+\hline
+DST & 下楼梯 \\
+\hline
+WALK & 走路 \\
+\hline
+EHG & 电梯中的超重状态 \\
+\hline
+EWL & 电梯中的失重状态  \\
+\hline
+EA & 电梯上升\\
+\hline
+ED & 电梯下降\\
+\hline
+SS & 静止站立\\
+\hline
+\end{tabular}
+\label{table:classes}
+\end{table}
+
+为了区分连个行为组，即上下楼梯，走路组和上下电梯，静止组，我们采用了以窗口方差为基础的决策树。
+图\ref{fig:cdf_activity} (a) 所示为两个运动组加速度z轴窗口方差的CDF（Cumulative Distribution Function）图。图中为700个不同行为窗口的统计结果。
+当用户静止站立或者乘坐电梯是，加速度计的z轴几乎一直为一个常量。
+但这三种行为时，这个常量加速度的大小是不同的。
+同时，在用户走路或者上下楼梯时，窗口的数据方差就会明显增大。
+如图\ref{fig:cdf_activity} (a) 所示，由两组动作的窗口方差统计结果来看，这两组动作窗口方差的分布之间有一个明显的分割。我们利用一个为9.064的方差阈值去区分这两组不同的窗口。
+
+对于走路，和上下楼梯而言，用阈值的方法想要区分开这三组动作不太容易。另一方面，正如我们上文所说，上下楼梯和走路的数据变化剧烈程度不同。我们使用隐式马尔科夫模型（Hidden Markov Model，HMM）来区分。
+对于静止站立和在电梯中失重和超重而言，窗口的均值是不同的。图\ref{fig:cdf_activity} (b) 显示了这三种不同动作的窗口均值CDF图。三种窗口的均值之间同样也存在较为明显的分割，我们采用类似的阈值方法来区分这三种行为。
+更进一步，如果用户的行为为在电梯中的超重状态（EHG），我们继续进行行为分类，并等待一个失重状态（EWL），将整个动作标记为一个电梯上升（EA）。
+相反的，我们将连续出现的一个失重和超重状态标记为电梯下降（ED）。
+从而我们完成了将用户当前的行为分类为上楼梯（UST）、下楼梯（DST）、走路（WALK）、电梯上升（EA）、电梯下降（ED）和静止站立（SS）几种不同的行为类别。
+
+% \begin{figure}
+% \centering
+% 	\begin{minipage}{0.5\linewidth}
+%         \centerline{\includegraphics[width=0.95\textwidth]{Figure/cdf_walk_rest.eps}}
+%         \centerline{(a)}
+%     \end{minipage}%
+% 	\begin{minipage}{0.5\linewidth}
+%         \centerline{\includegraphics[width=0.95\textwidth]{Figure/cdf_ele.eps}}
+%         \centerline{(b)}
+%     \end{minipage}
+% \caption{不同行为窗口的方差和均值CDF图}
+% \label{fig:cdf_activity}
+% \end{figure}
+
+\section{脚步切割}
+
+为了估算走路时每一步的行走距离和行走方向，我们需要将原始的传感器数据流切分为以每一步为单位的数据。
+人类的走路是一个周期性规律的动作。对于传感器而言，这就意味着走路时具有周期性的数据模式。
+加速度的y轴几乎与人体前进的方向一致，我们的脚部切割主要是利用加速度y轴，辅助以加速度x轴和z轴。
+图\ref{fig:acc_walk}所示为用户走路时，三轴加速度的读数。
+我们注意当，当脚落在地面上直到抬起之前，它相对于地面来说是相对静止的。
+此时，三轴加速度具有一个相对不变的读数，我们称这为“静止区间”。
+
+图\ref{fig:acc_walk}中的红色方框为脚部切割检测到三轴加速度的“静止区间”。
+为了防止由与走路相似的周期性行为，例如摆腿导致的误切割，我们不仅仅检测前进方向y轴上的“静止区间”，同样检测x轴和z轴上的“静止区间”。
+
+如果用户当前的行为为走路，脚部切割将原始的三轴加速度数据$ax,ay,az$作为输入，不断分别检测三个轴上的“静止区间”。对于x轴和y轴，我们将连续的六个在$0\pm0.5$ 范围的加速度数据标记为一个“静止区间”。对于z轴，由于有重力加速度分量的存在，我们将连续的六个在$9.8\pm0.5$范围的加速度数据标记为一个“静止区间”。我们将每个轴上的连续两个“静止区间”的部分做交集，其相交部分数据作为当前一步的数据。
+
+
+% \begin{figure}[!ht]
+% \centering
+% \includegraphics[width=0.9\textwidth]{Figure/ay_entire_walk.eps}
+% \caption{走路时的三轴加速度}
+% \label{fig:acc_walk}
+% \end{figure}
+
+\section{步长估算器}
+\label{sec:step_length_estimator}
+
+\subsection{研究动机}
+
+为了估算用户的行动轨迹，我们需要知道用户的行走距离。不同的用户具有不同的体型，从而具有不同的步长。对于一个特定的用户来说，现今几乎所有的步长估算方案都基于如下假设：对于特定用户的步长而言，其在一段时间之内是不会改变的。然而我们相信在某些情况下，用户的步长有可能频繁的变化，例如以小步长走路和以较大步长跑步。步长估算器估算用户每一步的步长，这就可以精确感知用户步长的变化。
+
+\subsection{研究挑战}
+
+用户的步长并不是脚部在空中运动轨迹的长度。如图\ref{fig:phase} (a) 中红色虚线所示，用户的实际步长是其运动轨迹在水平面上的投影。因此，我们不能直接通过对前进方向的加速度$a_y$进行两次积分得到步长。
+
+\subsection{实验观察}
+
+图\ref{fig:phase} (a) 所示为用户走路时脚部的运动轨迹。如图所示，加速度y轴并不总是水平的，我们将y轴的方向投影在水平面上，并记为脚部方向（foot direction），记y轴方向与脚部方向的夹角为$\theta$。
+
+图\ref{fig:phase} (b) 所示为为与 (a) 相对应的传感器数据。如图\ref{fig:axes} 所示，在sensor的坐标系中，图\ref{fig:phase} (a) 中前进方向加速度为$a_y$的正方向，脚部逆时针旋转方向为$g_x$的正方向。图中将脚部的运动轨迹分为5个阶段，其每个阶段的特征为：
+
+\begin{itemize}
+
+\item 在第（1）阶段，用户的脚与地面相对静止，此时$a_y$与$g_x$读数为 0。
+
+\item 在第（2）阶段，此时脚部还没有向前移动，并没有向前的加速度。但是此时脚跟抬起，导致$g_x$为负。由于y轴已经不再水平，由于重力加速度分量，$a_y$微微小于 0。我们记第（2）阶段开始的时间为抬脚时间（uplift time，$T_u$）。
+
+\item 在第（3）阶段，脚开始向前移动。脚面上翘，使得$g_x$为正。整个脚部加速向前，使得$a_y$为正。我们记第（3）阶段开始的时间为离地时间（liftoff time，$T_l$）。
+
+\item 在第（4）阶段，脚部减速直至静止，脚跟着地，脚面下压。我们记第（4）阶段开始的时间为着地时间（landing time，$T_d$）。
+
+\item 在第（5）阶段，脚部整个着地并且再次静止。我们记第（5）阶段开始的时间为静止时间（rest time，$T_r$）。
+
+\end{itemize}
+
+% \begin{sidewaysfigure}
+% \centering
+% 	\begin{minipage}{1\linewidth}
+%         \centerline{\includegraphics[width = 1\textwidth]{Figure/walk_sketch.eps}}
+%         \centerline{(a) 脚部轨迹}
+%     \end{minipage}
+% 	\begin{minipage}{0.9\linewidth}
+%         \centerline{\includegraphics[width = 1\textwidth]{Figure/ay_gx_one_step.eps}}
+%         \centerline{(b) 传感器数据}
+%     \end{minipage}
+% \caption{走路时脚步的运动轨迹及传感器数据}
+% \label{fig:phase}
+% \end{sidewaysfigure}
+
+除此之外，如图\ref{fig:top_view}所示，由于不同的用户具有不同的行走习惯，例如不同程度的内八字与外八字。水平方向的加速度不能表示人前进方向的加速度。我们记$a_x$ 为x 轴方向上的加速度，$a_m$为人前进方向上的加速度，$a_f$为水平面上的加速度。在前进方向与水平加速度之间的夹角为$\varphi$。这三个加速度$a_m, a_f, a_x$之间存在如公式（\ref{eq:relation}）所示的关系。
+
+% \begin{figure}[!ht]
+% \centering
+% 	\begin{minipage}{0.5\linewidth}
+%         \centerline{\includegraphics[height=0.9\textwidth]{Figure/top3d.eps}}
+%         \centerline{ (a) }
+%     \end{minipage}%
+% 	\begin{minipage}{0.5\linewidth}
+%         \centerline{\includegraphics[height=0.9\textwidth]{Figure/walk_flyover.eps}}
+%         \centerline{ (b) }
+%     \end{minipage}
+% \caption{八字脚情况}
+% \label{fig:top_view}
+% \end{figure}
+
+\begin{gather}
+\vspace{-5mm}
+ a_{m}=a_{f}cos(\varphi) + a_{x}sin(\varphi)
+\label{eq:relation}
+\end{gather}
+
+\subsection{解决方案}
+
+对从脚部切割部分得到的单独每步的传感器数据，我们首先提取出关键时间点，包含$T_u,T_l,T_d,T_r$。然后，我们通过对前进方向的加速度$a_m$根据时间，从着地时间到静止时间做两次积分。最后我们利用分别嵌入在用户左右两脚的两个传感器去进一步减少误差，从而得到校正后的用户真实步长。
+
+\subsubsection{关键时间点抽取}
+
+如我们上文所说，只有在第（3）阶段的脚步运动才导致了实际的位移，其发生在抬脚时间（uplift time）和离地时间（liftoff time）之间。
+此外，脚与水平地面的夹角$\theta$在抬脚时间（uplift time）和着地时间（landing time）之间变化。所以我们进行关键事件抽取，即抬脚时间（uplift time，$T_u$），离地时间（liftoff time, $T_l$），着地时间（landing time，$T_d$），静止时间（rest time，$T_r$）。
+
+脚部切割提供给了我们切割后的脚部传感器数据，其中只包含了从第（2）阶段到第（4）阶段的数据。
+FootStep-Tracker根据分段的数据，根据算法\ref{alg:fpe}，从原始数据流之中抽取关键时间点。
+在抬脚时间（uplift time，$T_u$）时，脚跟上提，$g_x$开始变负，$a_y$稍稍小于 0，我们从数据流中，从给定的切割好的数据分段向之前，寻找$g_x$小于0的时间点作为抬脚时间。
+在离地时间（liftoff time，$T_l$）时，脚步开始向前移动，我们在给定的数据段中，寻找第一个$a_y(t)<0$并且$a_y(t+1)>0$的点作为离地时间。
+在着地时间（landing time，$T_d$）时，脚跟着地，$a_y$变为负数。我们在给定的数据段中，离地时间后，寻找第一个$a_y<0$的点作为着地时间。
+在静止时间（rest time，$T_r$）时，$a_y,g_x$再次为0。我们在给定的数据段中，着地时间后，寻找第一个$a_y,g_x$为0的点作为静止时间。
+
+\begin{algorithm}
+    \caption{关键时间抽取}
+	\label{alg:fpe}
+	\KwIn {传感器数据流$ a_y, g_x $, 切割好的本步数据 $D_{s}$}
+	\KwOut { 抬脚时间（Uplift time $ T_{u} $）, 离地时间（liftoff time $ T_{l} $）, 着地时间（landing time $ T_{d} $）, 静止时间（rest time $ T_{r} $}）
+    沿着$ D_{s} $的首个数据逆时序寻找$ T_{u} $，直到在时间点$ t $时，满足$g_x(t-1)=0, g_x(t) < 0$\;
+    沿着$ D_{s} $的首个数据逆时序寻找$ T_{l} $，直到在时间点$ t $时，满足{$a_y(t)<0, a_y(t+1)>0$}\;
+    沿着$ D_{s} $的最后一个数据顺时序寻找$ T_{d} $，直到在时间点$ t $时，满足{$a_y(t-1)>0, a_y(t)<0$}\;
+    沿着$ D_{s} $的最后一个数据顺时序寻找$ T_{r} $，直到在时间点$ t $时，满足$g_x(t), a_y(t)$ is equal to zero\;
+    返回 $ T_{u}, T_{l}, T_{d}, T_{r} $\;
+\end{algorithm}
+
+\subsubsection{步长估算}
+
+如图\ref{fig:phase}中的红色虚线所示，步长并不是脚在空中的运动轨迹，而是其在水平地面上的投影。公式（\ref{eq:afoot}）沿着水平脚部方向的加速度$a_f$可以通过加速度传感器读数$a_y,a_z$和每个时刻的角$\theta$计算得出。我们将$a_y,a_z$以夹角$\theta$投影在水平面上，将其合成为$a_f$。
+
+\begin{gather}
+ a_{f}(t)=a_{y}(t) cos(\theta(t)) + a_{z}(t) sin(\theta(t)),\quad t \in [\mathit{T_{l}}, \mathit{T_{d}}]
+\label{eq:afoot}
+\end{gather}
+
+公式（\ref{eq:theta}）计算每个时刻加速度y轴与水平脚步方向的夹角$\theta(t)$。 由于在抬脚时间开始，出现了脚面的转动，我们对于x轴陀螺仪得到的角速度从抬脚时间开始积分，得到每个时间$t$时的角度$\theta(t)$。
+
+\begin{gather}
+\theta(t)=\int_{\mathit{T_{u}}}^{t}g_x(t)\ dt, \quad t\in [\mathit{T_{u}}, \mathit{T_{r}}]
+\label{eq:theta}
+\end{gather}
+
+为了校正收到走路习惯，如八字脚而影响的加速度，我们利用公式（\ref{eq:awalk}）将加速度投影到前进移动的方向。
+
+\begin{gather}
+ a_{m}(t)=a_{f}(t) cos(\varphi) + a_{x}(t) sin(\varphi),\quad t\in [\mathit{T_{l}}, \mathit{T_{d}}]
+\label{eq:awalk}
+\end{gather}
+
+得到了移动方向的加速度$a_m$，我们利用公式（\ref{eq:s}）最终两次积分计算当前一步的行走距离。
+
+\begin{equation}
+\begin{aligned}
+S &= \int_{T_l}^{T_d}\int_{T_l}^{t'}a_m(t)\ dtdt' \\
+  &= \int_{T_l}^{T_d}\int_{T_l}^{t'}(a_{f}(t)cos(\varphi) + a_{x}(t)sin(\varphi))\ dtdt'\\
+  &= S_x + S_y + S_z
+\end{aligned}
+\label{eq:s}
+\end{equation}
+
+这里的$S_x, S_y, S_z$为实际的行走方向的加速度在三轴上的投影，它们分别可以表示为公式 （\ref{eq:sn}）。
+
+\begin{equation}
+\begin{aligned}
+S_x &= \int_{T_l}^{T_d}\int_{T_l}^{t'}(a_{x}(t)sin(\varphi))\ dtdt'\\
+S_y &= \int_{T_l}^{T_d}\int_{T_l}^{t'}(a_{y}(t)cos(\theta(t))cos(\varphi))\ dtdt'\\
+S_z &= \int_{T_l}^{T_d}\int_{T_l}^{t'}(a_{z}(t)sin(\theta(t))cos(\varphi))\ dtdt'
+\end{aligned}
+\label{eq:sn}
+\end{equation}
+
+为了估算步长，我们还需要估算角上度$\varphi$。如图\ref{fig:phi}所示，我们让用户直线行走一段固定的距离$s$，然后我们用$a_f$进行两次积分，得到沿着脚步方向的位移$s_f$。
+由于$\Delta{s_f}$与$\Delta{s}$之间的夹角为$\varphi$，我们通过$\varphi=arccos(\frac{\Delta{s}}{\Delta{s_f}})$得到$\varphi$。
+此外，由于$s_f$为$\Delta{s_f}$的和，$s$为$\Delta{s}$的和。因此我们有$\varphi=arccos(\frac{s}{s_f})$。
+
+% \begin{figure}[!ht]
+% \centering
+% \includegraphics[width=0.9\textwidth]{Figure/phi.eps}
+% \caption{估算角度$\varphi$.}
+% \label{fig:phi}
+% \end{figure}
+
+图\ref{fig:after_calibration}所示为用户一个步长为1.23m的脚步，步长估算器的估算结果。
+图\ref{fig:after_calibration} (a) 显示了原始加速度数据$a_y$与校正过的前进方向数据$a_m$。
+图\ref{fig:after_calibration} (b) 显示了对应的位移数据。我们对原始加速度$a_y$和校正后的加速度$a_m$分别进行两次积分。
+对于$a_y$，我们得到的估算步长为1.86m。
+对于$a_m$，我们得到得估算步长为1.23m。
+参考于实际步长1.23m，我们的校正方法使得步长估算误差从0.63m减少为0.12m。
+
+% \begin{figure}[!ht]
+% \centering
+% 	\begin{minipage}{0.5\linewidth}
+%         \centerline{\includegraphics[width=0.9\textwidth]{Figure/ay_calibrate.eps}}
+%         \centerline{(a) 加速度矫正}
+%     \end{minipage}%
+% 	\begin{minipage}{0.5\linewidth}
+%         \centerline{\includegraphics[width=0.9\textwidth]{Figure/sy_calibrate.eps}}
+%         \centerline{(b) 位移校正}
+%     \end{minipage}
+% \caption{步长估算的案例研究}
+% \label{fig:after_calibration}
+% \end{figure}
+
+\subsubsection{双脚校正机制}
+
+为了更近一步的减少累积误差，FootStep-Tracker将两个传感器分别嵌入用户的左右两个鞋子中，并分别的进行步长估算。由于在某一特定时刻，两个脚的累计步长，即两脚的位置不会相差太远，我们给出双脚校正的机制。当两个脚分别的累计步长相差达到1m 以上时，我们将他们的平均值作为当前的用户行走距离，并重置双脚的累计步长。
+
+\section{方向估算器}
+\label{sec:step_direction_estimator}
+
+\subsection{研究动机和挑战}
+
+为了得到用户的行为轨迹，我们同样需要计算出用户的行走方向。
+由于我们将传感器嵌入到用户的鞋子中，我们可以估算用户脚部走路时的相对转角。然而，脚部的相对转角并不是人体的行走方向变化。所以，我们需要通过估算出的脚部的方向变化而进一步估算用户行走方向的变化。
+
+\subsection{实验观察}
+
+当用户左/右转时，他们通常以垂直的方向为轴，如图\ref{fig:axes} (b) 所示，z轴与重力方向相反，因此我们主要关注与转弯动作最为相关的$g_z$。
+
+图\ref{fig:gzl_90_walking}所示为用户在一个90度左转时，传感器采集到的数据。图中红色方框为转弯时采集到的数据，对于一个90度的左转来说，左脚有两步导致了这次左转，右脚在左脚的这两步之间有一步。此外，当用户向前行走时，由于脚部轻微的左右摆动和八字脚的关系，$g_z$也有轻微的波动。
+
+% \begin{figure}[!ht]
+% \centering
+% \includegraphics[width=0.9\textwidth]{Figure/gz_turn_l90.eps}
+% \caption{用户左转时的传感器数据}
+% \label{fig:gzl_90_walking}
+% \end{figure}
+
+图\ref{fig:sketch_turn}为一个四步的左转。我们可以看到，用户绕着某个虚拟的点，我们记为原点$O$，左转了$\alpha$度。对于一只脚来说，为了完成这次$\alpha$ 的转弯，它需要先后转两次，分别为$\alpha_1,\alpha_2$。
+
+% \begin{figure}[!ht]
+% \centering
+% \includegraphics[width=0.9\textwidth]{Figure/turn_sketch.eps}
+% \caption{一个$\alpha$度的左转}
+% \label{fig:sketch_turn}
+% \end{figure}
+
+对于某个特定用户来说，我们假定在其行走的过程中，脚部方向（foot direction, $d_f$）和行走方向（moving direction，$d_m$）的夹角是不变的。
+在我们的场景中，这个假设是合理的。这是因为对于某一个特定的用户来说，其走路的习惯，例如八字脚的程度，在一个相当长的时间内是不变的。
+
+为了估算出用户的转弯角度$\alpha_i$，我们给出如下定理，
+
+\begin{thm}
+假设脚部方向（foot direction, $d_f$）和行走方向（moving direction，$d_m$）的夹角$\varphi$ 是不变的。那么脚部的转角$\alpha_i$与人体转弯的角度$\beta_i$是相等的.
+\label{thm:equal}
+\end{thm}
+
+\begin{proof}
+不失一般性，如图\ref{fig:turn_theta}所示，用户绕着点$O$转弯了$\alpha$角。令从$O$ 到用户脚的方向为$d_o$，脚步方向为$d_f$, 行走方向为$d_m$, 其夹角为$ \varphi_i $ 和 $ \varphi_{i+1} $，脚步方向的旋转角为 $ \beta_i $, 前进方向的旋转角为$ \gamma $。
+由$d_w$垂直于$d_o$，那么有$\alpha_i=\gamma$. 由于对顶角相等，我们有$ \gamma + \varphi_i +\lambda = \beta_i + \varphi_{i+1} + \lambda $。根据假设，$ \varphi_i = \varphi_{i+1} $，那么 $ \gamma = \beta_i $。所以我们有$ \alpha_i = \beta_i $。
+\end{proof}
+
+% \begin{figure}[!ht]
+% \centering
+% \includegraphics[width=0.9\textwidth]{Figure/turn_theta.eps}
+% \caption{Foot direction and moving direction}
+% \label{fig:turn_theta}
+% \end{figure}
+
+\subsection{解决方案}
+
+FootStep-Tracker利用低通滤波去掉用户走直线时的数据噪声，将转弯步从直行步中提取出来。此外，对于一步来说，我们发现脚部出现转弯运动的时间在上文提到的第（3）阶段，从抬脚时间到着陆时间。这是因为在第（1）-（2）阶段，脚跟抬起，准备向前移动。在第（4）-（5）阶段，脚正在着地。这些阶段中，脚部都没有绕着z轴旋转。我们使用上文提到的算法\ref{alg:fpe}，得到各个关键时间。
+
+我们通过得到的抬脚时间和着地时间，利用公式(\ref{eq:turn_degree})计算用户的转弯角度。由于脚部以z轴为轴，我们从抬脚时间到着地时间对$g_z$积分，得到脚部方向$d_f$的旋转角度$\beta_i$。然后，根据定理\ref{thm:equal}，我们有前进方向的转角与脚部方向的转角相等，即${\alpha_i}={\beta_i}$。对于多步的转弯，我们将每一步的转弯角度累加，从而得到总体的转弯角度。
+
+\begin{equation}
+\begin{aligned}
+& \alpha   =\sum_{i=1}^{n} \alpha_i \\
+& \alpha_i =\beta_i =\int_{\mathit{T_{l}}}^{\mathit{T_{d}}}g_z(t) \ dt
+\label{eq:turn_degree}
+\end{aligned}
+\end{equation}
+
+\section{参考地点估计}
+
+通过步长估算器\ref{sec:step_length_estimator}和方向估算器\ref{sec:step_direction_estimator}，我们可以准确的估算用户的行为轨迹。
+然而，我们仍然需要将行为轨迹嵌入到全局的室内地图中。
+
+为了通过行为轨迹和室内地图确定用户的确切位置，我们有了如下两个想法：首先，用户的行为轨迹受到室内物理拓扑结构的限制，也就是说，用户不能穿墙。第二，由于参考地点，包括楼梯和电梯，它们的位置在室内地图中是固定的。所以当用户在进行参考行为时，例如上电梯、上楼梯，我们就可以确切的定位用户在几个可能的参考地点上。
+
+为了定位用户和更进一步的追踪和导航，我们采用了贪食蛇策略\cite{snake}。如图\ref{fig:Anakonda} (a) 所示，用户乘坐电梯来到环境中，然后右转走了一小段距离。此时根据行走轨迹和电梯的位置，有三个可能的用户位置。随着用户行走，到了如图 (b) 的时刻，由于地图拓扑环境的限制，可能的行走轨迹 (2) 和 (3) 被排除掉了，从而筛选出确切的用户行为轨迹(1)。
+
+% \begin{figure}[!ht]
+% \centering
+% 	\begin{minipage}{0.5\linewidth}
+%         \centerline{\includegraphics[width=0.9\textwidth]{Figure/Anakonda1.eps}}
+%         \centerline{(a) 可能的行为轨迹}
+%     \end{minipage}%
+% 	\begin{minipage}{0.5\linewidth}
+%         \centerline{\includegraphics[width=0.9\textwidth]{Figure/Anakonda2.eps}}
+%         \centerline{(b) 过滤掉不可能的行为轨迹}
+%     \end{minipage}
+% \caption{贪食蛇策略}
+% \label{fig:Anakonda}
+% \end{figure}
+
+由于我们已经通过行为分类器\ref{sec:activity_classifier}，如果用户正在上下电梯或者楼梯，我们在地图中找到电梯和楼梯的位置作为参考地点。通过贪食蛇策略，我们可以进一步确定确切的用户位置，进而进行持续定位。
+
+\section{实验验证及结果分析}
+
+\subsection{系统实现}
+
+\noindent\textbf{硬件：}我们的系统包含由德州仪器公司生产的CC2541 SensorTag\cite{sensortag}和一台三星Galaxy S5安卓智能手机。
+
+\noindent\textbf{软件：}我们的系统采用JAVA语言，实现于安卓平台。传感器通过蓝牙向智能手机传输数据。智能手机利用传感器数据定位和追踪用户的位置，并提供图形交互界面（Graphical User Interface，GUI）。
+
+\subsection{实验设定}
+
+SensorTag的采样频率为20Hz，其如图\ref{fig:sensortag}所示的嵌入用户的鞋垫中。我们选择我们的系办公楼作为我们评估使用的室内环境，其面积约为56m$\times$63m。 我们采用分类准确率评估行为分类器，采用定位误差评估步长估算器和方向估算器。
+
+\subsection{评估行为分类器}
+
+为了评估行为分类器，我们首先采集了上文中提到的6个行为的传感器数据。
+对于每一个行为，我们收集了来自3个用户的500个窗口的加速度和陀螺仪数据。
+然后我们利用这些数据来训练HMM模型以及确定决策树的阈值。
+我们将训练好的分类器在线为之前的3个用户和5个新的用户进行行为分类。
+他们在环境中走路或者是上下楼梯、电梯。
+图\ref{fig:activity_classifier}显示了行为分类器的准确率。
+对于用决策树，即用于分类静止站立（SS），电梯中的超重状态（EHG）和电梯中的失重状态（EWL）的部分，它相对于HMM 的部分来说准确率更高。
+这是因为这些行为具有一些本质的区别，例如方差和平均数。
+然而，上楼梯（UST），下楼梯（DST）和走路（WALK）相互更为相似。
+平均情况下，我们具有大约96.2\%的分类准确率。
+
+% \begin{figure}[!ht]
+% \centering
+% \includegraphics[width=0.6\textwidth]{Figure/eva_classification.eps}
+% \caption{行为分类器准确率}
+% \label{fig:eva_activity_classificaton}
+% \end{figure}
+
+\subsection{评估步长估算器}
+
+为了评估步长估算器，我们跟踪一个穿着FootStep-Tracker的用户，沿着一个长约63m 的走廊直线行走。另外，作为对比，我们采用传统的根据身高估算步长，再用步长乘以步数的方法估算距离。图\ref{fig:eva_step_length} (a) 显示了其定位误差。
+如曲线\emph{One Foot}显示了步长估算器只作用于一只脚时的定位误差。
+曲线\emph{Common Method}显示了传统方法的定位误差。
+曲线\emph{Double Feet}显示了步长估算器采用双脚校正后的定位误差。
+定位误差从14.64\%(9.23m/63m)和14.60\%(9.2m/63m)减少到4.19\%(2.63m/63m)。
+图\ref{fig:eva_step_length} (b) 显示了步长估算器误差的CDF图。每步步长的误差大约围绕在0分布，采用双脚校正时的定位误差有效减少了0.2m左右。
+
+% \begin{figure}[!ht]
+% \centering
+% 	\begin{minipage}{0.5\linewidth}
+%         \centerline{\includegraphics[width=0.9\textwidth]{Figure/eva_stride_length.eps}}
+%         \centerline{(a) 用户直线行走的定位误差}
+%     \end{minipage}%
+% 	\begin{minipage}{0.5\linewidth}
+%         \centerline{\includegraphics[width=0.9\textwidth]{Figure/eva_step_length_error_cdf.eps}}
+%         \centerline{(b) 定位误差CDF}
+%     \end{minipage}
+% \caption{评估步长估算器}
+% \label{fig:eva_step_length}
+% \end{figure}
+
+\subsection{评估方向估算器}
+
+为了评估方向估算器，我们邀请了8位用户，从-180度到+180度，以30度为粒度，每次转弯10 次。图\ref{fig:eva_step_direction} (a) 显示了角度误差。
+
+在我们的环境中，所有的转角都是直角。为了更进一步的提高定位准确率，我们采用两脚估算的两个角度作为特征，利用支撑向量机（Support Vector Machine，SVM）将转弯行为分类成三类，左转（LEFT），右转（RIGHT）和掉头（TURN\_AROUND）。
+我们邀请三个用户，对于每一个转弯类别都转弯30次。我们利用收集的数据训练SVM模型，然后我们再5个新用户上进行在线测试。图\ref{fig:eva_step_direction} (b) 显示了分类后的转弯误差。左右转弯可以比较准确的区分开，这是因为$g_z$具有正负相反的读数。然而区分左右转和掉头时，会出现一些误判，这是因为他们之间只具有角度的差别。平均情况下，我们的准确率可以达到98.3\%。
+
+% \begin{figure}[!ht]
+% \centering
+% 	\begin{minipage}{0.5\linewidth}
+%         \centerline{\includegraphics[width=0.9\textwidth]{Figure/theta_cal_l.eps}}
+%         \centerline{(a) 角度误差}
+%     \end{minipage}%
+% 	\begin{minipage}{0.5\linewidth}
+%         \centerline{\includegraphics[width=0.9\textwidth]{Figure/eva_turn_cla.eps}}
+%         \centerline{(b) 分类后的角度误差}
+%     \end{minipage}
+% \caption{评估方向估算器}
+% \label{fig:eva_step_direction}
+% \end{figure}
+
+\subsection{真实环境中的定位样例研究}
+
+为了评估FootStep-Tracker，我们邀请了5个用户进行测试。他们穿着FootStep-Tracker，沿着如图\ref{fig:path}所示的红色实线的路线行动。在六次转弯之后，他乘坐另一个电梯离开当前室内环境。首先，FootStep-Tracker并不能确定哪个电梯为用户的确切位置。图中的蓝色虚线显示了可能的用户位置。首先，用户走了一小段距离，然后右转，直走了一段很长的距离。此时，FootStep-Tracker通过贪食蛇策略\cite{snake}可以排除了虚线所示的几个用户行为轨迹。图\ref{fig:eva_case_study} (a) 显示了一个用户走路的步数与定位误差的关系。在开始时，FootStep-Tracker由于还没有确定用户的可能位置，具有较大的定位误差。随着用户继续行走，用户的确切位置在六步之后确定，定位误差锐减到1m左右。图\ref{fig:eva_case_study} (b) 显示了转弯数和定位误差的关系。由于第一个转弯时，用户的确切位置还没有确定，并不具有参考价值。我们从第二个转弯开始，发现随着转弯数目的增加，定位误差可以明显减少，此外双脚校正也可以有效的减少误差。图\ref{fig:eva_case_study} (c) 显示了平均误差在大约1m左右。
+
+% \begin{figure}
+% \centering
+% \includegraphics[width=0.6\textwidth]{Figure/path.eps}
+% \caption{Walking Path.}
+% \label{fig:path}
+% \end{figure}
+
+% \begin{figure}[!ht]
+% \centering
+% 	\begin{minipage}{0.33\linewidth}
+%         \centerline{\includegraphics[width=1\textwidth]{Figure/eva_path.eps}}
+%         \centerline{(a) 角度误差}
+%     \end{minipage}%
+% 	\begin{minipage}{0.33\linewidth}
+%         \centerline{\includegraphics[width=1\textwidth]{Figure/eva_error_turn.eps}}
+%         \centerline{(b) 分类后的角度误差}
+%     \end{minipage}%
+%     \begin{minipage}{0.33\linewidth}
+%         \centerline{\includegraphics[width=1\textwidth]{Figure/eva_path_users.eps}}
+%         \centerline{(b) 分类后的角度误差}
+%     \end{minipage}
+% \caption{真实环境中的案例评估}
+% \label{fig:eva_case_study}
+% \end{figure}
+
+\section{本章小结}
+
+本章中，我们阐释了基于脚步感知的无锚节点室内定位系统。我们将传感器嵌入用户的鞋子中，利用加速度计和陀螺仪估算用户的步长和行走方向。除此之外，我们检测用户的参考行为，例如上下楼梯和乘坐电梯，以得到用户的参考地点帮助定位。我们在一个较大的室内环境中检验我们的系统，定位精度可以达到1m左右。
+
+\chapter{基于脚步感知的无锚节点室内定位系统实现}
+\label{C:implement}
+
+\section{系统实现概述}
+
+在于脚步感知的无锚节点室内定位系统的基础上，我们对FootStep-Tracker 做了实际的系统实现。我们采用德州仪器公司生产的SensorTag\cite{sensortag}和三星公司生产的Glaxy S5对系统进行了实现。
+
+本章首先介绍了系统实现的硬件与软件平台。在此基础上，介绍了系统设计的各个部分，包括其场景结构、数据流和工作原理。最后，对系统在Android平台上的实现效果进行展示。
+
+\section{实现平台}
+
+\subsection{硬件平台}
+
+FootStep-Tracker的实现采用了德州仪器公司生产的SensorTag\cite{sensortag}作为嵌入用户鞋子中的传感器芯片。SensorTag是德州仪器公司开发的首款蓝牙开发套件。SensorTag将多种传感器集成在基于CC2541的单板上，其中包括红外温度传感器、湿度传感器、压力传感器、加速度计、陀螺仪和磁力计。其支开发持多种平台，包括PC、Android 和IOS平台，并可以直接通过智能手机进行固件的版本更新。
+
+SensorTag采用蓝牙低功耗（Bluetooth low energy, BLE）\cite{ble}作为数据传输平台。BLE较传统的蓝牙来说，旨在保持通讯范围的同时，提供更少的耗电量。BLE在2006年首先由Nokia提出，当时被称为\textbf{Wibree}。随后在2010年，其被并入蓝牙4.0协议。
+
+% \begin{figure}[!ht]
+% \centering
+% 	\begin{minipage}{0.5\linewidth}
+%         \centerline{\includegraphics[width=1\textwidth]{Figure/sensortag.jpg}}
+%         \centerline{(a) CC2541 SensorTag\cite{sensortag}}
+%     \end{minipage}%
+% 	\begin{minipage}{0.5\linewidth}
+%         \centerline{\includegraphics[width=1\textwidth]{Figure/s5.png}}
+%         \centerline{(b) SAMSUNG GALAXY S5}
+%     \end{minipage}
+% \caption{硬件平台}
+% \label{fig:hardware}
+% \end{figure}
+
+\subsection{软件平台}
+
+FootStep-Tracker的实现采用JAVA语言\cite{java}，通过Android\cite{android}平台实现在于智能手机上。
+
+\section{系统设计}
+
+图\ref{fig:imp_scene}所示为系统的场景图。本系统为一种基于脚步感知的无锚节点室内定位系统，主要包括SnesorTag和GALAXY S5智能手机，二者通过蓝牙低功耗进行数据交互。SensorTag上搭载加速度计、陀螺仪组成的IMU模块和BLE蓝牙通信模块。智能手机搭载室内地图，接收来自SensorTag传输的传感器数据，通过进行分析处理，定位用户位置并与用户友好的交互。
+
+% \begin{figure}[!ht]
+% \centering
+% \includegraphics[width=0.9\textwidth]{Figure/imp_scene.jpg}
+% \caption{系统设计场景图}
+% \label{fig:imp_scene}
+% \end{figure}
+
+图\ref{fig:imp_data}所示为系统的数据流图。本系统的具体工作过程为：
+
+\begin{enumerate}
+  \item 用户双脚分别穿着嵌入SensorTag的鞋子。
+  \item 智能手机的APP中加载室内地图。
+  \item 智能手机的蓝牙通信模块与SnesorTag的蓝牙通信模块进行配对。
+  \item SensorTag上搭载的IMU模块通过加速度计和陀螺仪采集用户脚部的传感器数据。
+  \item SensorTag的蓝牙通信模块将采集到的传感器数据发送给智能手机的蓝牙通信模块。
+  \item 智能手机的处理器通过收集的传感器数据，估算出用户的行为轨迹。
+  \item 智能手机的处理器通过收集的传感器数据，估算出用户的行为模式，结合加载的室内地图，估算出用户所在的参考位置。
+  \item 智能手机结合估算出的运动轨迹和参考位置，估算出用户的位置，并通过显示屏显示。
+\end{enumerate}
+
+% \begin{figure}[!ht]
+% \centering
+% \includegraphics[width=0.8\textwidth]{Figure/imp_data.jpg}
+% \caption{系统数据流图}
+% \label{fig:imp_data}
+% \end{figure}
+
+% \begin{figure}[!ht]
+% \centering
+% \includegraphics[width=0.9\textwidth]{Figure/imp_how.jpg}
+% \caption{系统原理图}
+% \label{fig:imp_data}
+% \end{figure}
+
+
+\section{实现效果}
+
+\section{本章小结}
+
+\chapter{总结与展望}
+\label{C:conclusion}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 附件部分
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\backmatter
+
+% 参考文献
+% 使用 BibTeX，不使用 BibTeX 时注释掉下面一句。
+\bibliography{template}
+
+% 不使用 BibTeX
+%\begin{thebibliography}{2}
+%
+%\bibitem{deng:01a}
+%{邓建松,~彭冉冉,~陈长松}.
+%\newblock {\em \LaTeXe{}~科技排版指南}.
+%\newblock 科学出版社,~书号:~7-03-009239-2/TP.1516, 北京, 2001.
+%
+%\bibitem{wang:00a}
+%王磊.
+%\newblock {\em \LaTeXe{}~插图指南}.
+%\newblock 2000.
+%\end{thebibliography}
+
+% 本章可以删去
+\Nchapter{简历与科研成果}
+
+\noindent {\heiti 基本情况}
+\vspace{1ex}
+
+\noindent 刘畅，男，汉族，1990~年~8~月出生，天津人。
+
+\vspace{2ex}
+\noindent {\heiti 教育背景}
+
+\begin{description}[labelindent=0em, leftmargin=8em, style=sameline]
+
+\item[2013.9～2016.6] 南京大学计算机科学与技术系 \hfill 硕士
+
+\item[2009.9～2013.6] 南京大学计算机科学与技术系 \hfill 本科
+
+\end{description}
+
+% 发表文章目录
+\vspace{5ex}
+\begin{Publications}{2}
+
+\item Chang Liu, Lei Xie, Chuyu Wang, Jie Wu and Sanglu Lu. ``FootStep-tracker: an anchor-free indoor localization system via sensing foot steps``,in Proc. of the 2015 ACM International Joint Conference on Pervasive and Ubiquitous Computing and Proceedings of the 2015 ACM International Symposium on Wearable Computers.
+
+\item 谢磊，刘畅，王楚豫，陆桑璐，''基于脚步感知的室内定位系统及其定位方法''，专利，申请号：201510373829.0
+
+\item 谢磊，刘畅，陆桑璐，''一种基于交通流感知的智能交通灯调度系统及其调度方法''，专利，申请号：201410162206.4
+
+\end{Publications}
+
+  % 致谢
+\begin{thanks}
+\vskip 18pt
+
+首先感谢我的父母对我
+
+感谢我的女朋友褚玉婷对我
+
+感谢我的导师谢磊副教授和陆桑璐教授对我的精心指导和帮助
+
+\end{thanks}
+
+
+\end{document}
