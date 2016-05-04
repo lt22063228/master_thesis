@@ -5,19 +5,21 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces 依据隐含变量进行选择的过程\relax }}{11}{figure.caption.4}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces clustering boosted preference\relax }}{13}{figure.caption.5}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces pairwise cluster extraction\relax }}{18}{figure.caption.6}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces integration process\relax }}{20}{figure.caption.7}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces graphical model of ClusterRank\relax }}{21}{figure.caption.8}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces MAP for different $alpha$\relax }}{26}{figure.caption.10}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Performance for top-10 recommendation\relax }}{27}{figure.caption.11}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Performance for top-5 recommendation\relax }}{27}{figure.caption.12}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces overview of model\relax }}{14}{figure.caption.6}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces data processing of BPR\relax }}{17}{figure.caption.7}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces pairwise cluster extraction\relax }}{19}{figure.caption.8}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces integration process\relax }}{21}{figure.caption.9}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces graphical model of ClusterRank\relax }}{22}{figure.caption.10}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces MAP for different $alpha$\relax }}{27}{figure.caption.12}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Performance for top-10 recommendation\relax }}{28}{figure.caption.13}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Performance for top-5 recommendation\relax }}{28}{figure.caption.14}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces 加权 vs 不加权 效果对比\relax }}{31}{figure.caption.13}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces 加权情况下的效果对比\relax }}{32}{figure.caption.14}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces 推荐预取系统框架图\relax }}{33}{figure.caption.15}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces 传输节省随缓存数量变化\relax }}{37}{figure.caption.16}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces 传输节省随用户数量改变\relax }}{38}{figure.caption.17}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces 不同方法的比较\relax }}{39}{figure.caption.18}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces 加权 vs 不加权 效果对比\relax }}{32}{figure.caption.15}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces 加权情况下的效果对比\relax }}{33}{figure.caption.16}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces 推荐预取系统框架图\relax }}{34}{figure.caption.17}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces 传输节省随缓存数量变化\relax }}{37}{figure.caption.18}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces 传输节省随用户数量改变\relax }}{38}{figure.caption.19}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces 不同方法的比较\relax }}{39}{figure.caption.20}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

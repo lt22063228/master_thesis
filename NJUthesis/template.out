@@ -33,10 +33,10 @@
 \BOOKMARK [2][-]{subsection.3.6.2}{3.6.2 参数设定}{section.3.6}% 33
 \BOOKMARK [2][-]{subsection.3.6.3}{3.6.3 结果分析}{section.3.6}% 34
 \BOOKMARK [1][-]{section.3.7}{3.7 本章小结}{chapter.3}% 35
-\BOOKMARK [0][-]{chapter.4}{第四章 \040基于聚类推荐的Ad Hoc网络缓存机制}{}% 36
-\BOOKMARK [1][-]{section.4.1}{4.1 背景介绍}{chapter.4}% 37
-\BOOKMARK [1][-]{section.4.2}{4.2 Ad Hoc 网中的视频传输}{chapter.4}% 38
-\BOOKMARK [1][-]{section.4.3}{4.3 推荐算法}{chapter.4}% 39
+\BOOKMARK [0][-]{chapter.4}{第四章 \040基于聚类推荐的视频缓存机制}{}% 36
+\BOOKMARK [1][-]{section.4.1}{4.1 动机描述}{chapter.4}% 37
+\BOOKMARK [1][-]{section.4.2}{4.2 基于智能手机的协同化移动流媒体系统}{chapter.4}% 38
+\BOOKMARK [1][-]{section.4.3}{4.3 用于缓存的推荐算法}{chapter.4}% 39
 \BOOKMARK [2][-]{subsection.4.3.1}{4.3.1 推荐模型}{section.4.3}% 40
 \BOOKMARK [1][-]{section.4.4}{4.4 系统设计}{chapter.4}% 41
 \BOOKMARK [1][-]{section.4.5}{4.5 模拟实验}{chapter.4}% 42
@@ -48,6 +48,6 @@
 \BOOKMARK [2][-]{subsection.4.5.6}{4.5.6 结果：不同方法比较}{section.4.5}% 48
 \BOOKMARK [1][-]{section.4.6}{4.6 本章小结}{chapter.4}% 49
 \BOOKMARK [0][-]{chapter.5}{第五章 \040总结与展望}{}% 50
-\BOOKMARK [0][-]{chapter*.19}{Bibliography}{}% 51
-\BOOKMARK [0][-]{chapter*.20}{简历与科研成果}{}% 52
-\BOOKMARK [0][-]{chapter*.21}{致 \040谢}{}% 53
+\BOOKMARK [0][-]{chapter*.21}{Bibliography}{}% 51
+\BOOKMARK [0][-]{chapter*.22}{简历与科研成果}{}% 52
+\BOOKMARK [0][-]{chapter*.23}{致 \040谢}{}% 53

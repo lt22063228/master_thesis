@@ -14,39 +14,39 @@
 \contentsline {section}{\numberline {3.1}问题定义}{10}{section.3.1}
 \contentsline {section}{\numberline {3.2}算法简介}{12}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}动机与直觉}{12}{subsection.3.2.1}
-\contentsline {section}{\numberline {3.3}贝叶斯排序推荐}{14}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}形式化定义}{14}{subsection.3.3.1}
+\contentsline {section}{\numberline {3.3}贝叶斯排序推荐}{15}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}形式化定义}{15}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}基于偏序对的学习}{15}{subsection.3.3.2}
 \contentsline {subsection}{\numberline {3.3.3}隐含因子模型}{16}{subsection.3.3.3}
 \contentsline {subsection}{\numberline {3.3.4}BPR 优化标准}{16}{subsection.3.3.4}
-\contentsline {section}{\numberline {3.4}聚类的引入}{17}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}聚类模型}{17}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}聚类信号的截取}{18}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}聚类信号的优化}{19}{subsection.3.4.3}
-\contentsline {section}{\numberline {3.5}整合模型}{19}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}信号的整合}{19}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}模型描述 }{20}{subsection.3.5.2}
-\contentsline {subsection}{\numberline {3.5.3}参数学习}{22}{subsection.3.5.3}
-\contentsline {section}{\numberline {3.6}实验}{24}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}实验设计}{24}{subsection.3.6.1}
-\contentsline {subsection}{\numberline {3.6.2}参数设定}{25}{subsection.3.6.2}
-\contentsline {subsection}{\numberline {3.6.3}结果分析}{25}{subsection.3.6.3}
-\contentsline {section}{\numberline {3.7}本章小结}{27}{section.3.7}
-\contentsline {chapter}{\numberline {第四章\hspace {0.3em}}基于聚类推荐的Ad Hoc网络缓存机制}{28}{chapter.4}
-\contentsline {section}{\numberline {4.1}背景介绍}{28}{section.4.1}
-\contentsline {section}{\numberline {4.2}Ad Hoc 网中的视频传输}{29}{section.4.2}
-\contentsline {section}{\numberline {4.3}推荐算法}{30}{section.4.3}
+\contentsline {section}{\numberline {3.4}聚类的引入}{18}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}聚类模型}{18}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}聚类信号的截取}{19}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}聚类信号的优化}{20}{subsection.3.4.3}
+\contentsline {section}{\numberline {3.5}整合模型}{20}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}信号的整合}{20}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}模型描述 }{21}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}参数学习}{23}{subsection.3.5.3}
+\contentsline {section}{\numberline {3.6}实验}{25}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}实验设计}{25}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.2}参数设定}{26}{subsection.3.6.2}
+\contentsline {subsection}{\numberline {3.6.3}结果分析}{26}{subsection.3.6.3}
+\contentsline {section}{\numberline {3.7}本章小结}{28}{section.3.7}
+\contentsline {chapter}{\numberline {第四章\hspace {0.3em}}基于聚类推荐的视频缓存机制}{29}{chapter.4}
+\contentsline {section}{\numberline {4.1}动机描述}{29}{section.4.1}
+\contentsline {section}{\numberline {4.2}基于智能手机的协同化移动流媒体系统}{30}{section.4.2}
+\contentsline {section}{\numberline {4.3}用于缓存的推荐算法}{31}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}推荐模型}{31}{subsection.4.3.1}
 \contentsline {section}{\numberline {4.4}系统设计}{33}{section.4.4}
 \contentsline {section}{\numberline {4.5}模拟实验}{35}{section.4.5}
 \contentsline {subsection}{\numberline {4.5.1}实验场景设定}{35}{subsection.4.5.1}
 \contentsline {subsection}{\numberline {4.5.2}实验数据}{36}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}评价标准}{36}{subsection.4.5.3}
+\contentsline {subsection}{\numberline {4.5.3}评价标准}{37}{subsection.4.5.3}
 \contentsline {subsection}{\numberline {4.5.4}结果：改变缓存大小}{37}{subsection.4.5.4}
 \contentsline {subsection}{\numberline {4.5.5}结果：改变用户数量大小}{38}{subsection.4.5.5}
 \contentsline {subsection}{\numberline {4.5.6}结果：不同方法比较}{39}{subsection.4.5.6}
 \contentsline {section}{\numberline {4.6}本章小结}{40}{section.4.6}
 \contentsline {chapter}{\numberline {第五章\hspace {0.3em}}总结与展望}{41}{chapter.5}
-\contentsline {chapter}{Bibliography}{42}{chapter*.19}
-\contentsline {chapter}{简历与科研成果}{43}{chapter*.20}
-\contentsline {chapter}{致\CTEX@spaceChar \CTEX@spaceChar 谢}{44}{chapter*.21}
+\contentsline {chapter}{Bibliography}{42}{chapter*.21}
+\contentsline {chapter}{简历与科研成果}{43}{chapter*.22}
+\contentsline {chapter}{致\CTEX@spaceChar \CTEX@spaceChar 谢}{44}{chapter*.23}
