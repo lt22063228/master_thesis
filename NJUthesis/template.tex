@@ -978,57 +978,223 @@ web·þÎñÆ÷½«ÇëÇó×ª·¢µ½ÏàÓ¦µÄÁ÷Ã½Ìå·þÎñÆ÷£»ÔÚ¿Í»§¶ËºÍ·þÎñÆ÷½»»»ÁË¿ØÖÆÐÅÏ¢Ö®ºó£¬ÊÓÆ
 % ´Ó\cite{Leskovec}µÃµ½Æô·¢£¬ÎÒÃÇÊ¹ÓÃÒþº¬Òò×ÓÄ£ÐÍ¶ÔÆ«ÐòÐÅºÅºÍ¾ÛÀàÐÅºÅ½øÐÐ½¨Ä££¬½«ÍÆ¼öÎÊÌâÐÎÊ½»¯
 % Îªµ¥Àà·ÖÀàÎÊÌâ£®Òò´Ë£¬¿ò¼ÜÖÐ´æÔÚÁ½ÖÖÐÅºÅ£¬ËüÃÇ¹²Í¬ÑµÁ·Ò»¸öÄ¿±ê£¬²»Í¬ÐÅºÅµÄ
 % Ä£ÐÍÏà»¥ñîºÏÇÒ¹²ÏíÌØÕ÷ÏòÁ¿£®
+\section{ÎÊÌâ¶¨Òå}
 
+ÍÆ¼öÏµÍ³ÊÇÊÓÆµ·ÖÏíÍøÕ¾µÄÖØÒªÒ»»·£¬ÔÚÄÚÈÝ·ºÀÄµÄÔÚÏß»·¾³ÖÐ£¬ËüÄÜ°ïÖúÓÃ»§¿ìËÙ¼ìË÷µ½ËùÐèµÄÄÚÈÝ¡£
+ÓÚÆÕÍ¨ÓÃ»§¶øÑÔ£¬ÍÆ¼öÏµÍ³°ïÖúËûÃÇ½â³ý¡°ÐÅÏ¢¹ýÔØ¡±µÄÀ§ÈÅ£»ÓÚÍøÕ¾ÔËÓªÈËÔ±¶øÑÔ£¬ÍÆ¼öÓÖÊÇÎüÒýÓÃ»§
+µÄÒ»ÖÖÖØÒªÊÖ¶Î£¬ÓÉ´ËÎªÍøÕ¾´øÀ´¸ü¶àµÄÊÕÒæ¡£
 
-\section{Ïà¹Ø¹¤×÷}
+ÔÚ±¾ÕÂ£¬ÎÒÃÇÌá³öÒ»ÖÖ»ùÓÚ¾ÛÀàÐÅÏ¢ÈÚºÏµÄÍÆ¼öÄ£ÐÍ£¬ËüÊôÓÚ»ùÓÚÄ£ÐÍµÄÐ­Í¬¹ýÂËÍÆ¼öËã·¨¡£Ð­Í¬¹ýÂË
+µÄ±¾ÖÊÏë·¨ÊÇ£ºµ±ÎÒÃÇÒª¹Û²ìÒ»¸öÓÃ»§¶ÔÒ»¸öÊÓÆµµÄÆ«ºÃÇé¿öµÄÊ±ºò£¬ÕÒµ½ÓëÓÃ»§ÏàËÆµÄÆäËûÓÃ»§£¬È»ºó
+¸ù¾ÝÕâÐ©ÓÃ»§¶Ô¸ÃÊÓÆµµÄÆÀ¼ÛÀ´ÆÀ¹ÀÆ«ºÃÇé¿ö£»»òÕß´ÓÁíÒ»¸ö½Ç¶ÈÀ´¿´£¬¿ÉÒÔÕÒµ½¸ÃÓÃ»§ÆÀ¼Û½Ï¸ßµÄÆäËûÊÓÆµ£¬
+¸ù¾ÝÕâÐ©ÊÓÆµÓë¸ÃÊÓÆµµÄÏàËÆ¶È¶ÔÆ«ºÃ×÷³ö¹À¼Æ¡£²»ÂÛ´ÓÄÄ¸ö½Ç¶È³ö·¢£¬×îÖÕ¶¼ÒªÂäÊµµ½ÏàËÆ¶ÈµÄ¼ÆËã¡£
+ÔÚ¼òµ¥µÄÄ£ÐÍÖÐ£¬¿ÉÒÔÊ¹ÓÃÃ¿¸öÓÃ»§»òÕßÊÓÆµµÄ½»»¥ÏòÁ¿(ÓÐ¡¡ÓÃ»§-ÊÓÆµ¡¡½»»¥µÄµ¥ÔªÎª1,·ñÔòÎª0)×÷ÎªÆä
+ÌØÕ÷ÏòÁ¿£¬È»ºó¼ÆËãÓÃ»§(ÊÓÆµ)Ö®¼äÌØÕ÷ÏòÁ¿µÄÓàÏÒÏàËÆ¶È,ÒÔ´Ë×÷ÎªÏàËÆ¶È£¬ÓÃÓÚ×îºóÆ«ºÃÖµ¼ÆËãµÄ¼ÓÈ¨ÏµÊý¡£
 
-»¥ÁªÍø³ÐÔØ×ÅÊýÒÔÒÚ¼ÆµÄÊÓÆµÄÚÈÝ£¬ÔÚÈç´Ë¶àµÄÑ¡ÔñÖ®ÏÂ£¬ÓÃ»§¼«Ò×±äµÃÎÞËùÊÊ´Ó£®¶ÔÓÚÊÓ
-ÆµÍøÕ¾¶øÑÔ£¬Á¼ºÃµÄÍÆ¼öÏµÍ³ÊÇËüÃÇÀµÒÔ³É¹¦µÄ¹Ø¼üÒòËØ£®ÔÚYouTubeÖÐ£¬Ìá¹©ÁËÏà¹ØÊÓÆµ
-µÄÍÆ¼ö·þÎñ£®\cite{imc}·¢ÏÖÔÚËùÓÐµÄYouTubeµÄÓÃ»§Á÷Á¿ÖÐ£¬´ó²¿·Ö¶¼À´×Ô£¢Ïà¹ØÊÓÆµ£¢µÄÍÆ¼ö
-·þÎñ£®ÕâËµÃ÷£¬´ó²¿·ÖÈËÒÑ¾­Ê®·ÖµØÒÀÀµÓÚÍÆ¼öÏµÍ³µÄ¹¦ÄÜÁË£®
+<<¡¡¼òµ¥´Ö²ÚµÄÌØÕ÷ÏòÁ¿¹À¼Æ·½·¨¡¡>>
 
-ÎªÁË×ö³öÍÆ¼ö£¬YouTubeÐèÒªÕÒ³öÓëµ±Ç°¹Û¿´ÊÓÆµ×îÏàËÆµÄÊÓÆµ£®\cite{youtube}½ÒÊ¾ÁËYouTubeËùÊ¹ÓÃµÄ
-ÍÆ¼ö»úÖÆ£¬Æä±¾ÖÊÉÏÊÇÊ¹ÓÃÒ»¸ö¼òµ¥ÓÐÐ§µÄ£¢¹²ÊÓ¼ÆÊý£¢×÷ÎªÏàËÆÐÔµÄÖ¸±ê£¬¶ÔÓÚÃ¿Ò»¶ÔÔÚ
-Í¬Ò»´Î»á»°ÖÐ±»Ò»Æð¹Û¿´µÄÊÓÆµ£¬¶¼ËãÒ»´Î¼ÆÊý£®\cite{youtubewalk}À©Õ¹ÁË£¢¹²ÊÓ£¢µÄ¸ÅÄî£¬ÔÚ´ËÖ®ÉÏÓ¦ÓÃ
-Ëæ»úÓÎ×ßËã·¨µÃ³ö¸ü¾«È·µÄÏàËÆ¶È¼ÆËã£®
+ÔÚÉÏÊö¼ÆËãÖÐ£¬ÎÒÃÇ¼ÙÉèÃ¿¸öÓÃ»§(ÊÓÆµ)µÄÌØÕ÷ÏòÁ¿ÊÇÒ»¸ö½»»¥ÏòÁ¿£¬ÕâÖÖÌØÕ÷ÊÇ´ÓÔ­Ê¼Êý¾ÝÖÐµÃÀ´µÄ´Ö²Ú¹À¼Æ¡£
+ÔÚÉÏÊöµÄÀý×ÓÖÐ£¬Ê¹ÓÃµÄÊÇÓÃ»§½»»¥Êý¾Ý×÷ÎªÌØÕ÷ÏòÁ¿£¬ÆäÖÐµÄÃ¿¸öµ¥Ôª¸ñ´ú±íÔÚÄ³¸öÊÓÆµÉÏÁ½¸öÓÃ»§Ö®¼äµÄ0-1ÏàËÆ¶È¡£
+ÕâÖÖ¹À¼Æ·½·¨´æÔÚÐí¶àÎÊÌâ£¬Ò»ÊÇÃ¿¸öµ¥Ôª¸ñµÄ¹À¼ÆÊýÖµ²»¾«È·£¬Ê¹ÓÃÒ»¸öÊµÊýÓòµÄÖµ¸ü¼ÓÆ½»¬£»¶þÊÇÌØÕ÷ÏòÁ¿ÖÐ°üº¬
+ÁË´óÁ¿µÄµ¥Ôª¸ñ£¬Ã¿¸öµ¥Ôª¸ñ¶¼´ú±íÒ»¸öÊÓÆµµÄ¡°Í¶Æ±¡±£¬ÕâÔÚÊµ¼ÊÔËÓÃÖÐ½«µ¼ÖÂ´æ´¢´óÁ¿µÄÄ£ÐÍ²ÎÊý£¬¶øÔÚ´óÐÍÍøÕ¾
+ÖÐÓÃ»§ºÍÊÓÆµµÄÊýÁ¿»ùÊýÊÇÒÔÒÚ¼ÆµÄ£¬´æ´¢ÕâÃ´´óµÄÌØÕ÷ÏòÁ¿ÊÇÄÑÒÔÀ©Õ¹µÄ¡£
+Îª´Ë£¬»ùÓÚÄ£ÐÍµÄÍÆ¼öÄ£ÐÍÌá³ö£¬ÓÃ»§µÄÌØÕ÷ÏòÁ¿¿ÉÒÔÓÃÒ»¸öÎ¬¶È½ÏÐ¡µÄÏòÁ¿À´±íÊ¾£¬¾ö¶¨ÏàËÆ¶ÈµÄÃ¿¸öµ¥Ôª¸ñ²»ÔÙÊÇ
+Ò»¸ö¸öÊµÌå½»»¥Êý¾Ý£¬¶øÊÇ¸ü¼ÓÉî²ã´ÎÓë±¾ÖÊÉÏµÄ¾ö¶¨ÒòËØ£¬ÕâÐ©½»»¥Êý¾Ý²»¹ýÊÇÕâÐ©±¾ÖÊÒòËØËù·´Ó¦³öÀ´µÄÒ»ÖÖÏÔÊ¾·´À¡¡£
+ÀýÈç£¬ÔÚÊÓÆµÍÆ¼öµÄ³¡ºÏÖÐ£¬ÕâÐ©ÒòËØ¿ÉÄÜ»áÊÇÊÓÆµµÄ¸÷¸öÎüÒýÈËµÄ²¿·Ö£º¶¯×÷³É·Ö£¬°®Çé³É·Ö£¬ÐüÒÉ³É·ÖµÈ´ý¡£ÎÒÃÇ
+³ÆÕâÐ©ÒòËØÎª¡°Òþº¬Òò×Ó¡±£¬ÒòÎªËüÃÇ²¢²»ÔÚÕæÊµÊý¾ÝÖÐÌåÏÖ³öÀ´£¬¶øÊÇÒþ²ØÔÚÕæÊµÊý¾ÝÖ®ºó¿ØÖÆ×ÅÒ»ÇÐ¡£ÒòÎªÔÚ·´À¡Êý¾Ý
+ÖÐ²¢Î´ËµÃ÷Ä³¸ö·´À¡ÊÇÓÉÓÚÄÄ¸öÒò×Ó²úÉú£¬»òÕßÕâÐ©Òò×ÓÔÚ²úÉú¸Ã·´À¡µÄÊ±ºò¸÷Õ¼ÁË¶àÉÙÈ¨ÖØ£¬Òò´ËÊµ¼ÊÖÐÎÒÃÇÖ»ÄÜµÃµ½
+Ã¿¸öÊµÌå(ÓÃ»§»òÕßÊÓÆµ)µÄÕâÐ©Òò×ÓµÄ·Ö²¼£¬È´²»ÖªµÀÕâÐ©Òò×ÓµÄÕæÊµÀàÐÍ£¬¼´ÎÒÃÇÖªµÀÒ»¸öÒò×Ó¶ÔÓÚ¾ö¶¨AÓÃ»§Æ«ºÃÊ®·Ö
+ÖØÒª£¬µ«È´²»ÖªµÀËüÃÇµÄÕæÊµÀàÐÍ£¬Ö»ÄÜÓÃÎ»ÖÃË÷Òý½øÐÐ±êÊ¶£¬¼´ÏàÍ¬Î»ÖÃË÷ÒýµÄÒò×Ó´ú±íÍ¬Ò»ÀàÒò×Ó¡£
 
-ÁíÒ»·½Ãæ£¬Ñ§ÕßÔÚ¸öÐÔ»¯ÍÆ¼öÁìÓòÒ²Ìá³öÐí¶à·½·¨½â¾öÍÆ¼öÎÊÌâ£®Netflix ´óÈüÖ¤ÊµÁË»ùÓÚ
-Òþº¬Òò×ÓµÄ·Ö½âÄ£ÐÍÔÚÐ§¹ûÉÏÒªÓÅÓÚ¾­µäµÄ½üÁÚËã·¨\cite{netflix}£®ÎªÁË½øÒ»²½½â¾öÒþÊ½·´À¡Êý¾ÝÎÊÌâ£¬
-\cite{BPR}½øÒ»²½Ìá³öÁË»ùÓÚÆ«Ðò¹ØÏµµÄÓÅ»¯·½·¨£®ÔÚ´ËÖ®ÉÏ£¬\cite{lcr}·¢ÏÖÓÃ»§µÄÆ«ºÃ³ÊÏÖ¾Ö²¿ÐÔ£¬Ìá³ö
-ÁË»ùÓÚ¾Ö²¿Æ«ºÃÅÅÐòµÄÏµÍ³¹ýÂË£®\cite{multiverse}À©Õ¹ÁË´«Í³µÄ¶þÎ¬µÄ¾ØÕó·Ö½â£¬Ê¹ÓÃÈýÎ¬µÄÕÅÁ¿·Ö½â
-ÔÚÉÏÏÂÎÄ¸ÐÖªµÄ³¡¾°ÏÂ×öÍÆ¼ö£¬ÕâÀà·½·¨µÄÒ»¸öÃ÷ÏÔÈ±µãÊÇ£ºÔö¼ÓµÄÎ¬¶È»áÃ÷ÏÔÔö¼ÓÄ£ÐÍµÄ
-¸´ÔÓ¶È£¬´Ó¶ø²úÉú£¢¹ýÄâºÏ£¢ÎÊÌâ£®ÒòÎª¹¹½¨¸´ÔÓÄ£ÐÍÈÝÒ×Ôì³É£¢¹ýÄâºÏ£¢ÎÊÌâ£¬¸ü¶àµÄÑ§
-ÕßÇãÏòÓÚ×¨×¢¼õÉÙÊý¾ÝµÄÏ¡ÊèÐÔ£®
+ÉÏÊöÌÖÂÛÖÐ£¬ÎÒÃÇÊ¹ÓÃÒ»ÏµÁÐÓÐÏÞµÄÒò×ÓÀ´±íÊ¾ÓÃ»§µÄÌØÕ÷¡£¶ø½øÒ»²½£¬ÎÒÃÇ¿ÉÒÔ¼ÙÉèÕâÐ©ÌØÕ÷²»¾ÖÏÞÓÚµ¥¸öÊµÌå£¬¶øÊÊÓÃ
+Õû¸öÓ¦ÓÃ³¡¾°ÖÐµÄËùÓÐÊµÌå£¬ÀýÈç¶ÔÓÚÊÓÆµµÄ¶¯×÷³É·Ö£¬ÓÃ»§Ò²¿ÉÒÔÓµÓÐÆäÒò×ÓÈ¨ÖØ£¬´ú±íÓÐ¶àÏ²»¶Ä³¸öÀàÐÍµÄÊÓÆµ¡£
+ÕâÑù£¬Ã¿ÀàÉæ¼°µ½µÄÊµÌå¶¼ÄÜÓµÓÐÒ»¸öÌØÕ÷ÏòÁ¿£¬ÓÃ»§ÊÓÆµÖ®¼äµÄÆ«ºÃÖµ¿ÉÒÔÖ±½ÓÊ¹ÓÃÏòÁ¿µÄÄÚ»ýÀ´±íÊ¾£¬×îÖÕµÄÐ§¹ûÊÇ
+Ã¿¸öÓÃ»§ºÍÊÓÆµ¶¼±»Ó³Éäµ½Ò»¸öÌØÕ÷¿Õ¼äÖ®ÖÐ£¬ÓÐ¼¸¸öÒò×Ó¾ÍÊÇ¼¸Î¬¿Õ¼ä¡£
+ÀýÈç£¬Ô¤ÆÚÖÐÎÒÃÇÈÏÎªPeter²»Ï²»¶µçÓ°$alpha$£¬¶ø¸üÏ²»¶µçÓ°
+$beta$,¶ÔÓÚMaryÀ´ËµÕýºÃÏà·´£®Ò»µ©ÏòÁ¿±»¼ÆËãºÃ£¬ÍÆ¼ö¾ÍÄÜ¹»ºÜÇáËÉµØ½øÐÐ£®Èç¹ûÎÒÃÇÊ¹ÓÃ
+K¸öÒþº¬Òò×Ó£¬ÄÇÃ´Òþº¬ÌØÕ÷ÏìÁÁ¾ÍÊÇKÎ¬£¬ÄÇÃ´Èç¹û$K(N+M) < NM$,ÄÇÃ´Ïà¹ØµÄÊý¾Ý±»´óÁ¿µÄ
+¼õÉÙ£¬´Ó¶ø´ïµ½Î¬¶ÈÏÂ½µµÄÐ§¹û£®
 
-ÎªÁË½â¾öÊý¾ÝÏ¡ÊèÐÔÎÊÌâ£¬£¢¹²·Ö½âÄ£ÐÍ£¢ÊÇÆÕ±é²ÉÓÃµÄÒ»ÖÖÊÖ¶Î£®Æä»ù±¾¼ÜÉèÍ¬ÑùÊÇÒþº¬
-Òò×Ó£¬Ö»²»¹ý²»Í¬µÄÊý¾ÝÍøÂçÖÐµÄ·´À¡ÓÉÒ»×éÏà¹ØµÄÒþº¬Òò×Ó¾ö¶¨£¬ÕâÑù´ïµ½µÄÐ§¹ûÊÇ´Ó¶à
-¸öÍøÂçÖÐÑ§Ï°¹²Í¬µÄÒ»¸öÄ¿±ê£®\cite{unified}¼ÙÉèÓÃ»§ÔÚYouTubeÉÏµÄ»î¶¯ÓëÆäÔÚTweeterÉÏµÄ»î¶¯Ïà
-¹Ø£¬»ù±¾¶¯»úÊÇÓÃ»§ÔÚTweeterÉÏµÄ»î¶¯Ïà½ÏÓÚÔÚYouTubeÉÏÒª»îÔ¾ºÜ¶à£¬´ÓTweeterÉÏµÃµ½
-µÄÓëÓÃ»§Ïà¹ØµÄÐÅÏ¢ÓÐÖúÓÚÆäÔÚYouTubeÉÏµÄÍÆ¼ö£®\cite{Leskovec}ÊÔÍ¼½«¹ºÎïÍøÕ¾ÉÏµÄÒþº¬ÌØÕ÷ÓëÉÌÆ·
-µÄÆÀ¼ÛÎÄ±¾ÉÏµÄÖ÷Ìâ·Ö²¼Ïà»¥¶ÔÆë£®\cite{xiexing}½«ÓÃ»§µÄGPSÐÅÏ¢ÈÚºÏ½ø»ùÓÚÎ»ÖÃ·þÎñµÄÍÆ¼öÏµÍ³£®
-Èç¹ûÔ­Ê¼Êý¾ÝÍøÂçÖ»ÄÜÌá¹©ÓÅÏÈµÄ·´À¡Êý¾Ý£¬Ò»Ð©Ïà¹ØµÄÊý¾ÝÍøÂçÄÜ¹»ÓÃÀ´ÃÖ²¹Êý¾ÝÈ±Ê§´ø
-À´µÄ²»×ã£®
+  \begin{figure}[t]
+  \includegraphics[width=1.\textwidth]{Figure/latent_space.png}
 
-ÔÚ±¾ÕÂµÄÌÖÂÛÖÐ£¬ÎÒÃÇÒª½«ÎÒÃÇµÄÄ£ÐÍ½¨Á¢ÔÚ£¢¹²·Ö½â£¢¼¼ÊõÖ®ÉÏ£®¸úÖ®Ç°¹¤×÷²»Í¬Ö®´¦ÔÚ
-ÓÚ£¬ÎÒÃÇµÄ·½·¨½«Ê¹ÓÃÍ¬Ò»¸öÊý¾ÝÍøÂçÖÐµÄÊý¾ÝµÄ²»Í¬·½Ãæ£®ÕâÑù×öµÄÓÅµãÔÚÓÚºÜ×ÔÈ»µÄ±£
-Ö¤ÁËÒþº¬Òò×ÓµÄÒ»ÖÂÐÔ£¨ÓÃ»§ÔÚ²»Í¬ÍøÂçÖÐµÄÐËÈ¤·Ö²¼ÍùÍù»á²»Í¬£©£®ÎÒÃÇµÄÄ£ÐÍÍ¬Ê±Ê¹ÓÃ
-£¢Æ«ÐòÐÅºÅ£¢ºÍ£¢¾ÛÀàÐÅºÅ£¢£¬¶ÔÓÚ¾ÛÀàÐÅºÅ£¬ÎÒÃÇ½«ÆäÈÚÈë¸öÐÔ»¯ÍÆ¼öµÄ¿ò¼Ü£®
+  \caption{ÒÀ¾ÝÒþº¬±äÁ¿½øÐÐÑ¡ÔñµÄ¹ý³Ì}
+  \label{fig:latent_space}
+  \end{figure}
 
-±¾ÕÂµÄ¹±Ï×ÈçÏÂ£º
+ÔÚÊµ¼ÊÇé¿öÖÐ£¬ÕâÖÖÒþº¬Òò×ÓÄ£ÐÍÌØ±ðÊÊºÏÓÚ´æ´¢¿ªÏúºÍ¼ÆËã¿ªÏú¾Þ´óµÄ´óÊý¾Ý¼¯¡£
+¸ø¶¨Ò»¸öÊµ¼ÊÏµÍ³µÄÊý¾Ý¼¯£¬ÎÒÃÇ¿ÉÒÔ¼ÙÉè·´À¡Êý¾Ý²úÉúµÄ¹ý³Ì£¬Í¨¹ý¸Ã¹ý³ÌÊ¹ÓÃ
+¼ÙÉèµÄÄ£ÐÍÈ¥ÄâºÏ·´À¡Êý¾Ý¡£
+µ«ÊÇÁíÒ»·½Ãæ£¬ÓÉÓÚÃ¿¸öÊµÌå¶¼ÓµÓÐÒ»×é²ÎÊý£¬Òò´ËÄ£ÐÍµÄ²ÎÊý¸öÊý»¹ÊÇÔ¶Ô¶¶àÓÚ´«Í³µÄÄ£ÐÍ¡£
+Òò´Ë£¬ÔÚÆÕ±éÊ¹ÓÃ¸ÃÄ£ÐÍ¼ÙÉèµÄÍÆ¼öÏµÍ³Ö®ÖÐ£¬´æÔÚ×Å¡°Ï¡ÊèÐÔ¡±ºÍ¡°ÀäÆô¶¯¡±µÈÂé·³µÄÎÊÌâ£¬»á
+µ¼ÖÂ×îÖÕµÃµ½Ê®·Ö²»¾«È·µÄÄ£ÐÍ¡£
+µäÐÍµÄÍÆ¼öÏµÍ³ÖÐ£¬ÊµÌåµÄ¸üÐÂËÙ¶ÈÊ®·ÖÑ¸ËÙ£¬ÐÂµÄÓÃ»§À´È¥²»¶Ï£¬Ã¿Ìì¶¼»áÓÐÐÂµÄÊÓÆµ±»ÉÏ´«¡£
+¶ÔÓÚÕâÐ©ÓÃ»§ÊÓÆµ£¬ÀúÊ·¼ÇÂ¼Ï¡ÉÙ£¬ÓÉÓÚÐ­Í¬¹ýÂËÊ¹ÓÃ½»»¥Êý¾ÝÀ´´ÓÆäËûÊµÌåµÃµ½Ò»¸öÊµÌåµÄÌØÕ÷ÏòÁ¿£¬
+Ö»ÓÐ±£Ö¤ÁËÒ»¸öÊµÌå´óÁ¿µÄ½»»¥£¬²ÅÄÜµÃµ½Ò»¸ö×¼È·µÄÌØÕ÷ÏòÁ¿£»Í¬Ê±£¬ÆäËûÊµÌå»á²Î¿¼Õâ¸ö²»¾«È·µÄÊµÌå
+µÃµ½¸÷×ÔµÄÌØÕ÷ÏòÁ¿£¬½øÒ»²½¸ÉÈÅÁËÆäËûÌØÕ÷ÏòÁ¿µÄÑµÁ·¡£
+
+½â¾öÕâÐ©ÎÊÌâµÄ·½·¨ÏÔÈ»ÊÇ»ñÈ¡¸ü¶àµÄÊý¾Ý£¬Ò»¸öË¼Â·ÊÇ»ñÈ¡ÓëÕâÐ©ÊµÌåÏà¹ØµÄÆäËûÓ¦ÓÃ³¡¾°ÏÂµÄÊý¾Ý£¬
+ÓÃÓÚÑµÁ·ÆäÔÚÊÓÆµÍÆ¼ö³¡¾°ÏÂµÄÌØÕ÷¡£ÕßÐèÒª±£Ö¤Á½µã£¬Ò»ÊÇ²»Í¬³¡¾°ÏÂµÄÌØÕ÷ÏòÁ¿µÄÏà¹ØÐÔÇ¿£¬
+·ñÔòÒýÈëµÄÊý¾ÝÖ»ÄÜ±»µ±×öÔëÒô´¦Àí£»¶þÊÇÊ¹ÓÃÕýÈ·µÄÄ£ÐÍÀ´¼ÙÉèÕâÐ©ÊµÌåÔÚÆäËû³¡¾°ÏÂµÄÐÐÎª£¬
+²¢ÇÒÔÚ½¨Ä£µÄÊ±ºòÒ²µ±ÌåÏÖ³öÓëÊÓÆµÍÆ¼ö³¡¾°ÓÐÒ»¶¨µÄÏà¹ØÐÔ¡£
+ÔÚ±¾ÕÂ£¬ÎÒÃÇ²ÉÈ¡ÁíÒ»¸öË¼Â·£¬¼´ÔÚÒ»¸öÓ¦ÓÃ³¡¾°Ö®ÖÐ»ñÈ¡²»Í¬ÀàÐÍµÄÐÅºÅ£¬Ê¹ÓÃÕâÐ©ÐÅºÅ¶ÔÄ£ÐÍ½øÐÐÄâºÏ¡£
+ÓÉÓÚ²»Í¬µÄÐÅºÅÀ´×ÔÓÚÍ¬Ò»¸öÓ¦ÓÃ³¡¾°(¶¼ÊÇÊÓÆµÍøÕ¾Ó¦ÓÃ),²»Í¬ÐÅºÅÖ®¼äÌìÈ»µÄ¾ß±¸Ò»¶¨µÄÏà¹ØÐÔ£»ÁíÒ»
+·½Ãæ£¬ÕâÃ´×öÊ¹µÃÎÒÃÇÄÜ¹»±ÜÃâÓëÆäËûÓ¦ÓÃ³¡¾°´ò½»µÀ£¬È´ÄÜµÃµ½¸ü¶àµÄÑµÁ·Êý¾Ý¡£¾ßÌå¶øÑÔ£¬Ä¿Ç°
+Õë¶ÔÒþÊ½µÄÓÃ»§·´À¡£¬Ñ§Êõ½çÆÕ±é²ÉÓÃ»ùÓÚÆ«ºÃÆ«Ðò¹ØÏµµÄÑ§Ï°·½·¨»ñÈ¡Ä£ÐÍ²ÎÊý£¬Æ«ºÃµÄÆ«Ðò¹ØÏµÊÇ
+¶ÔÍÆ¼ö³¡¾°µÄÁ¼ºÃÀà±È£¬µ«ÊÇÍ¨³£Çé¿öÏÂÓÃ»§µÄ·´À¡Êý¾Ý¼«¶ÈØÑ·¦£¬ÔÚ½ö´æÔÚÕýÀýºÍ´óÁ¿Î´ÖªµÄ·´À¡µÄ
+Çé¿öÏÂ£¬Á¼ºÃµÄÆ«Ðò¹ØÏµ¼«ÄÑ»ñµÃ¡£ÎÒÃÇÈÏÎª£ºÕâÖÖÆ«Ðò¹ØÏµÊ®·ÖÖØÒª£¬Í¨¹ýÆ«ÐòÐÅºÅÄÜ¹»µÃµ½²¿·Ö¾«È·
+µÄÌØÕ÷ÏòÁ¿£¬½øÒ»²½ÀûÓÃÊÓÆµµÄ¾ÛÀàÐ§Ó¦£¬Ê¹µÃÍ¬Ò»¾ÛÀàÖÐµÄÊÓÆµ¾¡Á¿Ïà½ü£¬ÄÜ¹»Ê¹µÃ²¿·Ö²»¾«È·µÄÄ£ÐÍ
+Ïò¾«È·µÄÄ£ÐÍ±Æ½ü£¬½ø¶øµÃµ½¸ü¾«È·µÄÄ£ÐÍ¡£
+Í¨¹ýÕâÖÖÏë·¨£¬ÎÒÃÇÌá³öÁË»ùÓÚ¾ÛÀàÐÅºÅÈÚºÏµÄÍÆ¼öÄ£ÐÍ£¬Æä»ù±¾Ïë·¨ÊÇÈÚºÏÆ«ÐòÐÅºÅÓë¾ÛÀàÐÅºÅ£¬
+´Ó·´À¡Êý¾ÝÖÐ»ñÈ¡Òþº¬ÌØÕ÷¡£Í¨¹ý¶ÔÕæÊµÊý¾ÝµÄÊµÑé½á¹û±íÃ÷£¬¾ÛÀàÐÅºÅÄÜ¹»ÓÐÐ§µØÌáÉýÍÆ¼öËã·¨µÄÐ§¹û¡£
+
+% \section{Ïà¹Ø¹¤×÷}
+% 
+% »¥ÁªÍø³ÐÔØ×ÅÊýÒÔÒÚ¼ÆµÄÊÓÆµÄÚÈÝ£¬ÔÚÈç´Ë¶àµÄÑ¡ÔñÖ®ÏÂ£¬ÓÃ»§¼«Ò×±äµÃÎÞËùÊÊ´Ó£®¶ÔÓÚÊÓ
+% ÆµÍøÕ¾¶øÑÔ£¬Á¼ºÃµÄÍÆ¼öÏµÍ³ÊÇËüÃÇÀµÒÔ³É¹¦µÄ¹Ø¼üÒòËØ£®ÔÚYouTubeÖÐ£¬Ìá¹©ÁËÏà¹ØÊÓÆµ
+% µÄÍÆ¼ö·þÎñ£®\cite{imc}·¢ÏÖÔÚËùÓÐµÄYouTubeµÄÓÃ»§Á÷Á¿ÖÐ£¬´ó²¿·Ö¶¼À´×Ô£¢Ïà¹ØÊÓÆµ£¢µÄÍÆ¼ö
+% ·þÎñ£®ÕâËµÃ÷£¬´ó²¿·ÖÈËÒÑ¾­Ê®·ÖµØÒÀÀµÓÚÍÆ¼öÏµÍ³µÄ¹¦ÄÜÁË£®
+% 
+% ÎªÁË×ö³öÍÆ¼ö£¬YouTubeÐèÒªÕÒ³öÓëµ±Ç°¹Û¿´ÊÓÆµ×îÏàËÆµÄÊÓÆµ£®\cite{youtube}½ÒÊ¾ÁËYouTubeËùÊ¹ÓÃµÄ
+% ÍÆ¼ö»úÖÆ£¬Æä±¾ÖÊÉÏÊÇÊ¹ÓÃÒ»¸ö¼òµ¥ÓÐÐ§µÄ£¢¹²ÊÓ¼ÆÊý£¢×÷ÎªÏàËÆÐÔµÄÖ¸±ê£¬¶ÔÓÚÃ¿Ò»¶ÔÔÚ
+% Í¬Ò»´Î»á»°ÖÐ±»Ò»Æð¹Û¿´µÄÊÓÆµ£¬¶¼ËãÒ»´Î¼ÆÊý£®\cite{youtubewalk}À©Õ¹ÁË£¢¹²ÊÓ£¢µÄ¸ÅÄî£¬ÔÚ´ËÖ®ÉÏÓ¦ÓÃ
+% Ëæ»úÓÎ×ßËã·¨µÃ³ö¸ü¾«È·µÄÏàËÆ¶È¼ÆËã£®
+% 
+% ÁíÒ»·½Ãæ£¬Ñ§ÕßÔÚ¸öÐÔ»¯ÍÆ¼öÁìÓòÒ²Ìá³öÐí¶à·½·¨½â¾öÍÆ¼öÎÊÌâ£®Netflix ´óÈüÖ¤ÊµÁË»ùÓÚ
+% Òþº¬Òò×ÓµÄ·Ö½âÄ£ÐÍÔÚÐ§¹ûÉÏÒªÓÅÓÚ¾­µäµÄ½üÁÚËã·¨\cite{netflix}£®ÎªÁË½øÒ»²½½â¾öÒþÊ½·´À¡Êý¾ÝÎÊÌâ£¬
+% \cite{BPR}½øÒ»²½Ìá³öÁË»ùÓÚÆ«Ðò¹ØÏµµÄÓÅ»¯·½·¨£®ÔÚ´ËÖ®ÉÏ£¬\cite{lcr}·¢ÏÖÓÃ»§µÄÆ«ºÃ³ÊÏÖ¾Ö²¿ÐÔ£¬Ìá³ö
+% ÁË»ùÓÚ¾Ö²¿Æ«ºÃÅÅÐòµÄÏµÍ³¹ýÂË£®\cite{multiverse}À©Õ¹ÁË´«Í³µÄ¶þÎ¬µÄ¾ØÕó·Ö½â£¬Ê¹ÓÃÈýÎ¬µÄÕÅÁ¿·Ö½â
+% ÔÚÉÏÏÂÎÄ¸ÐÖªµÄ³¡¾°ÏÂ×öÍÆ¼ö£¬ÕâÀà·½·¨µÄÒ»¸öÃ÷ÏÔÈ±µãÊÇ£ºÔö¼ÓµÄÎ¬¶È»áÃ÷ÏÔÔö¼ÓÄ£ÐÍµÄ
+% ¸´ÔÓ¶È£¬´Ó¶ø²úÉú£¢¹ýÄâºÏ£¢ÎÊÌâ£®ÒòÎª¹¹½¨¸´ÔÓÄ£ÐÍÈÝÒ×Ôì³É£¢¹ýÄâºÏ£¢ÎÊÌâ£¬¸ü¶àµÄÑ§
+% ÕßÇãÏòÓÚ×¨×¢¼õÉÙÊý¾ÝµÄÏ¡ÊèÐÔ£®
+% 
+% ÎªÁË½â¾öÊý¾ÝÏ¡ÊèÐÔÎÊÌâ£¬£¢¹²·Ö½âÄ£ÐÍ£¢ÊÇÆÕ±é²ÉÓÃµÄÒ»ÖÖÊÖ¶Î£®Æä»ù±¾¼ÜÉèÍ¬ÑùÊÇÒþº¬
+% Òò×Ó£¬Ö»²»¹ý²»Í¬µÄÊý¾ÝÍøÂçÖÐµÄ·´À¡ÓÉÒ»×éÏà¹ØµÄÒþº¬Òò×Ó¾ö¶¨£¬ÕâÑù´ïµ½µÄÐ§¹ûÊÇ´Ó¶à
+% ¸öÍøÂçÖÐÑ§Ï°¹²Í¬µÄÒ»¸öÄ¿±ê£®\cite{unified}¼ÙÉèÓÃ»§ÔÚYouTubeÉÏµÄ»î¶¯ÓëÆäÔÚTweeterÉÏµÄ»î¶¯Ïà
+% ¹Ø£¬»ù±¾¶¯»úÊÇÓÃ»§ÔÚTweeterÉÏµÄ»î¶¯Ïà½ÏÓÚÔÚYouTubeÉÏÒª»îÔ¾ºÜ¶à£¬´ÓTweeterÉÏµÃµ½
+% µÄÓëÓÃ»§Ïà¹ØµÄÐÅÏ¢ÓÐÖúÓÚÆäÔÚYouTubeÉÏµÄÍÆ¼ö£®\cite{Leskovec}ÊÔÍ¼½«¹ºÎïÍøÕ¾ÉÏµÄÒþº¬ÌØÕ÷ÓëÉÌÆ·
+% µÄÆÀ¼ÛÎÄ±¾ÉÏµÄÖ÷Ìâ·Ö²¼Ïà»¥¶ÔÆë£®\cite{xiexing}½«ÓÃ»§µÄGPSÐÅÏ¢ÈÚºÏ½ø»ùÓÚÎ»ÖÃ·þÎñµÄÍÆ¼öÏµÍ³£®
+% Èç¹ûÔ­Ê¼Êý¾ÝÍøÂçÖ»ÄÜÌá¹©ÓÅÏÈµÄ·´À¡Êý¾Ý£¬Ò»Ð©Ïà¹ØµÄÊý¾ÝÍøÂçÄÜ¹»ÓÃÀ´ÃÖ²¹Êý¾ÝÈ±Ê§´ø
+% À´µÄ²»×ã£®
+% 
+% ÔÚ±¾ÕÂµÄÌÖÂÛÖÐ£¬ÎÒÃÇÒª½«ÎÒÃÇµÄÄ£ÐÍ½¨Á¢ÔÚ£¢¹²·Ö½â£¢¼¼ÊõÖ®ÉÏ£®¸úÖ®Ç°¹¤×÷²»Í¬Ö®´¦ÔÚ
+% ÓÚ£¬ÎÒÃÇµÄ·½·¨½«Ê¹ÓÃÍ¬Ò»¸öÊý¾ÝÍøÂçÖÐµÄÊý¾ÝµÄ²»Í¬·½Ãæ£®ÕâÑù×öµÄÓÅµãÔÚÓÚºÜ×ÔÈ»µÄ±£
+% Ö¤ÁËÒþº¬Òò×ÓµÄÒ»ÖÂÐÔ£¨ÓÃ»§ÔÚ²»Í¬ÍøÂçÖÐµÄÐËÈ¤·Ö²¼ÍùÍù»á²»Í¬£©£®ÎÒÃÇµÄÄ£ÐÍÍ¬Ê±Ê¹ÓÃ
+% £¢Æ«ÐòÐÅºÅ£¢ºÍ£¢¾ÛÀàÐÅºÅ£¢£¬¶ÔÓÚ¾ÛÀàÐÅºÅ£¬ÎÒÃÇ½«ÆäÈÚÈë¸öÐÔ»¯ÍÆ¼öµÄ¿ò¼Ü£®
+% 
+% ±¾ÕÂµÄ¹±Ï×ÈçÏÂ£º
+% \begin{enumerate}
+% \item ÎÒÃÇÍ¨¹ýÔÚÍ¬Ò»¸öÊý¾ÝÔ´ÖÐ³éÈ¡Á½Àà²»Í¬µÄÊý¾ÝÐÅºÅ£¬ÒÔ½â¾öÍÆ¼öÏµÍ³ÖÐÆÕ±é´æÔÚµÄ
+% Êý¾ÝÏ¡ÊèÐÔÎÊÌâ£®
+% \item ÎÒÃÇ½«Á½ÖÖ²»Í¬ÀàÐÍµÄÐÅºÅÈÚºÏµ½Ò»¸öÍ¬Ò»µÄÍÆ¼ö¿ò¼ÜÖ®ÖÐ£®
+% \item ÎÒÃÇÊ¹ÓÃÕæÊµ³¡¾°ÏÂµÄÊý¾Ý½øÐÐÁËÊµÑé£¬²¢ÇÒÑéÖ¤ÁË·½·¨µÄÓÐÐ§ÐÔ£®
+% \end{enumerate}
+\section{Ëã·¨¼ò½é}
+
+\subsection{¶¯»úÓëÖ±¾õ}
+ÎÒÃÇµÄËã·¨ÊÇÔÚBPR-MF(»ùÓÚ¾ØÕó·Ö½âµÄ±´Ò¶Ë¹ÅÅÐòÍÆ¼ö)Ö®ÉÏ£¬½áºÏÊÓÆµ¾ÛÀàÐÅÏ¢µÄ¶àÐÅºÅÔ´ÍÆ¼öÏµÍ³¡£Ö®
+ËùÒÔÊÇ¡°¶àÐÅºÅ¡±£¬ÔÚÓÚÔ­À´µÄBPR-MFÊÇ½«Ô­Ê¼Êý¾Ý×ª»¯ÎªÒ»¸ö¸öÆ«Ðò¶Ô£¬¼´Æ«ÐòÐÅºÅ£¬Ö®ºóÊ¹ÓÃÆ«Ðò¶Ô×÷Îª
+Ä£ÐÍµÄ·´À¡ÐÅÏ¢£¬ÕâÖÖÆ«ÐòÐÅºÅ½«×÷ÎªÎÒÃÇµÄ¿ò¼ÜµÄÐÅºÅÔ´Ö®Ò»¡£ÔÚÆ«ÐòÐÅºÅÖ®Íâ£¬ÎÒÃÇ¶îÍâÀûÓÃÁËÔ­Ê¼Êý¾Ý
+ÖÐµÄÊÓÆµ¾ÛÀàÐÅÏ¢£¬¼´ÓÃ»§ÎÞÒâÊ¶µØ½«ÊÓÆµÔÚÊ±¼äÖáÉÏ½øÐÐµÄ¾ÛÀà£¬½«¾ÛÀàÐÅÏ¢×ª»¯Îª¾ÛÀàÐÅºÅ£¬Õâ¸ö¾ÛÀàÐÅºÅ
+½«×÷ÎªÎÒÃÇµÄËã·¨µÄÁíÍâÒ»¸öÐÅÏ¢À´Ô´¡£×îÖÕµÄÄ£ÐÍ²»µ«ÊÔÍ¼×¼È·µØÔ¤²âÔ­Ê¼Êý¾ÝÖÐµÄÆ«ºÃµÄÆ«Ðò¶Ô£¬Í¬Ê±
+Ò²¾¡¿ÉÄÜµÄ»¹Ô­Ã¿¸öÓÃ»§ÔÚÊ±¼äÖáÉÏ¶ÔÊÓÆµµÄ¾ÛÀà£¬×ö·¨ÊÇÊ¹µÃ¶ÔÍ¬Ò»¸ö¾ÛÀàÖÐµÄÊÓÆµ¾¡Á¿¸øÓèÏàËÆµÄÆ«ºÃÖµ¡£
+
+ÔÚÄ£ÐÍ½éÉÜÖ®Ç°£¬ÎÒÃÇ½«¾ÍÎªºÎ½«Æ«ÐòÐÅºÅºÍ¾ÛÀàÐÅºÅ½áºÏÆðÀ´×÷³öÒ»¸öÖ±¹ÛµÄ½âÊÍ£®ÆäÖÐ
+µÄ¹Ø¼üË¼ÏëÊÇÕâÐ©ÐÅºÅ¹²ÏíÒ»×éÏàÍ¬µÄ²ÎÊý£¬¾ÛÀàÐÅºÅºÍÆ«ÐòÐÅºÅ¹²Í¬ÓÃÀ´ÑµÁ·Ò»¸öÄ£ÐÍ£¬
+µ±Æ«ÐòÐÅºÅÈ±·¦Ê±ºò£¬Õâ¸ø¾ÛÀàÐÅºÅ°ïÖúÄ£ÐÍÑµÁ·Ìá¹©ÁËÒ»¸ö»ú»á£®
+
+\begin{figure}[t]
+  \includegraphics[width=1.\textwidth]{Figure/intuition.png}
+  \caption{clustering boosted preference}
+  \label{fig:intuition}
+ \end{figure}
+
+ÈçÍ¼\ref{fig:intuition}ËùÊ¾£¬ÊÓÆµxÓëÊÓÆµ{s,t,y,z}½ô½ôµØ¹ØÁªÔÚÒ»Æð(Ã¿´Î£øµÄ³öÏÖ¶¼°éËæ×ÅÊÓÆµ{s,t,y,z}
+µÄ³öÏÖ),µ«ÊÇÏà¶ÔÓÚËùÓÐµÄÊý¾Ý£¬xµÄÑµÁ·Êý¾ÝÏà¶Ô½ÏÉÙ£®¼ÙÉèÎÒÃÇÒª¶ÔÄ³¸ö¹Û¿´¹ýÊÓÆµ{s,t,
+y,z}µÄÓÃ»§×öÍÆ¼ö£¬ÒòÎªÊÓÆµxµÄ¸ß¶ÈÏà¹ØÐÔ£¬ÎÒÃÇÏ£Íûx»á±»ÍÆ¼ö.Èç¹û½ö½öÌá¹©Æ«ÐòÐÅºÅ£¬
+ÄÇÃ´xºÜÄÑ±»ÍÆ¼öµ½£¬ÒòÎªÆäËûÁ÷ÐÐµÄµ«È´Ïà¹ØÐÔ²»Ç¿µÄÊÓÆµ»á½«xÍÆËÍµ½µ×²¿£®ÎªÁËÌáÉýÊÓÆµ
+xµÄÎ»ÖÃ£¬ÎÒÃÇÐèÒª¸æËßÏµÍ³ÊÓÆµxºÜÖØÒª£®¾ÛÀàÐÅºÅÍ¨¹ýÔÚÊÓÆµxºÍÁ÷ÐÐÊÓÆµ{s,t,y,z}Ö®¼ä
+½¨Á¢¹ØÁªÊ¹µÃxÇ÷½üÓÚÕâÐ©Á÷ÐÐÊÓÆµ£¬´Ó¶ø¼ä½ÓµØÌáÉýÁËÊÓÆµµÄÈ¨ÖØ£¬½ø¶øÔö¼ÓÁËÏò¸ÃÓÃ»§
+ÍÆ¼ö¸ÃÊÓÆµµÄ¸ÅÂÊ£®
+
+Æ«ÐòÐÅºÅÌåÏÖ³ö¸öÐÔ»¯µÄÁ÷ÐÐ¶ÈµÄÇ÷ÊÆ£¬ÕâÒâÎ¶×ÅËü»á¸üÆ«ÏòÓÚÁ÷ÐÐÊÓÆµ¶ø²»ÊÇÏà¹ØÊÓÆµ£¬
+Ïà¹ØÊÓÆµ²»Ò»¶¨ÊÇÁ÷ÐÐµÄ£¬¶øÊÇÖ÷ÌâÐËÈ¤Ê®·ÖÏà½üµÄÄÚÈÝ£®¶ø¾ÛÀàÐÍºÅ¸ü¼Ó¹Ø×¢Ïà¹Ø¶ÈÕâÒ»
+ÒòËØ£¬ÕâÒ²½âÊÍÁËÎªºÎ¾ÛÀàÐÅºÅÔÚYouTubeÉÏµÄ³É¹¦Ó¦ÓÃ£®ÓëYouTube²»Í¬µÄÒ»µãÊÇ£¬¶ÔÓÚ²»
+Í¬µÄÓÃ»§£¬Ò»¸öÊÓÆµµÄÏà¹ØÊÓÆµ×Ü»áÊÇÒ»ÑùµÄ£»¶øÎÒÃÇÃèÊöµÄÏà¹ØÊÓÆµ¶Ô²»Í¬µÄÓÃ»§½«»áÓÐ
+²»Í¬µÄÊÓÆµÁÐ±í£®
+
+<< Í¼XXX >>
+
+ÔÚÕû¸öÍÆ¼öÏµÍ³ÖÐ£¬ÓµÓÐµÄÊµÌåÖ»ÓÐÓÃ»§ºÍÊÓÆµ£¬ÓëËüÃÇÖ®¼äµÄ²¿·Ö½»»¥ÐÅÏ¢¡£ÍÆ¼öÏµÍ³½«ÔÚ
+ÈÎºÎÊ±¼äµã£¬¶ÔÃ¿¸öÓÃ»§Ìá¹©Ò»¸öÊÓÆµµÄÍÆ¼öÁÐ±í£¬Ê¹µÃÓÃ»§½«À´¾¡¿ÉÄÜµØÔÚ¸ÃÁÐ±íÑ¡ÔñÒª
+¹Û¿´µÄÊÓÆµ¡£Ò»´Î¹Û¿´ÊÓÆµµÄ»á»°°üº¬±»¹Û¿´µÄÒ»ÏµÁÐÊÓÆµ£¬´«Í³µÄÍÆ¼öÏµÍ³Ö»¹Ø×¢ÄÄÐ©ÊÓÆµ
+±»ÓÃ»§Ëù¹Û¿´£¬¶øÄÄÐ©ÊÓÆµÃ»ÓÐ±»¹Û¿´£¬ËùÓÐÊ±¼äÉÏµÄÐÅÏ¢±»¼òµ¥µØºöÂÔ¡£ÎÒÃÇÈÏÎªÓÃ»§ÊÂÊµÉÏ
+ÎÞÒâÊ¶µØ½«ÊÓÆµ¾ÛÀàÔÚÒ»Æð£¬ÕâÖÖ¾ÛÀàÓëÓÃ»§µÄÆ«ºÃ¸ß¶ÈÏà¹Ø£¬¶øÊ±¼ä´ÁÐÅÏ¢¸æËßÎÒÃÇÓÃ»§
+»áÈçºÎ½«ËüÃÇ¾ÛÀà¡£Òò´Ë£¬ÎÒÃÇÌá³öÒ»¸ö¡°Ë«ÐÅºÅÈÚºÏ¡±µÄÍÆ¼ö¿ò¼ÜÒÔ³ä·ÖÀûÓÃ¶îÍâµÄ¾ÛÀàÐÅºÅ£¬
+×îÖÕµÄËðÊ§º¯Êý°üº¬Æ«ÐòËðÊ§ºÍ¾ÛÀàËðÊ§£º
+\begin{equation}
+  mix\_loss = ranking\_loss + clustering\_loss
+\end{equation}
+ÈçÍ¼[XXX]ËùÊ¾£¬ÏµÍ³°üº¬Èý¸ö²¿·Ö¡£¶ÔÓÚÃ¿¸öÕýÓÃ»§·´À¡£¬"ranking signal extraction"
+Ä£¿é½«»á²ÉÑùÒ»¸ö¸º·´À¡¡£¼ÓÉÏÓÃ»§µÄ±êÊ¶£¬×é³ÉµÄÈýÔª×é×é³ÉÁË×îºóµÄÆ«ÐòÐÅºÅ¡£"clustering 
+signal extraction" ¸ù¾ÝÊ±¼ä´ÁÑ°ÕÒ¾ÛÀà£¬×îÖÕµÄ¾ÛÀàÐÅºÅ°üº¬Ò»ÏµÁÐµÄ¾ÛÀà¶Ô¡£½«Æ«ÐòÐÅºÅ
+ºÍ¾ÛÀàÐÅºÅ×îÎªÊäÈë£¬Ð­Í¬¹ýÂËÍÆ¼öÏµÍ³½«»á´ÓÆ«ÐòÐÅºÅºÍ¾ÛÀàÐÅºÅÖÐ»ñµÃÑµÁ·Ä£ÐÍËùÐèµÄÖªÊ¶¡£
+µÚ\ref{sec:ranking}ºÍ\ref{sec:clustering}·Ö±ð½éÉÜÁËÆ«ÐòÐÅºÅºÍ¾ÛÀàÐÅºÅ»ñÈ¡ºÍ½¨Ä£µÄÏ¸½Ú£¬
+µÚ\ref{sec:final}½Ú½«»á½éÉÜÕûºÏÄ£ÐÍµÄÏ¸½Ú¡£
+
+\section{±´Ò¶Ë¹ÅÅÐòÍÆ¼ö} \label{sec:rank}
+±´Ò¶Ë¹ÅÅÐòÍÆ¼ö(BPR)ÊÇÕë¶ÔÒþÊ½·´À¡Êý¾Ý½øÐÐÓÅ»¯µÄÒ»ÖÖ¾ØÕó·Ö½âÄ£ÐÍ£¬Æä°üÀ¨Ò»ÖÖ¾ØÕó·Ö½â(Òþº¬Òò×ÓÄ£ÐÍÖÐµÄÒ»ÖÖ)
+µÄ½¨Ä£·½Ê½ºÍÒ»ÖÖ»ùÓÚÆ«Ðò¶ÔµÄÓÅ»¯·½·¨¡£
+
+\subsection{ÐÎÊ½»¯¶¨Òå}
+¡¡¼ÙÉèU±íÊ¾ËùÓÐÓÃ»§£¬¶øI±íÊ¾ËùÓÐÊÓÆµ,¶øËùÓÐ·´À¡Êý¾ÝÎª$S \subset U \times I$¡£ÍÆ¼öµÄ±¾ÖÊ¿ÉÒÔ±»¿´×öÊÇ£º¸øÃ¿¸öÓÃ»§Ìá¹©Ò»¸ö¸öÐÔ»¯µÄÔÚËùÓÐÊÓÆµÉÏµÄÈ«Ðò$\textgreater_u \subset I$£¬
+ÆäÖÐ$\textgreater_u$±ØÐëÂú×ãÈ«ÐòµÄÐÔÖÊ£º
+\begin{equation}
+  \begin{split}
+  \forall i,j \in I: i \neq j \Rightarrow i \textgreater_u i \vee j \textgreater_u i (È«ÐòÐÔ) \\
+  \forall i,j \in I: i \textgreater_u j \wedge j \textgreater_u i \Rightarrow i = j (·Ç¶Ô³ÆÐÔ) == \\
+  \forall i,j,k \in I: i \textgreater_u j \wedge j \textgreater_u k \Rightarrow i \textgreater_u k (´«µÝÐÔ)
+  \end{split}
+\end{equation}
+ÎªÁË·½±ãÆð¼û£¬×öÈçÏÂ¶¨Òå£º
+\begin{equation}
+  \begin{split}
+  I^+_u \coloneqq \{i \in I:(u,i)\in S\} \\
+  U^+_i \coloneqq \{u \in U:(u,i) \in S \}
+  \end{split}
+\end{equation}
+
+\subsection{»ùÓÚÆ«Ðò¶ÔµÄÑ§Ï°}
+ÓÉÓÚÍ¨³£ÍÆ¼ö³¡¾°ÖÐÖ»ÄÜµÃµ½ÕýÀý·´À¡Êý¾Ý(ÓÃ»§µã»÷£¬¹ºÂòÊý¾Ý)£¬ÔÚËùÓÐÎ´¹Û²âµ½µÄ·´À¡ÖÐ£¬»ìÔÓ×ÅÎ´ÖªµÄ·´À¡
+Óë¸ºÀý·´À¡¡£Ò»ÖÖµäÐÍµÄ×ö·¨ÊÇ½«ËùÓÐ·´À¡$(u,i) \in S$±êÎªÕý£¬ËùÓÐÔÚ$(U \times I \\ S$ÖÐµÄ·´À¡ÊÓÎª¸º¡£
+Òò´Ë£¬ÑµÁ·³öÀ´µÄÄ£ÐÍ½«»á¶Ô¹Û²ìµ½µÄ·´À¡Ô¤²â1£¬¶ÔÆäËûµÄ½»»¥Ô¤²âÎª0¡£ÕâÃ´×öµÄÎÊÌâÊÇ£¬¶ÔÓÚÔÚ$(U \times I \\ S$ÖÐÎ´À´½«ÒªÅÅÐòµÄ
+µ¥ÔªÀ´Ëµ£¬ÔÚÑµÁ·¹ý³ÌÖÐ½«»á±»ÊÓÎª¸ºÀý¡£ÕâÒâÎ¶×ÅÒ»¸ö¾«È·µÄÄ£ÐÍ½«ÎÞ·¨¶ÔÕâÐ©µ¥Ôª½øÐÐÅÅÐò£¬ÒòÎªÆäÔ¤²âÆ«ºÃ½«¶¼»áÎª0¡£¶øÕâÀà
+»úÆ÷Ñ§Ï°·½·¨ÄÜ¹»Ô¤²âµÄÎ¨Ò»Ô­ÒòÊÇ·ÀÖ¹¹ýÄâºÏµÄ¼¼ÇÉ£¬ÀýÈç¹éÒ»»¯¡£
+
+Îª´Ë£¬BPRÑ¡ÔñÊ¹ÓÃÔÚÊÓÆµÉÏµÄÆ«Ðò¶Ô×÷ÎªÓÅ»¯µÄÑµÁ·Êý¾Ý£¬ÕâÃ´×öÄÜ¹»¸üºÃµØ±íÊ¾ÍÆ¼öÎÊÌâ¡£BPRÊÔÍ¼´ÓSÖÐ»Ö¸´
+Ã¿¸öÓÃ»§µÄ²¿·Ö$\textgreater_u$,Èç¹ûÒ»¸öÊÓÆµi±»ÓÃ»§u¹Û¿´¹ý£¬¼´$(u,i) \in S$£¬ÄÇÃ´¾Í¼ÙÉèÓÃ»§¶Ô
+ÊÓÆµiµÄÏ²»¶³Ì¶È³¬¹ýËùÓÐÆäËûÎ´¿´¹ýµÄÊÓÆµ¡£Èç£¬ÔÚÍ¼[XXX]ÖÐ£¬ÓÃ»§$u_1$¿´¹ýÊÓÆµ$i_2$µ«ÊÇÃ»¿´¹ý$i_1$£¬
+Òò´Ë¾Í¼ÙÉèÓÃ»§u¶Ô$i_2$µÄÏ²°®³Ì¶È³¬¹ý$i_1$¡£¶ÔÓÚÄÇÐ©Í¬Ê±±»Ò»¸öÓÃ»§¹Û¿´¹ýµÄÊÓÆµ£¬´ÓÖÐµÃ²»µ½ÈÎºÎÆ«ºÃÐÅÏ¢£¬Í¬ÓÚÄÇÐ©
+Í¬Ê±Î´±»Ò»¸öÓÃ»§¹Û¿´¹ýµÄÊÓÆµ¶øÑÔ£¬Ò²ÊÇÒ»Ñù¡£ÐÎÊ½»¯±íÊ¾µÄÑµÁ·Êý¾ÝÈçÏÂ£º
+\begin{equation}
+  D_S \coloneqq \{(u,i,j) | i \in I^+_u \wedge j \in I\\I^+_u \}
+\end{equation}
+ÕâÃ´×ö´øÀ´ÈçÏÂÓÅÊÆ£º
 \begin{enumerate}
-\item ÎÒÃÇÍ¨¹ýÔÚÍ¬Ò»¸öÊý¾ÝÔ´ÖÐ³éÈ¡Á½Àà²»Í¬µÄÊý¾ÝÐÅºÅ£¬ÒÔ½â¾öÍÆ¼öÏµÍ³ÖÐÆÕ±é´æÔÚµÄ
-Êý¾ÝÏ¡ÊèÐÔÎÊÌâ£®
-\item ÎÒÃÇ½«Á½ÖÖ²»Í¬ÀàÐÍµÄÐÅºÅÈÚºÏµ½Ò»¸öÍ¬Ò»µÄÍÆ¼ö¿ò¼ÜÖ®ÖÐ£®
-\item ÎÒÃÇÊ¹ÓÃÕæÊµ³¡¾°ÏÂµÄÊý¾Ý½øÐÐÁËÊµÑé£¬²¢ÇÒÑéÖ¤ÁË·½·¨µÄÓÐÐ§ÐÔ£®
+  \item ÑµÁ·Êý¾ÝÖÐÍ¬Ê±°üº¬ÕýÀýÆ«Ðò¶ÔÓë¸ºÀýÆ«Ðò¶Ô¡£ÔÚÎª¹Û¿´µÄÁ½¸öÊÓÆµÖ®¼äµÄÆ«ÐòÖµÕýÊÇÔÚ
+    ½«À´ÐèÒªÅÅÐòµÄÖµ¡£ÕâÒâÎ¶×Å£¬´ÓÆ«Ðò¶ÔµÄ½Ç¶ÈÀ´¿´£¬ÑµÁ·Êý¾Ý$D_S$ºÍ²âÊÔÊý¾ÝÊÇ²»Ïà½»µÄ
+    Á½¸ö¼¯ºÏ
+  \item ÓÉÓÚÊ¹ÓÃ¹Û²âµ½µÄÆ«Ðò¶Ô$\textgreater_u$×Ó¼¯$D_S$½øÐÐÑµÁ·£¬ÑµÁ·Êý¾ÝÊÇ´Ó½ÏÎª¿Í¹ÛµÄÅÅÃûÉÏ»ñµÃ¡£
 \end{enumerate}
 
-\section{ÅÅÐòÎÊÌâ}
-\subsection{ÐÎÊ½»¯¶¨Òå}
+<< Í¼XXX >>
+
+
+\subsection{Òþº¬Òò×ÓÄ£ÐÍ}
 ¡¡¸ø¶¨Ò»¸öÓÃ»§ºÍÒ»ÏµÁÐÊÓÆµ£¬ÆäÖÐÒ»Ð©ÊÓÆµÒÑ¾­±»¸ÃÓÃ»§¹Û¿´¹ý£¬ÁíÍâÒ»Ð©Ã»¿´¹ý£®ÍÆ¼ö
 µÄÈÎÎñÊÇ´ÓÎ´¿´¹ýµÄÊÓÆµÖÐÑ¡ÔñÒ»Ð©ÊÓÆµ³öÀ´£¬Ê¹µÃÕâÐ©ÊÓÆµÔÚ½«À´¾¡¿ÉÄÜ¶àµÄ±»¸ÃÓÃ»§¹Û
 ¿´£®ÍÆ¼öÄ£ÐÍÕë¶ÔÃ¿¸ö£¨ÓÃ»§£¬ÊÓÆµ£©¶Ô£¬»á¸ø³ö¸ÃÓÃ»§¶ÔÊÓÆµµÄÆ«ºÃÖµµÄÒ»¸öÆÀ·Ö£®ÕâÑù£¬
 Ã¿¸öÓÃ»§¶ÔËùÓÐÊÓÆµÓÐÒ»ÏµÁÐµÄÆÀ·Ö£¬¸ù¾ÝÕâÐ©Æ«ºÃÖµÆÀ·Ö¸øÍÆ¼öÌá¹©Ö¸µ¼£®
-\subsection{Òþº¬Òò×ÓÄ£ÐÍ}
 ¡¡Ã¿¸öÓÃ»§¶ÔÃ¿¸öÊÓÆµ¶¼»áÓÐÒ»¸öÆ«ºÃÖµÆÀ·Ö£¬¸ÃÆÀ·ÖÓÉÒ»¸öÆÀ·Öº¯Êýh(j|i)¸ø³ö£¬£é´ú±í
 ÓÃ»§£¬£ê´ú±íÊÓÆµ,¸ÃÆÀ·Öº¯Êý¾ÍÓÉÄ£ÐÍ¼ÙÉèµÄÀ´£®ÆäÖÐÒ»ÖÖ½¨Ä£·½·¨ÊÇÒþº¬Òò×ÓÄ£ÐÍ£¬ÆäÖÐ
 Òò×Ó±íÊ¾ÓëÆÀ·ÖÏà¹ØµÄËùÓÐÒòËØ£¬Í¨³£ÓÉÒ»¸öDÎ¬µÄÏòÁ¿±íÊ¾£®ÀýÈç£¬ÔÚÊÓÆµÍÆ¼öÁìÓò£¬¼ÙÉè
@@ -1040,37 +1206,72 @@ web·þÎñÆ÷½«ÇëÇó×ª·¢µ½ÏàÓ¦µÄÁ÷Ã½Ìå·þÎñÆ÷£»ÔÚ¿Í»§¶ËºÍ·þÎñÆ÷½»»»ÁË¿ØÖÆÐÅÏ¢Ö®ºó£¬ÊÓÆ
 \end{equation}
 ÆäÖÐw´ú±íÆ«ÖÃÏî£¬¶ø£õ£¬£öÔò·Ö±ð¶ÔÓ¦×ÅÓÃ»§ºÍÊÓÆµµÄÒþº¬ÌØÕ÷£®
 
-<< Òþº¬ÌØÕ÷µÄÍ¼Ê¾ >>
-\subsection{»ùÓÚÆ«Ðò¶ÔµÄÑ§Ï°}
-»ùÓÚÉÏÊöµÄÄ£ÐÍ¼ÙÉè£¬Ä£ÐÍ²ÎÊý¿ÉÒÔ´ÓÓÃ»§µÄ·´À¡Êý¾ÝÖÐµÃÀ´£®ÊÓÆµÍøÕ¾ÖÐµÄ·´À¡Êý¾ÝÒ»°ã
-ÒÔÒþÊ½·´À¡ÐÎÊ½³öÏÖ£¬´¦ÀíÒþÊ½Êý¾ÝµÄÓÐÐ§·½·¨ÊÇ²ÉÓÃ»ùÓÚÆ«Ðò¶ÔµÄÑ§Ï°·½·¨£®»ù±¾Ïë·¨ÊÇ£º
-¶ÔÓÚÃ¿¸öÓÃ»§i, ÓÐ¹Û¿´¹ýµÄÊÓÆµ$j \in V^+(i) $ ºÍÃ»¿´¹ýµÄÊÓÆµ $k \in V^-(i) $,ÄÇÃ´
-£¢£é¶ÔÓÚ£êµÄÆ«ºÃÖµÒª¸ß¹ý¶Ô£ëµÄÆ«ºÃÖµ£¢£º
-	      \begin{equation} \label{pref1}
-	       j \succ_i k \Leftrightarrow j \in V^+(i) \wedge k \in V^-(i).
-	      \end{equation}
-Í¨¹ýÕâÐ©´¦Àí£¬ÎÒÃÇµÃµ½Ò»ÅúÆ«Ðò¶ÔÊý¾Ý $S_D \succ U \times V \times V$:
-	      \begin{equation} \label{pref2}
-	       \langle i,j,k\rangle \in S_D \Leftrightarrow j \in V^+(i) \wedge k \in V^-(i).
-	      \end{equation}
-ÓÐÁËÕâÐ©Æ«Ðò¶Ô·´À¡Êý¾ÝÖ®ºó£¬Êý¾ÝÓëÄ£ÐÍµÄ¹ØÏµÍ¨¹ý¶¨ÒåÆ«Ðò¶Ô²úÉúµÄ¸ÅÂÊ´Ó¶ø½¨Á¢ÆðÀ´£º
-	      \begin{equation}
-	      p(j \succ k) := \sigma(\hat{h}(j|i) - \hat{h}(k|i))
-	      \end{equation}
-ÆäÖÐ$ $ , h ÊÇÆÀ·Öº¯Êý£¬×îÖÕµÄÄ¿±ê¾ÍÊÇÊ¹µÃÊý¾Ý¼¯µÄÁªºÏ¸ÅÂÊ×î´ó£º
-	      \begin{equation}
-		\argmax_\Uptheta{\prod_{(i,j,k)\in S_D} {p(j \succ_i k)} },
-	      \end{equation}
-ÒòÎª$S_D$ÖÐ°üº¬×Å´óÁ¿µÄÊý¾Ý£¬Ò»°ã²ÉÓÃËæ»úÌÝ¶ÈÏÂ½µµÄ·½Ê½À´ÑµÁ·²ÎÊý£®ÔÚÃ¿Ò»ÂÖµÄ¸üÐÂ
-ÖÐ£¬¶ÔÓÚÃ¿¸öÓÃ»§¹Û¿´¹ýµÄÊÓÆµ£ê£¬¶¼´ÓÃ»¿´¹ýµÄÊÓÆµÖÐ²ÉÑùÒ»¸öÊÓÆµ£ë£¬È»ºóÊ¹ÓÃÌÝ¶ÈÏÂ
-½µ½øÐÐ¸üÐÂ£º
-	      \begin{equation}
-	        \theta \longleftarrow \theta - \eta (1- \sigma(\hat{h}(i,j) - \hat{h}(i,k)))\frac{\partial}{\partial\theta}(\hat{h}(i,j)-\hat{h}(i,k)). 
-	      \end{equation}
-ÆäÖÐ$\eta$ÊÇÑ§Ï°ËÙÂÊ£®Õâ¸ö¿ò¼Ü±»Ìá³öÒÔ×¨ÃÅ´¦ÀíÒþÊ½·´À¡Êý¾Ý£¬ÃüÃûÎª£¢±´Ò¶Ë¹¸öÐÔ»¯
-ÅÅÐò£¢£®
+\subsection{BPR ÓÅ»¯±ê×¼}
+ÎÒÃÇµÄÄ¿±êÊÇÑ°ÕÒÃ¿¸ö¸öÐÔ»¯µÄÔÚËùÓÐÊÓÆµ$i \in I$ÉÏµÄÕýÈ·ÅÅÃû¡£Èô$\Theta$´ú±íÈÎÒâÄ£ÐÍµÄ²ÎÊýÏòÁ¿(ÀýÈç¾ØÕó·Ö½âÄ£ÐÍ)£¬
+Ê¹ÓÃ¸ÅÂÊ±íÊ¾¾ÍÊÇ×î´ó»¯ÏÂÊöµÄºóÑé¸ÅÂÊ£º
+\begin{equation}
+  p(\Theta|\textgreater_u) \propto p(\textgreater_u | \Theta)p(\Theta)
+\end{equation}
+ÕâÆäÖÐ£¬$\textgreater_u$ËùÏ£ÍûµÃµ½µÄµ«ÊÇÒþº¬µÄÓÃ»§uµÄÆ«ºÃ½á¹¹¡£¼ÙÉèËùÓÐµÄÓÃ»§µÄÇé¿öÖ®¼äÏà»¥¶ÀÁ¢£»
+Í¬Ê±¼ÙÉèÕë¶ÔÃ¿¸öÓÃ»§£¬ËùÓÐµÄÆ«Ðò¶Ô$(i,j)$Ö®¼äÒ²Ïà»¥¶ÀÁ¢¡£Òò´Ë£¬ÉÏÊöµÄÒÔÓÃ»§ÎªÖÐÐÄµÄËÆÈ»º¯Êý
+$p(\textgreater_u|\Theta)$¿ÉÒÔ±»ÖØÐ´Îª¶ÔÃ¿¸öÓÃ»§ºÍÃ¿¸öÆ«Ðò¶Ô½øÐÐ·Ö½â£º
+\begin{equation}
+  \begin{split}
+    \prod_{u \in U} p(\textgreater_u | \Theta) = & \prod_{(u,i,j)\in U \time I \time I} p(i\textgreater_u j|\Theta)^{delta((u,i,j)\in D_S)}
+    & \cdot (1-p(i \textgreater_u j | \Theta))^{\delta((u,j,i)\notin D_S)}
+  \end{split}
+\end{equation}
+ÆäÖÐ£¬$\delta$ÊÇÖ¸Ê¾º¯Êý¡£¸ù¾ÝÈ«ÐòÐÔºÍ·Ç¶Ô³ÆÐÔ£¬ÉÏÊö±íÊö¿ÉÒÔ±»¼ò»¯Îª:
+\begin{equation}
+\prod_{u \in U} p(\textgreater_u | \Theta) = \prod_{(u,i,j)\in U \time I \time I} p(i\textgreater_u j|\Theta)
+\end{equation}
+Í¨¹ý½«Ã¿¸öÆ«Ðò¶Ô±íÊ¾ÎªÊ¹ÓÃ$sigma(x) = 1/(1+e^{-x})$º¯Êý×ª»¯µÄËæ»úÊÂ¼þ²¢ÇÒÒýÈëÏÈÑé¸ÅÂÊ£¬×îÖÕµÄÓÅ»¯Ä¿±êÎª
+\begin{equation}
+  \begin{split}
+    BPR-OPT & \coloneqq ln p(\Theta|\textgreater_u)
+    & = ln p(\textgreater_u|\Theta)p(\Theta)
+    & = ln \prod_{(u,i,j) \in D_S} \sigma(h_u(i|u) - h_u(j|u)) p(\Theta) - \lambda_\Theta ||\Theta||^2
+  \end{split}
+\end{equation}
+ÆäÖÐ$\lambda_\Theta$ÊÇÄ£ÐÍÌØ¶¨µÄ¹éÒ»»¯²ÎÊý¡£
 
-\section{¾ÛÀàµÄÒýÈë}
+ÎªÁËÓÅ»¯¸ÃÄ¿±êº¯Êý£¬¿ÉÒÔÊ¹ÓÃÌÝ¶ÈÏÂ½µ·½·¨¡£È»¶ø£¬Êý¾Ý¼¯ÖÐµÄÅ¤ÇúµÄ·Ö²¼½«»áÊ¹µÃÊÕÁ²ËÙ¶È¼«¶ÈÏÂ½µ¡£
+¿¼ÂÇÒ»¸öÁ÷ÐÐµÄÊÓÆµi£¬ËüÔÚÐí¶àÓÃ»§µÄ¼ÇÂ¼ÖÐ¶¼´æÔÚ£¬ÄÇÃ´ÔÚÃ¿´ÎÌÝ¶ÈÏÂ½µ¸üÐÂµÄÊ±ºò£¬¸ÃÊÓÆµi½«»á
+³ÉÎªÖ÷µ¼ÌÝ¶ÈµÄÒ»¸öÊµÌå¡£ÎªÁËÊ¹Ëã·¨ÊÕÁ²£¬±ØÐëÑ¡Ôñ¼«Ð¡µÄÑ§Ï°ËÙÂÊ¡£Òò´Ë£¬¸üºÃµÄ·½·¨ÊÇÊ¹ÓÃ
+Ëæ»úÌÝ¶ÈÏÂ½µ·¨½øÐÐÓÅ»¯¡£½øÒ»²½µÄ£¬¸üÐÂÃ¿¸ö½»»¥·´À¡µÄË³Ðò±ØÐë¾¡Á¿Ëæ»ú£¬·ñÔòÁ¬ÐøµÄ¸üÐÂ½«»á
+Éæ¼°Í¬Ò»¸öÊÓÆµ»òÕßÓÃ»§£¬Ê¹µÃÌÝ¶ÈÖµ±äÐ¡£¬½µµÍÊÕÁ²ËÙ¶È¡£ÓÉÓÚÊý¾Ý¼¯ÖÐµÄÆ«Ðò¶ÔÖÚ¶à£¬Êµ¼Ê¸üÐÂÊ±ºò£¬
+¿ÉÒÔÕë¶ÔÃ¿¸öÕýÀý£¬²ÉÑùÒ»¸ö¸ºÀý£¬ÕâÃ´×öÄÜ¹»Ê¹µÃÊÕÁ²Ê±¼ä´ó·ù¶ÈµÄ¼õÉÙ¡£
+
+% \subsection{»ùÓÚÆ«Ðò¶ÔµÄÑ§Ï°}
+% »ùÓÚÉÏÊöµÄÄ£ÐÍ¼ÙÉè£¬Ä£ÐÍ²ÎÊý¿ÉÒÔ´ÓÓÃ»§µÄ·´À¡Êý¾ÝÖÐµÃÀ´£®ÊÓÆµÍøÕ¾ÖÐµÄ·´À¡Êý¾ÝÒ»°ã
+% ÒÔÒþÊ½·´À¡ÐÎÊ½³öÏÖ£¬´¦ÀíÒþÊ½Êý¾ÝµÄÓÐÐ§·½·¨ÊÇ²ÉÓÃ»ùÓÚÆ«Ðò¶ÔµÄÑ§Ï°·½·¨£®»ù±¾Ïë·¨ÊÇ£º
+% ¶ÔÓÚÃ¿¸öÓÃ»§i, ÓÐ¹Û¿´¹ýµÄÊÓÆµ$j \in V^+(i) $ ºÍÃ»¿´¹ýµÄÊÓÆµ $k \in V^-(i) $,ÄÇÃ´
+% £¢£é¶ÔÓÚ£êµÄÆ«ºÃÖµÒª¸ß¹ý¶Ô£ëµÄÆ«ºÃÖµ£¢£º
+% 	      \begin{equation} \label{pref1}
+% 	       j \succ_i k \Leftrightarrow j \in V^+(i) \wedge k \in V^-(i).
+% 	      \end{equation}
+% Í¨¹ýÕâÐ©´¦Àí£¬ÎÒÃÇµÃµ½Ò»ÅúÆ«Ðò¶ÔÊý¾Ý $S_D \succ U \times V \times V$:
+% 	      \begin{equation} \label{pref2}
+% 	       \langle i,j,k\rangle \in S_D \Leftrightarrow j \in V^+(i) \wedge k \in V^-(i).
+% 	      \end{equation}
+% ÓÐÁËÕâÐ©Æ«Ðò¶Ô·´À¡Êý¾ÝÖ®ºó£¬Êý¾ÝÓëÄ£ÐÍµÄ¹ØÏµÍ¨¹ý¶¨ÒåÆ«Ðò¶Ô²úÉúµÄ¸ÅÂÊ´Ó¶ø½¨Á¢ÆðÀ´£º
+% 	      \begin{equation}
+% 	      p(j \succ k) := \sigma(\hat{h}(j|i) - \hat{h}(k|i))
+% 	      \end{equation}
+% ÆäÖÐ$ $ , h ÊÇÆÀ·Öº¯Êý£¬×îÖÕµÄÄ¿±ê¾ÍÊÇÊ¹µÃÊý¾Ý¼¯µÄÁªºÏ¸ÅÂÊ×î´ó£º
+% 	      \begin{equation}
+% 		\argmax_\Uptheta{\prod_{(i,j,k)\in S_D} {p(j \succ_i k)} },
+% 	      \end{equation}
+% ÒòÎª$S_D$ÖÐ°üº¬×Å´óÁ¿µÄÊý¾Ý£¬Ò»°ã²ÉÓÃËæ»úÌÝ¶ÈÏÂ½µµÄ·½Ê½À´ÑµÁ·²ÎÊý£®ÔÚÃ¿Ò»ÂÖµÄ¸üÐÂ
+% ÖÐ£¬¶ÔÓÚÃ¿¸öÓÃ»§¹Û¿´¹ýµÄÊÓÆµ£ê£¬¶¼´ÓÃ»¿´¹ýµÄÊÓÆµÖÐ²ÉÑùÒ»¸öÊÓÆµ£ë£¬È»ºóÊ¹ÓÃÌÝ¶ÈÏÂ
+% ½µ½øÐÐ¸üÐÂ£º
+% 	      \begin{equation}
+% 	        \theta \longleftarrow \theta - \eta (1- \sigma(\hat{h}(i,j) - \hat{h}(i,k)))\frac{\partial}{\partial\theta}(\hat{h}(i,j)-\hat{h}(i,k)). 
+% 	      \end{equation}
+% ÆäÖÐ$\eta$ÊÇÑ§Ï°ËÙÂÊ£®Õâ¸ö¿ò¼Ü±»Ìá³öÒÔ×¨ÃÅ´¦ÀíÒþÊ½·´À¡Êý¾Ý£¬ÃüÃûÎª£¢±´Ò¶Ë¹¸öÐÔ»¯
+% ÅÅÐò£¢£®
+
+\section{¾ÛÀàµÄÒýÈë} \label{sec:cluster}
 
 ¸ø¶¨Ò»ÏµÁÐÊÓÆµVºÍÓÐÏÞµÄ¾ÛÀàC,±ê×¼µÄ¾ÛÀàÈÎÎñ½«»á°ÑÃ¿¸öÊÓÆµ·ÖÅäµ½ÆäÖÐÒ»¸ö¾ÛÀà $ c  \in C$
 ÖÐ£®È»¶ø£¬ÎÒÃÇµÄÄ¿µÄ²»ÔÚÓÚ×öÏÔÊ½µÄ¾ÛÀà»®·Ö£¬¶ø½ö½öÊÇÀûÓÃ¾ÛÀàÏÖÏóÖÐµÄÐÅÏ¢£®¾ßÌå¶ø
@@ -1149,31 +1350,31 @@ $\delta t$µÄÈ¡Öµ¾ö¶¨ÁË¶Ô¾ÛÀàµÄãÐÖµÒÔ¼°ËùÄÜ»ñÈ¡µÄ¾ÛÀàÐÅºÅµÄÊýÁ¿£®ÎÒÃÇ²»ÄÜ½«$\delt
               \begin{equation}
 		\argmax_{\theta,\Lambda}{\prod_{(i,j,k,l)\in S_Y} {p(\langle j,k \rangle \succ \langle j,l \rangle )} },
               \end{equation}
-\section{ÕûºÏÄ£ÐÍ}   	 
-\subsection{¶¯»úÓëÖ±¾õ}
-ÔÚÄ£ÐÍ½éÉÜÖ®Ç°£¬ÎÒÃÇ½«¾ÍÎªºÎ½«Æ«ÐòÐÅºÅºÍ¾ÛÀàÐÅºÅ½áºÏÆðÀ´×÷³öÒ»¸öÖ±¹ÛµÄ½âÊÍ£®ÆäÖÐ
-µÄ¹Ø¼üË¼ÏëÊÇÕâÐ©ÐÅºÅ¹²ÏíÒ»×éÏàÍ¬µÄ²ÎÊý£¬¾ÛÀàÐÅºÅºÍÆ«ÐòÐÅºÅ¹²Í¬ÓÃÀ´ÑµÁ·Ò»¸öÄ£ÐÍ£¬
-µ±Æ«ÐòÐÅºÅÈ±·¦Ê±ºò£¬Õâ¸ø¾ÛÀàÐÅºÅ°ïÖúÄ£ÐÍÑµÁ·Ìá¹©ÁËÒ»¸ö»ú»á£®
-
-\begin{figure}[t]
-  \includegraphics[width=1.\textwidth]{Figure/intuition.png}
-  \caption{clustering boosted preference}
-  \label{fig:intuition}
- \end{figure}
-
-ÈçÍ¼\ref{fig:intuition}ËùÊ¾£¬ÊÓÆµxÓëÊÓÆµ{s,t,y,z}½ô½ôµØ¹ØÁªÔÚÒ»Æð(Ã¿´Î£øµÄ³öÏÖ¶¼°éËæ×ÅÊÓÆµ{s,t,y,z}
-µÄ³öÏÖ),µ«ÊÇÏà¶ÔÓÚËùÓÐµÄÊý¾Ý£¬xµÄÑµÁ·Êý¾ÝÏà¶Ô½ÏÉÙ£®¼ÙÉèÎÒÃÇÒª¶ÔÄ³¸ö¹Û¿´¹ýÊÓÆµ{s,t,
-y,z}µÄÓÃ»§×öÍÆ¼ö£¬ÒòÎªÊÓÆµxµÄ¸ß¶ÈÏà¹ØÐÔ£¬ÎÒÃÇÏ£Íûx»á±»ÍÆ¼ö.Èç¹û½ö½öÌá¹©Æ«ÐòÐÅºÅ£¬
-ÄÇÃ´xºÜÄÑ±»ÍÆ¼öµ½£¬ÒòÎªÆäËûÁ÷ÐÐµÄµ«È´Ïà¹ØÐÔ²»Ç¿µÄÊÓÆµ»á½«xÍÆËÍµ½µ×²¿£®ÎªÁËÌáÉýÊÓÆµ
-xµÄÎ»ÖÃ£¬ÎÒÃÇÐèÒª¸æËßÏµÍ³ÊÓÆµxºÜÖØÒª£®¾ÛÀàÐÅºÅÍ¨¹ýÔÚÊÓÆµxºÍÁ÷ÐÐÊÓÆµ{s,t,y,z}Ö®¼ä
-½¨Á¢¹ØÁªÊ¹µÃxÇ÷½üÓÚÕâÐ©Á÷ÐÐÊÓÆµ£¬´Ó¶ø¼ä½ÓµØÌáÉýÁËÊÓÆµµÄÈ¨ÖØ£¬½ø¶øÔö¼ÓÁËÏò¸ÃÓÃ»§
-ÍÆ¼ö¸ÃÊÓÆµµÄ¸ÅÂÊ£®
-
-Æ«ÐòÐÅºÅÌåÏÖ³ö¸öÐÔ»¯µÄÁ÷ÐÐ¶ÈµÄÇ÷ÊÆ£¬ÕâÒâÎ¶×ÅËü»á¸üÆ«ÏòÓÚÁ÷ÐÐÊÓÆµ¶ø²»ÊÇÏà¹ØÊÓÆµ£¬
-Ïà¹ØÊÓÆµ²»Ò»¶¨ÊÇÁ÷ÐÐµÄ£¬¶øÊÇÖ÷ÌâÐËÈ¤Ê®·ÖÏà½üµÄÄÚÈÝ£®¶ø¾ÛÀàÐÍºÅ¸ü¼Ó¹Ø×¢Ïà¹Ø¶ÈÕâÒ»
-ÒòËØ£¬ÕâÒ²½âÊÍÁËÎªºÎ¾ÛÀàÐÅºÅÔÚYouTubeÉÏµÄ³É¹¦Ó¦ÓÃ£®ÓëYouTube²»Í¬µÄÒ»µãÊÇ£¬¶ÔÓÚ²»
-Í¬µÄÓÃ»§£¬Ò»¸öÊÓÆµµÄÏà¹ØÊÓÆµ×Ü»áÊÇÒ»ÑùµÄ£»¶øÎÒÃÇÃèÊöµÄÏà¹ØÊÓÆµ¶Ô²»Í¬µÄÓÃ»§½«»áÓÐ
-²»Í¬µÄÊÓÆµÁÐ±í£®
+\section{ÕûºÏÄ£ÐÍ} \label{sec:final}
+% \subsection{¶¯»úÓëÖ±¾õ}
+% ÔÚÄ£ÐÍ½éÉÜÖ®Ç°£¬ÎÒÃÇ½«¾ÍÎªºÎ½«Æ«ÐòÐÅºÅºÍ¾ÛÀàÐÅºÅ½áºÏÆðÀ´×÷³öÒ»¸öÖ±¹ÛµÄ½âÊÍ£®ÆäÖÐ
+% µÄ¹Ø¼üË¼ÏëÊÇÕâÐ©ÐÅºÅ¹²ÏíÒ»×éÏàÍ¬µÄ²ÎÊý£¬¾ÛÀàÐÅºÅºÍÆ«ÐòÐÅºÅ¹²Í¬ÓÃÀ´ÑµÁ·Ò»¸öÄ£ÐÍ£¬
+% µ±Æ«ÐòÐÅºÅÈ±·¦Ê±ºò£¬Õâ¸ø¾ÛÀàÐÅºÅ°ïÖúÄ£ÐÍÑµÁ·Ìá¹©ÁËÒ»¸ö»ú»á£®
+% 
+% \begin{figure}[t]
+%   \includegraphics[width=1.\textwidth]{Figure/intuition.png}
+%   \caption{clustering boosted preference}
+%   \label{fig:intuition}
+%  \end{figure}
+% 
+% ÈçÍ¼\ref{fig:intuition}ËùÊ¾£¬ÊÓÆµxÓëÊÓÆµ{s,t,y,z}½ô½ôµØ¹ØÁªÔÚÒ»Æð(Ã¿´Î£øµÄ³öÏÖ¶¼°éËæ×ÅÊÓÆµ{s,t,y,z}
+% µÄ³öÏÖ),µ«ÊÇÏà¶ÔÓÚËùÓÐµÄÊý¾Ý£¬xµÄÑµÁ·Êý¾ÝÏà¶Ô½ÏÉÙ£®¼ÙÉèÎÒÃÇÒª¶ÔÄ³¸ö¹Û¿´¹ýÊÓÆµ{s,t,
+% y,z}µÄÓÃ»§×öÍÆ¼ö£¬ÒòÎªÊÓÆµxµÄ¸ß¶ÈÏà¹ØÐÔ£¬ÎÒÃÇÏ£Íûx»á±»ÍÆ¼ö.Èç¹û½ö½öÌá¹©Æ«ÐòÐÅºÅ£¬
+% ÄÇÃ´xºÜÄÑ±»ÍÆ¼öµ½£¬ÒòÎªÆäËûÁ÷ÐÐµÄµ«È´Ïà¹ØÐÔ²»Ç¿µÄÊÓÆµ»á½«xÍÆËÍµ½µ×²¿£®ÎªÁËÌáÉýÊÓÆµ
+% xµÄÎ»ÖÃ£¬ÎÒÃÇÐèÒª¸æËßÏµÍ³ÊÓÆµxºÜÖØÒª£®¾ÛÀàÐÅºÅÍ¨¹ýÔÚÊÓÆµxºÍÁ÷ÐÐÊÓÆµ{s,t,y,z}Ö®¼ä
+% ½¨Á¢¹ØÁªÊ¹µÃxÇ÷½üÓÚÕâÐ©Á÷ÐÐÊÓÆµ£¬´Ó¶ø¼ä½ÓµØÌáÉýÁËÊÓÆµµÄÈ¨ÖØ£¬½ø¶øÔö¼ÓÁËÏò¸ÃÓÃ»§
+% ÍÆ¼ö¸ÃÊÓÆµµÄ¸ÅÂÊ£®
+% 
+% Æ«ÐòÐÅºÅÌåÏÖ³ö¸öÐÔ»¯µÄÁ÷ÐÐ¶ÈµÄÇ÷ÊÆ£¬ÕâÒâÎ¶×ÅËü»á¸üÆ«ÏòÓÚÁ÷ÐÐÊÓÆµ¶ø²»ÊÇÏà¹ØÊÓÆµ£¬
+% Ïà¹ØÊÓÆµ²»Ò»¶¨ÊÇÁ÷ÐÐµÄ£¬¶øÊÇÖ÷ÌâÐËÈ¤Ê®·ÖÏà½üµÄÄÚÈÝ£®¶ø¾ÛÀàÐÍºÅ¸ü¼Ó¹Ø×¢Ïà¹Ø¶ÈÕâÒ»
+% ÒòËØ£¬ÕâÒ²½âÊÍÁËÎªºÎ¾ÛÀàÐÅºÅÔÚYouTubeÉÏµÄ³É¹¦Ó¦ÓÃ£®ÓëYouTube²»Í¬µÄÒ»µãÊÇ£¬¶ÔÓÚ²»
+% Í¬µÄÓÃ»§£¬Ò»¸öÊÓÆµµÄÏà¹ØÊÓÆµ×Ü»áÊÇÒ»ÑùµÄ£»¶øÎÒÃÇÃèÊöµÄÏà¹ØÊÓÆµ¶Ô²»Í¬µÄÓÃ»§½«»áÓÐ
+% ²»Í¬µÄÊÓÆµÁÐ±í£®
 \subsection{ÐÅºÅµÄÕûºÏ}
 Í¼\ref{fig:integration}½âÊÍÁË¿ò¼ÜµÄÕûºÏ¹ý³Ì£®¶ÔÓÚÆ«ÐòÐÅºÅ£¬ÎÒÃÇÇø·Ö¹Û¿´¹ýµÄºÍÃ»¹Û¿´¹ýµÄÊÓÆµ£¬½ØÈ¡³ö
 ÈýÔªËØ$\langle user, observed, unobserved \rangle$. ÎªÁË½«Æä½¨Ä£Îª·ÖÀàÎÊÌâ£¬ÎÒÃÇ
