@@ -1813,17 +1813,17 @@ $\alpha_u = \alpha_v$, $\beta_u = \beta_v$.为了得到最优结果，设定$D = 45$.其中最
 \section{基于智能手机的协同化移动流媒体系统}
 
 移动场景中，难以保证用户之间都在信号传输范围之内。为此，项目组基于MANET技术，设计
-并实现了“基于只能手机的协同化移动流媒体系统”。如图\ref{fig:adhoc}，系统利用移动节点自身的通信能力，使得
+并实现了``基于只能手机的协同化移动流媒体系统''。如图\ref{fig:adhoc}，系统利用移动节点自身的通信能力，使得
 视频传输更加流畅，同时支持不断变化的网络拓扑。系统的架构如图\ref{fig:adhocframe}所示。
 
-\begin{figure}[t]
+\begin{figure}[ht]
   \centering
   \includegraphics[width=\textwidth]{Figure/adhoc.png}
   \caption{Ad-hoc网络系统架构图}
   \label{fig:adhoc}
 \end{figure}
 
-\begin{figure}[t]
+\begin{figure}[ht]
   \centering
   \includegraphics[width=\textwidth]{Figure/adhocframe.png}
   \caption{系统模块架构图}
@@ -1837,9 +1837,9 @@ $\alpha_u = \alpha_v$, $\beta_u = \beta_v$.为了得到最优结果，设定$D = 45$.其中最
 发送到服务器端作为训练数据。
 
 
-\begin{figure}[t]
+\begin{figure}[ht]
   \centering
-  \includegaphics[width=\textwidth]{Figure/adhocnet.png}
+  \includegraphics[width=\textwidth]{Figure/adhocnet.png}
   \caption{网络层架构图}
   \label{fig:adhocnet}
 \end{figure}
@@ -1852,14 +1852,15 @@ $\alpha_u = \alpha_v$, $\beta_u = \beta_v$.为了得到最优结果，设定$D = 45$.其中最
 模块交互，并使用同步队列进行同步。Node模块包含RouteManager与IPManager，负责协调各模块工作，同时接收来自
 应用层的请求。应用层通过Node提供的接口传输与接收数据，底层对应用层透明。
 
-\begin{figure}[t]
-  \centering
-  \includegaphics[width=\textwidth]{Figure/process.png}
-  \caption{应用层流程图}
-  \label{fig:process}
-\end{figure}
+% \begin{figure}[ht]
+%   \centering
+%   \includegraphics[width=\textwidth]{Figure/process.png}
+%   \caption{应用层流程图}
+%   \label{fig:process}
+% \end{figure}
 
- 应用层的交互流程如图\ref{fig:process}所示，移动设备上保留两类缓存空间，一类是视频播放过程中的播放缓冲，另一类
+% 应用层的交互流程如图\ref{fig:process}所示，
+ 移动设备上保留两类缓存空间，一类是视频播放过程中的播放缓冲，另一类
 是预缓存所需要的视频缓存。在开始观看之后，用户首先在推荐列表中选择所观看的视频。若选择观看了推荐视频，
 那么所有的视频内容将从预缓存空间中获取。否则用户查询本地播放缓存，如果还不存在，则通过移动自组网获取数据，
 若依然不再，最后通过蜂窝网络获取视频数据。其中预缓存空间的内容的更新与获取都由推荐缓存模块来实现。
@@ -1900,7 +1901,7 @@ baseline与我们的方法进行比较。
 同样的，我们也比较原始的BPR算法，在数据密集场合，这或许能够表现得更好。
 
 
-\begin{figure}[t]
+\begin{figure}[ht]
   \centering
   \includegraphics[width=\textwidth]{Figure/with_or_without.png}
   \caption{加权 vs 不加权 效果对比}
@@ -1922,7 +1923,7 @@ BPR在这样的更新下表现得一般，甚至不如稀疏场景下的结果，这一点并不在预期之中。
 权重是另外一个视频权重的2倍就显得很不合理。为了弥补这个问题，聚类信号会将这两个视频在特征上往相向的方向
 逼近。并且，我们的聚类信号正好是基于时间分簇的，因此聚类更新只会针对实际上相近的视频进行更新。这样，聚类
 更新就会对不合理的权重进行调节，将原本几何衰减的权重调整至符合实际情况。
-\begin{figure}[t]
+\begin{figure}[ht]
   \centering
   \includegraphics[width=\textwidth]{Figure/compare.png}
   \caption{加权情况下的效果对比}
@@ -1943,7 +1944,7 @@ BPR在这样的更新下表现得一般，甚至不如稀疏场景下的结果，这一点并不在预期之中。
 端完成实际的推荐工作，具体而言，它负责记录客户端的使用记录，定期的进行模型的更新,
 当用户发送推荐请求之后发送推荐列表，另外，为了使广播达到带宽节省的效果，服务器还
 负责对推荐视频进行传输上的同步,即让其在一次的广播中完成传输．
-\begin{figure}[t]
+\begin{figure}[ht]
   \centering
   \includegraphics[width=\textwidth]{Figure/system.png}
   \caption{推荐预取系统框架图}
@@ -2052,7 +2053,7 @@ communication\_save = \dfrac{(hit\_num - distinct\_videos)}{10 \times user\_num}
 就代表所减少的通信占原本通信量的百分比．
 
 \subsection{结果：改变缓存大小}
-\begin{figure}[t]
+\begin{figure}[ht]
   \centering
   \includegraphics[width=\textwidth]{Figure/cache_num.png}
   \caption{传输节省随缓存数量变化}
@@ -2083,7 +2084,7 @@ communication\_save = \dfrac{(hit\_num - distinct\_videos)}{10 \times user\_num}
 如果实际上用户平均未观看这么多的视频，那么这个百分比会更高．
 
 \subsection{结果：改变用户数量大小}
-\begin{figure}[t]
+\begin{figure}[ht]
   \centering
   \includegraphics[width=\textwidth]{Figure/user_num.png}
   \caption{传输节省随用户数量改变}
@@ -2104,7 +2105,7 @@ communication\_save = \dfrac{(hit\_num - distinct\_videos)}{10 \times user\_num}
 传输节省，实际系统是希望能够处理各种用户数量场合的，因此设定更多的缓存很有必要．
 
 \subsection{结果：不同方法比较}
-\begin{figure}[t]
+\begin{figure}[ht]
   \centering
   \includegraphics[width=\textwidth]{Figure/method.png}
   \caption{不同方法的比较}

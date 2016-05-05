@@ -14,13 +14,15 @@
 \contentsline {figure}{\numberline {3.9}{\ignorespaces Performance for top-10 recommendation\relax }}{28}{figure.caption.13}
 \contentsline {figure}{\numberline {3.10}{\ignorespaces Performance for top-5 recommendation\relax }}{28}{figure.caption.14}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces 加权 vs 不加权 效果对比\relax }}{32}{figure.caption.15}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces 加权情况下的效果对比\relax }}{33}{figure.caption.16}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces 推荐预取系统框架图\relax }}{34}{figure.caption.17}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces 传输节省随缓存数量变化\relax }}{37}{figure.caption.18}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces 传输节省随用户数量改变\relax }}{38}{figure.caption.19}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces 不同方法的比较\relax }}{39}{figure.caption.20}
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Ad-hoc网络系统架构图\relax }}{30}{figure.caption.15}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces 系统模块架构图\relax }}{31}{figure.caption.16}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces 网络层架构图\relax }}{32}{figure.caption.17}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces 加权 vs 不加权 效果对比\relax }}{34}{figure.caption.18}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces 加权情况下的效果对比\relax }}{34}{figure.caption.19}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces 推荐预取系统框架图\relax }}{35}{figure.caption.20}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces 传输节省随缓存数量变化\relax }}{39}{figure.caption.21}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces 传输节省随用户数量改变\relax }}{40}{figure.caption.22}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces 不同方法的比较\relax }}{41}{figure.caption.23}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
