@@ -1,6 +1,6 @@
 \let \CTEX@spaceChar \relax 
 \select@language {english}
-\contentsline {chapter}{Contents}{iii}{chapter*.1}
+\contentsline {chapter}{Contents}{vi}{chapter*.1}
 \contentsline {chapter}{\numberline {第一章\hspace {0.3em}}绪论}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}研究背景}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}移动流媒体技术}{2}{section.1.2}
@@ -11,45 +11,50 @@
 \contentsline {section}{\numberline {2.1}移动流媒体服务}{8}{section.2.1}
 \contentsline {section}{\numberline {2.2}流媒体个性化推荐}{10}{section.2.2}
 \contentsline {section}{\numberline {2.3}视频缓存}{13}{section.2.3}
-\contentsline {chapter}{\numberline {第三章\hspace {0.3em}}基于多信号融合的分解推荐模型}{14}{chapter.3}
-\contentsline {section}{\numberline {3.1}引言}{14}{section.3.1}
-\contentsline {section}{\numberline {3.2}问题建模}{15}{section.3.2}
-\contentsline {section}{\numberline {3.3}算法简介}{16}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}动机与直觉}{16}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}算法简介}{17}{subsection.3.3.2}
-\contentsline {section}{\numberline {3.4}贝叶斯排序推荐}{18}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}形式化定义}{18}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}基于偏序对的学习}{18}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}隐含因子模型}{19}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}BPR 优化标准}{20}{subsection.3.4.4}
-\contentsline {section}{\numberline {3.5}聚类的引入}{21}{section.3.5}
+\contentsline {chapter}{\numberline {第三章\hspace {0.3em}}基于多信号融合的分解推荐模型}{15}{chapter.3}
+\contentsline {section}{\numberline {3.1}引言}{15}{section.3.1}
+\contentsline {section}{\numberline {3.2}动机与直觉}{16}{section.3.2}
+\contentsline {section}{\numberline {3.3}场景描述与算法概览}{17}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}场景描述}{17}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}多信号融合算法概览}{18}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}贝叶斯排序推荐}{19}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}形式化定义}{19}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}基于偏序对的学习}{19}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}隐含因子模型}{21}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}BPR 优化标准}{21}{subsection.3.4.4}
+\contentsline {section}{\numberline {3.5}聚类的引入}{22}{section.3.5}
 \contentsline {subsection}{\numberline {3.5.1}聚类模型}{22}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}聚类信号的截取}{22}{subsection.3.5.2}
-\contentsline {subsection}{\numberline {3.5.3}聚类信号的优化}{23}{subsection.3.5.3}
+\contentsline {subsection}{\numberline {3.5.2}聚类信号的截取}{23}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}聚类信号的优化}{24}{subsection.3.5.3}
 \contentsline {section}{\numberline {3.6}整合模型}{24}{section.3.6}
 \contentsline {subsection}{\numberline {3.6.1}信号的整合}{24}{subsection.3.6.1}
 \contentsline {subsection}{\numberline {3.6.2}模型描述 }{25}{subsection.3.6.2}
 \contentsline {subsection}{\numberline {3.6.3}参数学习}{27}{subsection.3.6.3}
 \contentsline {section}{\numberline {3.7}实验}{29}{section.3.7}
 \contentsline {subsection}{\numberline {3.7.1}实验设计}{29}{subsection.3.7.1}
-\contentsline {subsection}{\numberline {3.7.2}参数设定}{29}{subsection.3.7.2}
-\contentsline {subsection}{\numberline {3.7.3}结果分析}{30}{subsection.3.7.3}
-\contentsline {section}{\numberline {3.8}本章小结}{31}{section.3.8}
-\contentsline {chapter}{\numberline {第四章\hspace {0.3em}}基于聚类推荐的视频缓存机制}{32}{chapter.4}
-\contentsline {section}{\numberline {4.1}动机描述}{32}{section.4.1}
-\contentsline {section}{\numberline {4.2}基于智能手机的协同化移动流媒体系统}{33}{section.4.2}
-\contentsline {section}{\numberline {4.3}用于缓存的推荐算法}{35}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}推荐模型}{36}{subsection.4.3.1}
-\contentsline {section}{\numberline {4.4}系统设计}{38}{section.4.4}
-\contentsline {section}{\numberline {4.5}模拟实验}{40}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}实验场景设定}{40}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}实验数据}{41}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}评价标准}{41}{subsection.4.5.3}
-\contentsline {subsection}{\numberline {4.5.4}结果：改变缓存大小}{42}{subsection.4.5.4}
-\contentsline {subsection}{\numberline {4.5.5}结果：改变用户数量大小}{43}{subsection.4.5.5}
-\contentsline {subsection}{\numberline {4.5.6}结果：不同方法比较}{44}{subsection.4.5.6}
-\contentsline {section}{\numberline {4.6}本章小结}{45}{section.4.6}
-\contentsline {chapter}{\numberline {第五章\hspace {0.3em}}总结与展望}{46}{chapter.5}
-\contentsline {chapter}{Bibliography}{47}{chapter*.26}
-\contentsline {chapter}{简历与科研成果}{49}{chapter*.27}
-\contentsline {chapter}{致\CTEX@spaceChar \CTEX@spaceChar 谢}{50}{chapter*.28}
+\contentsline {subsection}{\numberline {3.7.2}参数设定}{30}{subsection.3.7.2}
+\contentsline {subsection}{\numberline {3.7.3}结果分析}{31}{subsection.3.7.3}
+\contentsline {section}{\numberline {3.8}本章小结}{32}{section.3.8}
+\contentsline {chapter}{\numberline {第四章\hspace {0.3em}}基于聚类推荐的移动流媒体缓存机制}{33}{chapter.4}
+\contentsline {section}{\numberline {4.1}基于智能手机的协同化移动流媒体系统}{33}{section.4.1}
+\contentsline {section}{\numberline {4.2}动机描述}{35}{section.4.2}
+\contentsline {section}{\numberline {4.3}系统设计}{36}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}推荐服务器设计}{36}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}客户端模块设计}{38}{subsection.4.3.2}
+\contentsline {subsubsection}{\numberline {4.3.2.1}缓存选择模块}{38}{subsubsection.4.3.2.1}
+\contentsline {subsubsection}{\numberline {4.3.2.2}缓存更新模块}{39}{subsubsection.4.3.2.2}
+\contentsline {section}{\numberline {4.4}缓存算法的优化}{40}{section.4.4}
+\contentsline {section}{\numberline {4.5}模拟实验}{42}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}实验场景设定}{42}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}模拟假设与数据准备}{43}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}评价标准}{44}{subsection.4.5.3}
+\contentsline {subsection}{\numberline {4.5.4}缓存大小}{44}{subsection.4.5.4}
+\contentsline {subsection}{\numberline {4.5.5}系统用户数量}{45}{subsection.4.5.5}
+\contentsline {subsection}{\numberline {4.5.6}缓存算法}{46}{subsection.4.5.6}
+\contentsline {section}{\numberline {4.6}本章小结}{47}{section.4.6}
+\contentsline {chapter}{\numberline {第五章\hspace {0.3em}}总结与展望}{48}{chapter.5}
+\contentsline {section}{\numberline {5.1}本文总结}{48}{section.5.1}
+\contentsline {section}{\numberline {5.2}前景展望}{49}{section.5.2}
+\contentsline {chapter}{Bibliography}{51}{chapter*.28}
+\contentsline {chapter}{简历与科研成果}{53}{chapter*.29}
+\contentsline {chapter}{致\CTEX@spaceChar \CTEX@spaceChar 谢}{54}{chapter*.30}
