@@ -17,38 +17,40 @@
 \BOOKMARK [1][-]{section.3.2}{3.2 问题建模}{chapter.3}% 17
 \BOOKMARK [1][-]{section.3.3}{3.3 算法简介}{chapter.3}% 18
 \BOOKMARK [2][-]{subsection.3.3.1}{3.3.1 动机与直觉}{section.3.3}% 19
-\BOOKMARK [1][-]{section.3.4}{3.4 贝叶斯排序推荐}{chapter.3}% 20
-\BOOKMARK [2][-]{subsection.3.4.1}{3.4.1 形式化定义}{section.3.4}% 21
-\BOOKMARK [2][-]{subsection.3.4.2}{3.4.2 基于偏序对的学习}{section.3.4}% 22
-\BOOKMARK [2][-]{subsection.3.4.3}{3.4.3 隐含因子模型}{section.3.4}% 23
-\BOOKMARK [2][-]{subsection.3.4.4}{3.4.4 BPR 优化标准}{section.3.4}% 24
-\BOOKMARK [1][-]{section.3.5}{3.5 聚类的引入}{chapter.3}% 25
-\BOOKMARK [2][-]{subsection.3.5.1}{3.5.1 聚类模型}{section.3.5}% 26
-\BOOKMARK [2][-]{subsection.3.5.2}{3.5.2 聚类信号的截取}{section.3.5}% 27
-\BOOKMARK [2][-]{subsection.3.5.3}{3.5.3 聚类信号的优化}{section.3.5}% 28
-\BOOKMARK [1][-]{section.3.6}{3.6 整合模型}{chapter.3}% 29
-\BOOKMARK [2][-]{subsection.3.6.1}{3.6.1 信号的整合}{section.3.6}% 30
-\BOOKMARK [2][-]{subsection.3.6.2}{3.6.2 模型描述 }{section.3.6}% 31
-\BOOKMARK [2][-]{subsection.3.6.3}{3.6.3 参数学习}{section.3.6}% 32
-\BOOKMARK [1][-]{section.3.7}{3.7 实验}{chapter.3}% 33
-\BOOKMARK [2][-]{subsection.3.7.1}{3.7.1 实验设计}{section.3.7}% 34
-\BOOKMARK [2][-]{subsection.3.7.2}{3.7.2 参数设定}{section.3.7}% 35
-\BOOKMARK [2][-]{subsection.3.7.3}{3.7.3 结果分析}{section.3.7}% 36
-\BOOKMARK [1][-]{section.3.8}{3.8 本章小结}{chapter.3}% 37
-\BOOKMARK [0][-]{chapter.4}{第四章 \040基于聚类推荐的视频缓存机制}{}% 38
-\BOOKMARK [1][-]{section.4.1}{4.1 动机描述}{chapter.4}% 39
-\BOOKMARK [1][-]{section.4.2}{4.2 基于智能手机的协同化移动流媒体系统}{chapter.4}% 40
-\BOOKMARK [1][-]{section.4.3}{4.3 用于缓存的推荐算法}{chapter.4}% 41
-\BOOKMARK [2][-]{subsection.4.3.1}{4.3.1 推荐模型}{section.4.3}% 42
-\BOOKMARK [1][-]{section.4.4}{4.4 系统设计}{chapter.4}% 43
-\BOOKMARK [1][-]{section.4.5}{4.5 模拟实验}{chapter.4}% 44
-\BOOKMARK [2][-]{subsection.4.5.1}{4.5.1 实验场景设定}{section.4.5}% 45
-\BOOKMARK [2][-]{subsection.4.5.2}{4.5.2 实验数据}{section.4.5}% 46
-\BOOKMARK [2][-]{subsection.4.5.3}{4.5.3 评价标准}{section.4.5}% 47
-\BOOKMARK [2][-]{subsection.4.5.4}{4.5.4 结果：改变缓存大小}{section.4.5}% 48
-\BOOKMARK [2][-]{subsection.4.5.5}{4.5.5 结果：改变用户数量大小}{section.4.5}% 49
-\BOOKMARK [2][-]{subsection.4.5.6}{4.5.6 结果：不同方法比较}{section.4.5}% 50
-\BOOKMARK [1][-]{section.4.6}{4.6 本章小结}{chapter.4}% 51
-\BOOKMARK [0][-]{chapter.5}{第五章 \040总结与展望}{}% 52
-\BOOKMARK [0][-]{chapter*.26}{简历与科研成果}{}% 53
-\BOOKMARK [0][-]{chapter*.27}{致 \040谢}{}% 54
+\BOOKMARK [2][-]{subsection.3.3.2}{3.3.2 算法简介}{section.3.3}% 20
+\BOOKMARK [1][-]{section.3.4}{3.4 贝叶斯排序推荐}{chapter.3}% 21
+\BOOKMARK [2][-]{subsection.3.4.1}{3.4.1 形式化定义}{section.3.4}% 22
+\BOOKMARK [2][-]{subsection.3.4.2}{3.4.2 基于偏序对的学习}{section.3.4}% 23
+\BOOKMARK [2][-]{subsection.3.4.3}{3.4.3 隐含因子模型}{section.3.4}% 24
+\BOOKMARK [2][-]{subsection.3.4.4}{3.4.4 BPR 优化标准}{section.3.4}% 25
+\BOOKMARK [1][-]{section.3.5}{3.5 聚类的引入}{chapter.3}% 26
+\BOOKMARK [2][-]{subsection.3.5.1}{3.5.1 聚类模型}{section.3.5}% 27
+\BOOKMARK [2][-]{subsection.3.5.2}{3.5.2 聚类信号的截取}{section.3.5}% 28
+\BOOKMARK [2][-]{subsection.3.5.3}{3.5.3 聚类信号的优化}{section.3.5}% 29
+\BOOKMARK [1][-]{section.3.6}{3.6 整合模型}{chapter.3}% 30
+\BOOKMARK [2][-]{subsection.3.6.1}{3.6.1 信号的整合}{section.3.6}% 31
+\BOOKMARK [2][-]{subsection.3.6.2}{3.6.2 模型描述 }{section.3.6}% 32
+\BOOKMARK [2][-]{subsection.3.6.3}{3.6.3 参数学习}{section.3.6}% 33
+\BOOKMARK [1][-]{section.3.7}{3.7 实验}{chapter.3}% 34
+\BOOKMARK [2][-]{subsection.3.7.1}{3.7.1 实验设计}{section.3.7}% 35
+\BOOKMARK [2][-]{subsection.3.7.2}{3.7.2 参数设定}{section.3.7}% 36
+\BOOKMARK [2][-]{subsection.3.7.3}{3.7.3 结果分析}{section.3.7}% 37
+\BOOKMARK [1][-]{section.3.8}{3.8 本章小结}{chapter.3}% 38
+\BOOKMARK [0][-]{chapter.4}{第四章 \040基于聚类推荐的视频缓存机制}{}% 39
+\BOOKMARK [1][-]{section.4.1}{4.1 动机描述}{chapter.4}% 40
+\BOOKMARK [1][-]{section.4.2}{4.2 基于智能手机的协同化移动流媒体系统}{chapter.4}% 41
+\BOOKMARK [1][-]{section.4.3}{4.3 用于缓存的推荐算法}{chapter.4}% 42
+\BOOKMARK [2][-]{subsection.4.3.1}{4.3.1 推荐模型}{section.4.3}% 43
+\BOOKMARK [1][-]{section.4.4}{4.4 系统设计}{chapter.4}% 44
+\BOOKMARK [1][-]{section.4.5}{4.5 模拟实验}{chapter.4}% 45
+\BOOKMARK [2][-]{subsection.4.5.1}{4.5.1 实验场景设定}{section.4.5}% 46
+\BOOKMARK [2][-]{subsection.4.5.2}{4.5.2 实验数据}{section.4.5}% 47
+\BOOKMARK [2][-]{subsection.4.5.3}{4.5.3 评价标准}{section.4.5}% 48
+\BOOKMARK [2][-]{subsection.4.5.4}{4.5.4 结果：改变缓存大小}{section.4.5}% 49
+\BOOKMARK [2][-]{subsection.4.5.5}{4.5.5 结果：改变用户数量大小}{section.4.5}% 50
+\BOOKMARK [2][-]{subsection.4.5.6}{4.5.6 结果：不同方法比较}{section.4.5}% 51
+\BOOKMARK [1][-]{section.4.6}{4.6 本章小结}{chapter.4}% 52
+\BOOKMARK [0][-]{chapter.5}{第五章 \040总结与展望}{}% 53
+\BOOKMARK [0][-]{chapter*.26}{Bibliography}{}% 54
+\BOOKMARK [0][-]{chapter*.27}{简历与科研成果}{}% 55
+\BOOKMARK [0][-]{chapter*.28}{致 \040谢}{}% 56

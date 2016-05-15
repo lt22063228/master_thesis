@@ -16,6 +16,7 @@
 \contentsline {section}{\numberline {3.2}问题建模}{15}{section.3.2}
 \contentsline {section}{\numberline {3.3}算法简介}{16}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}动机与直觉}{16}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}算法简介}{17}{subsection.3.3.2}
 \contentsline {section}{\numberline {3.4}贝叶斯排序推荐}{18}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}形式化定义}{18}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}基于偏序对的学习}{18}{subsection.3.4.2}
@@ -49,5 +50,6 @@
 \contentsline {subsection}{\numberline {4.5.6}结果：不同方法比较}{44}{subsection.4.5.6}
 \contentsline {section}{\numberline {4.6}本章小结}{45}{section.4.6}
 \contentsline {chapter}{\numberline {第五章\hspace {0.3em}}总结与展望}{46}{chapter.5}
-\contentsline {chapter}{简历与科研成果}{47}{chapter*.26}
-\contentsline {chapter}{致\CTEX@spaceChar \CTEX@spaceChar 谢}{48}{chapter*.27}
+\contentsline {chapter}{Bibliography}{47}{chapter*.26}
+\contentsline {chapter}{简历与科研成果}{49}{chapter*.27}
+\contentsline {chapter}{致\CTEX@spaceChar \CTEX@spaceChar 谢}{50}{chapter*.28}

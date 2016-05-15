@@ -1,0 +1,118 @@
+\begin{thebibliography}{11}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\providecommand{\eprint}[2][]{\url{#2}}
+\providecommand{\bibinfo}[2]{#2}
+\ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Inproceedings
+\bibitem[{Baluja 等(2008)Baluja, Seth, Sivakumar, Jing, Yagnik, Kumar,
+  Ravichandran 和~ Aly}]{youtubewalk}
+\bibinfo{author}{Baluja, S.}, \bibinfo{author}{Seth, R.},
+  \bibinfo{author}{Sivakumar, D.}, \bibinfo{author}{Jing, Y.},
+  \bibinfo{author}{Yagnik, J.}, \bibinfo{author}{Kumar, S.},
+  \bibinfo{author}{Ravichandran, D.}, \bibinfo{author}{Aly, M.},
+  \bibinfo{year}{2008}.
+\newblock \bibinfo{title}{Video suggestion and discovery for youtube: Taking
+  random walks through the view graph}, in: \bibinfo{booktitle}{Proceedings of
+  the 17th International Conference on World Wide Web},
+  \bibinfo{publisher}{ACM}, \bibinfo{address}{New York, NY, USA}. pp.
+  \bibinfo{pages}{895--904}.
+%Type = Inproceedings
+\bibitem[{Cha 等(2007)Cha, Kwak, Rodriguez, Ahn 和~ Moon}]{itube}
+\bibinfo{author}{Cha, M.}, \bibinfo{author}{Kwak, H.},
+  \bibinfo{author}{Rodriguez, P.}, \bibinfo{author}{Ahn, Y.Y.},
+  \bibinfo{author}{Moon, S.}, \bibinfo{year}{2007}.
+\newblock \bibinfo{title}{I tube, you tube, everybody tubes: Analyzing the
+  world's largest user generated content video system}, in:
+  \bibinfo{booktitle}{Proceedings of the 7th ACM SIGCOMM Conference on Internet
+  Measurement}, \bibinfo{publisher}{ACM}, \bibinfo{address}{New York, NY, USA}.
+  pp. \bibinfo{pages}{1--14}.
+%Type = Inproceedings
+\bibitem[{Davidson 等(2010)Davidson, Liebald, Liu, Nandy, Van~Vleet, Gargi,
+  Gupta, He, Lambert, Livingston 和~ Sampath}]{youtube}
+\bibinfo{author}{Davidson, J.}, \bibinfo{author}{Liebald, B.},
+  \bibinfo{author}{Liu, J.}, \bibinfo{author}{Nandy, P.},
+  \bibinfo{author}{Van~Vleet, T.}, \bibinfo{author}{Gargi, U.},
+  \bibinfo{author}{Gupta, S.}, \bibinfo{author}{He, Y.},
+  \bibinfo{author}{Lambert, M.}, \bibinfo{author}{Livingston, B.},
+  \bibinfo{author}{Sampath, D.}, \bibinfo{year}{2010}.
+\newblock \bibinfo{title}{The youtube video recommendation system}, in:
+  \bibinfo{booktitle}{Proceedings of the Fourth ACM Conference on Recommender
+  Systems}, \bibinfo{publisher}{ACM}, \bibinfo{address}{New York, NY, USA}. pp.
+  \bibinfo{pages}{293--296}.
+%Type = Inproceedings
+\bibitem[{Karatzoglou 等(2010)Karatzoglou, Amatriain, Baltrunas 和~
+  Oliver}]{multiverse}
+\bibinfo{author}{Karatzoglou, A.}, \bibinfo{author}{Amatriain, X.},
+  \bibinfo{author}{Baltrunas, L.}, \bibinfo{author}{Oliver, N.},
+  \bibinfo{year}{2010}.
+\newblock \bibinfo{title}{Multiverse recommendation: N-dimensional tensor
+  factorization for context-aware collaborative filtering}, in:
+  \bibinfo{booktitle}{Proceedings of the Fourth ACM Conference on Recommender
+  Systems}, \bibinfo{publisher}{ACM}, \bibinfo{address}{New York, NY, USA}. pp.
+  \bibinfo{pages}{79--86}.
+%Type = Article
+\bibitem[{Koren 等(2009)Koren, Bell 和~ Volinsky}]{netflix}
+\bibinfo{author}{Koren, Y.}, \bibinfo{author}{Bell, R.},
+  \bibinfo{author}{Volinsky, C.}, \bibinfo{year}{2009}.
+\newblock \bibinfo{title}{Matrix factorization techniques for recommender
+  systems}.
+\newblock \bibinfo{journal}{Computer} \bibinfo{volume}{42},
+  \bibinfo{pages}{30--37}.
+%Type = Inproceedings
+\bibitem[{Lee 等(2014)Lee, Bengio, Kim, Lebanon 和~ Singer}]{lcr}
+\bibinfo{author}{Lee, J.}, \bibinfo{author}{Bengio, S.}, \bibinfo{author}{Kim,
+  S.}, \bibinfo{author}{Lebanon, G.}, \bibinfo{author}{Singer, Y.},
+  \bibinfo{year}{2014}.
+\newblock \bibinfo{title}{Local collaborative ranking}, in:
+  \bibinfo{booktitle}{Proceedings of the 23rd International Conference on World
+  Wide Web}, \bibinfo{publisher}{ACM}, \bibinfo{address}{New York, NY, USA}.
+  pp. \bibinfo{pages}{85--96}.
+%Type = Inproceedings
+\bibitem[{McAuley 和~ Leskovec(2013)}]{Leskovec}
+\bibinfo{author}{McAuley, J.}, \bibinfo{author}{Leskovec, J.},
+  \bibinfo{year}{2013}.
+\newblock \bibinfo{title}{Hidden factors and hidden topics: Understanding
+  rating dimensions with review text}, in: \bibinfo{booktitle}{Proceedings of
+  the 7th ACM Conference on Recommender Systems}, \bibinfo{publisher}{ACM},
+  \bibinfo{address}{New York, NY, USA}. pp. \bibinfo{pages}{165--172}.
+%Type = Inproceedings
+\bibitem[{Rendle 等(2009)Rendle, Freudenthaler, Gantner 和~
+  Schmidt-Thieme}]{BPR}
+\bibinfo{author}{Rendle, S.}, \bibinfo{author}{Freudenthaler, C.},
+  \bibinfo{author}{Gantner, Z.}, \bibinfo{author}{Schmidt-Thieme, L.},
+  \bibinfo{year}{2009}.
+\newblock \bibinfo{title}{Bpr: Bayesian personalized ranking from implicit
+  feedback}, in: \bibinfo{booktitle}{Proceedings of the Twenty-Fifth Conference
+  on Uncertainty in Artificial Intelligence}, \bibinfo{publisher}{AUAI Press},
+  \bibinfo{address}{Arlington, Virginia, United States}. pp.
+  \bibinfo{pages}{452--461}.
+%Type = Inproceedings
+\bibitem[{Yan 等(2015)Yan, Sang 和~ Xu}]{unified}
+\bibinfo{author}{Yan, M.}, \bibinfo{author}{Sang, J.}, \bibinfo{author}{Xu,
+  C.}, \bibinfo{year}{2015}.
+\newblock \bibinfo{title}{Unified youtube video recommendation via
+  cross-network collaboration}, in: \bibinfo{booktitle}{Proceedings of the 5th
+  ACM on International Conference on Multimedia Retrieval},
+  \bibinfo{publisher}{ACM}, \bibinfo{address}{New York, NY, USA}. pp.
+  \bibinfo{pages}{19--26}.
+%Type = Inproceedings
+\bibitem[{Zheng 等(2010)Zheng, Zheng, Xie 和~ Yang}]{xiexing}
+\bibinfo{author}{Zheng, V.W.}, \bibinfo{author}{Zheng, Y.},
+  \bibinfo{author}{Xie, X.}, \bibinfo{author}{Yang, Q.}, \bibinfo{year}{2010}.
+\newblock \bibinfo{title}{Collaborative location and activity recommendations
+  with gps history data}, in: \bibinfo{booktitle}{Proceedings of the 19th
+  International Conference on World Wide Web}, \bibinfo{publisher}{ACM},
+  \bibinfo{address}{New York, NY, USA}. pp. \bibinfo{pages}{1029--1038}.
+%Type = Inproceedings
+\bibitem[{Zhou 等(2010)Zhou, Khemmarat 和~ Gao}]{imc}
+\bibinfo{author}{Zhou, R.}, \bibinfo{author}{Khemmarat, S.},
+  \bibinfo{author}{Gao, L.}, \bibinfo{year}{2010}.
+\newblock \bibinfo{title}{The impact of youtube recommendation system on video
+  views}, in: \bibinfo{booktitle}{Proceedings of the 10th ACM SIGCOMM
+  Conference on Internet Measurement}, \bibinfo{publisher}{ACM},
+  \bibinfo{address}{New York, NY, USA}. pp. \bibinfo{pages}{404--410}.
+
+\end{thebibliography}
