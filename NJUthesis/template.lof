@@ -7,26 +7,27 @@
 \contentsline {figure}{\numberline {2.1}{\ignorespaces 用于管理p2p节点的分布式散列表\relax }}{10}{figure.caption.6}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces 依据隐含变量进行选择的过程\relax }}{12}{figure.caption.7}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces clustering boosted preference\relax }}{16}{figure.caption.8}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces overview of model\relax }}{18}{figure.caption.9}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces data processing of BPR\relax }}{20}{figure.caption.10}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces pairwise cluster extraction\relax }}{23}{figure.caption.11}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces integration process\relax }}{25}{figure.caption.12}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces graphical model of ClusterRank\relax }}{26}{figure.caption.13}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces MAP for different $alpha$\relax }}{30}{figure.caption.15}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Performance for top-10 recommendation\relax }}{31}{figure.caption.16}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Performance for top-5 recommendation\relax }}{31}{figure.caption.17}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces 经过聚类提升的偏好\relax }}{15}{figure.caption.8}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces 模型概览\relax }}{17}{figure.caption.9}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces 偏序数据的处理\relax }}{19}{figure.caption.10}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces 聚类对的获取\relax }}{22}{figure.caption.11}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces 融合过程\relax }}{24}{figure.caption.12}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces 融合模型的概率图模型\relax }}{25}{figure.caption.13}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces 不同$\alpha $的MAP\relax }}{29}{figure.caption.15}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces top-10推荐的效果\relax }}{30}{figure.caption.16}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces top-5推荐的效果\relax }}{30}{figure.caption.17}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Ad-hoc网络系统架构图\relax }}{33}{figure.caption.18}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces 系统模块架构图\relax }}{34}{figure.caption.19}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces 网络层架构图\relax }}{34}{figure.caption.20}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces 推荐预取系统框架图\relax }}{36}{figure.caption.21}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces 缓存推荐模块\relax }}{38}{figure.caption.22}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces 加权 vs 不加权 效果对比\relax }}{41}{figure.caption.23}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces 加权情况下的效果对比\relax }}{42}{figure.caption.24}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces 传输节省随缓存数量变化\relax }}{44}{figure.caption.25}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces 传输节省随用户数量改变\relax }}{45}{figure.caption.26}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces 不同方法的比较\relax }}{46}{figure.caption.27}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Ad-hoc网络系统架构图\relax }}{32}{figure.caption.18}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces 系统模块架构图\relax }}{33}{figure.caption.19}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces 网络层架构图\relax }}{33}{figure.caption.20}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces 推荐缓存架构\relax }}{35}{figure.caption.21}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces 推荐服务器模块图\relax }}{36}{figure.caption.22}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces 基于推荐的缓存模块\relax }}{38}{figure.caption.23}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces 加权 vs 不加权 效果对比\relax }}{41}{figure.caption.24}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces 加权情况下的效果对比\relax }}{42}{figure.caption.25}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces 传输节省随缓存数量变化\relax }}{44}{figure.caption.26}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces 传输节省随用户数量改变\relax }}{45}{figure.caption.27}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces 不同方法的比较\relax }}{46}{figure.caption.28}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
