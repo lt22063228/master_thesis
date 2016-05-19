@@ -26,7 +26,7 @@
 \contentsline {subsection}{\numberline {3.5.1}聚类模型}{21}{subsection.3.5.1}
 \contentsline {subsection}{\numberline {3.5.2}聚类信号的截取}{22}{subsection.3.5.2}
 \contentsline {subsection}{\numberline {3.5.3}聚类信号的优化}{23}{subsection.3.5.3}
-\contentsline {section}{\numberline {3.6}完整的模型}{23}{section.3.6}
+\contentsline {section}{\numberline {3.6}算法整体的模型}{23}{section.3.6}
 \contentsline {subsection}{\numberline {3.6.1}信号的融合}{23}{subsection.3.6.1}
 \contentsline {subsection}{\numberline {3.6.2}模型描述 }{24}{subsection.3.6.2}
 \contentsline {subsection}{\numberline {3.6.3}参数学习}{26}{subsection.3.6.3}

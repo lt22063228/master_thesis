@@ -27,7 +27,7 @@
 \BOOKMARK [2][-]{subsection.3.5.1}{3.5.1 聚类模型}{section.3.5}% 27
 \BOOKMARK [2][-]{subsection.3.5.2}{3.5.2 聚类信号的截取}{section.3.5}% 28
 \BOOKMARK [2][-]{subsection.3.5.3}{3.5.3 聚类信号的优化}{section.3.5}% 29
-\BOOKMARK [1][-]{section.3.6}{3.6 完整的模型}{chapter.3}% 30
+\BOOKMARK [1][-]{section.3.6}{3.6 算法整体的模型}{chapter.3}% 30
 \BOOKMARK [2][-]{subsection.3.6.1}{3.6.1 信号的融合}{section.3.6}% 31
 \BOOKMARK [2][-]{subsection.3.6.2}{3.6.2 模型描述 }{section.3.6}% 32
 \BOOKMARK [2][-]{subsection.3.6.3}{3.6.3 参数学习}{section.3.6}% 33
