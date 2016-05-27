@@ -1,4 +1,4 @@
-\begin{thebibliography}{11}
+\begin{thebibliography}{38}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{\texttt{#1}}\fi
@@ -6,6 +6,21 @@
 \providecommand{\eprint}[2][]{\url{#2}}
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Article
+\bibitem[{Adomavicius 和~ Tuzhilin(2005)}]{adomavicius2005toward}
+\bibinfo{author}{Adomavicius, G.}, \bibinfo{author}{Tuzhilin, A.},
+  \bibinfo{year}{2005}.
+\newblock \bibinfo{title}{Toward the next generation of recommender systems: A
+  survey of the state-of-the-art and possible extensions}.
+\newblock \bibinfo{journal}{Knowledge and Data Engineering, IEEE Transactions
+  on} \bibinfo{volume}{17}, \bibinfo{pages}{734--749}.
+%Type = Article
+\bibitem[{Balamash 和~ Krunz(2004)}]{balamash2004overview}
+\bibinfo{author}{Balamash, A.}, \bibinfo{author}{Krunz, M.},
+  \bibinfo{year}{2004}.
+\newblock \bibinfo{title}{An overview of web caching replacement algorithms}.
+\newblock \bibinfo{journal}{Communications Surveys \& Tutorials, IEEE}
+  \bibinfo{volume}{6}, \bibinfo{pages}{44--56}.
 %Type = Inproceedings
 \bibitem[{Baluja 等(2008)Baluja, Seth, Sivakumar, Jing, Yagnik, Kumar,
   Ravichandran 和~ Aly}]{youtubewalk}
@@ -29,19 +44,86 @@
   \bibinfo{booktitle}{Proceedings of the 7th ACM SIGCOMM Conference on Internet
   Measurement}, \bibinfo{publisher}{ACM}, \bibinfo{address}{New York, NY, USA}.
   pp. \bibinfo{pages}{1--14}.
+%Type = Article
+\bibitem[{Chandler 等(2012)Chandler, Shen, Zhao, Stokes 和~
+  Li}]{chandler2012toward}
+\bibinfo{author}{Chandler, H.}, \bibinfo{author}{Shen, H.},
+  \bibinfo{author}{Zhao, L.}, \bibinfo{author}{Stokes, J.},
+  \bibinfo{author}{Li, J.}, \bibinfo{year}{2012}.
+\newblock \bibinfo{title}{Toward p2p-based multimedia sharing in user generated
+  contents}.
+\newblock \bibinfo{journal}{Parallel and Distributed Systems, IEEE Transactions
+  on} \bibinfo{volume}{23}, \bibinfo{pages}{966--975}.
+%Type = Article
+\bibitem[{Chen 和~ Xiao(2006)}]{chen2006cache}
+\bibinfo{author}{Chen, H.}, \bibinfo{author}{Xiao, Y.}, \bibinfo{year}{2006}.
+\newblock \bibinfo{title}{Cache access and replacement for future wireless
+  internet}.
+\newblock \bibinfo{journal}{Communications Magazine, IEEE}
+  \bibinfo{volume}{44}, \bibinfo{pages}{113--123}.
 %Type = Inproceedings
-\bibitem[{Davidson 等(2010)Davidson, Liebald, Liu, Nandy, Van~Vleet, Gargi,
+\bibitem[{Cheng 和~ Liu(2009)}]{cheng2009nettube}
+\bibinfo{author}{Cheng, X.}, \bibinfo{author}{Liu, J.}, \bibinfo{year}{2009}.
+\newblock \bibinfo{title}{Nettube: Exploring social networks for peer-to-peer
+  short video sharing}, in: \bibinfo{booktitle}{INFOCOM 2009, IEEE},
+  \bibinfo{organization}{IEEE}. pp. \bibinfo{pages}{1152--1160}.
+%Type = Inproceedings
+\bibitem[{Cherniack 等(2003)Cherniack, Galvez, Franklin 和~
+  Zdonik}]{cherniack2003profile}
+\bibinfo{author}{Cherniack, M.}, \bibinfo{author}{Galvez, E.F.},
+  \bibinfo{author}{Franklin, M.J.}, \bibinfo{author}{Zdonik, S.},
+  \bibinfo{year}{2003}.
+\newblock \bibinfo{title}{Profile-driven cache management}, in:
+  \bibinfo{booktitle}{Data Engineering, 2003. Proceedings. 19th International
+  Conference on}, \bibinfo{organization}{IEEE}. pp. \bibinfo{pages}{645--656}.
+%Type = Inproceedings
+\bibitem[{D'Alconzo 等(2014)D'Alconzo, Casas, Fiadino, Bar 和~
+  Finamore}]{d2014blame}
+\bibinfo{author}{D'Alconzo, A.}, \bibinfo{author}{Casas, P.},
+  \bibinfo{author}{Fiadino, P.}, \bibinfo{author}{Bar, A.},
+  \bibinfo{author}{Finamore, A.}, \bibinfo{year}{2014}.
+\newblock \bibinfo{title}{Who to blame when youtube is not working? detecting
+  anomalies in cdn-provisioned services}, in: \bibinfo{booktitle}{Wireless
+  Communications and Mobile Computing Conference (IWCMC), 2014 International},
+  \bibinfo{organization}{IEEE}. pp. \bibinfo{pages}{435--440}.
+%Type = Inproceedings
+\bibitem[{Davidson 等(2010a)Davidson, Liebald, Liu, Nandy, Van~Vleet, Gargi,
   Gupta, He, Lambert, Livingston 和~ Sampath}]{youtube}
 \bibinfo{author}{Davidson, J.}, \bibinfo{author}{Liebald, B.},
   \bibinfo{author}{Liu, J.}, \bibinfo{author}{Nandy, P.},
   \bibinfo{author}{Van~Vleet, T.}, \bibinfo{author}{Gargi, U.},
   \bibinfo{author}{Gupta, S.}, \bibinfo{author}{He, Y.},
   \bibinfo{author}{Lambert, M.}, \bibinfo{author}{Livingston, B.},
-  \bibinfo{author}{Sampath, D.}, \bibinfo{year}{2010}.
+  \bibinfo{author}{Sampath, D.}, \bibinfo{year}{2010}a.
 \newblock \bibinfo{title}{The youtube video recommendation system}, in:
   \bibinfo{booktitle}{Proceedings of the Fourth ACM Conference on Recommender
   Systems}, \bibinfo{publisher}{ACM}, \bibinfo{address}{New York, NY, USA}. pp.
   \bibinfo{pages}{293--296}.
+%Type = Inproceedings
+\bibitem[{Davidson 等(2010b)Davidson, Liebald, Liu, Nandy, Van~Vleet, Gargi,
+  Gupta, He, Lambert, Livingston 等}]{davidson2010youtube}
+\bibinfo{author}{Davidson, J.}, \bibinfo{author}{Liebald, B.},
+  \bibinfo{author}{Liu, J.}, \bibinfo{author}{Nandy, P.},
+  \bibinfo{author}{Van~Vleet, T.}, \bibinfo{author}{Gargi, U.},
+  \bibinfo{author}{Gupta, S.}, \bibinfo{author}{He, Y.},
+  \bibinfo{author}{Lambert, M.}, \bibinfo{author}{Livingston, B.}, 等,
+  \bibinfo{year}{2010}b.
+\newblock \bibinfo{title}{The youtube video recommendation system}, in:
+  \bibinfo{booktitle}{Proceedings of the fourth ACM conference on Recommender
+  systems}, \bibinfo{organization}{ACM}. pp. \bibinfo{pages}{293--296}.
+%Type = Inproceedings
+\bibitem[{Ho 等(2010)Ho, Lee 和~ Yu}]{ho2010cluster}
+\bibinfo{author}{Ho, C.P.}, \bibinfo{author}{Lee, S.Y.}, \bibinfo{author}{Yu,
+  J.Y.}, \bibinfo{year}{2010}.
+\newblock \bibinfo{title}{Cluster-based replication for p2p-based
+  video-on-demand service}, in: \bibinfo{booktitle}{Electronics and Information
+  Engineering (ICEIE), 2010 International Conference On},
+  \bibinfo{organization}{IEEE}. pp. \bibinfo{pages}{V2--49}.
+%Type = Misc
+\bibitem[{Index()}]{indexglobal}
+\bibinfo{author}{Index, C.V.N.}, .
+\newblock \bibinfo{title}{Global mobile data traffic forecast update,
+  2011--2016. white paper (february 2012)}.
 %Type = Inproceedings
 \bibitem[{Karatzoglou 等(2010)Karatzoglou, Amatriain, Baltrunas 和~
   Oliver}]{multiverse}
@@ -62,6 +144,34 @@
 \newblock \bibinfo{journal}{Computer} \bibinfo{volume}{42},
   \bibinfo{pages}{30--37}.
 %Type = Inproceedings
+\bibitem[{Krishnan 等(2009)Krishnan, Madhyastha, Srinivasan, Jain,
+  Krishnamurthy, Anderson 和~ Gao}]{krishnan2009moving}
+\bibinfo{author}{Krishnan, R.}, \bibinfo{author}{Madhyastha, H.V.},
+  \bibinfo{author}{Srinivasan, S.}, \bibinfo{author}{Jain, S.},
+  \bibinfo{author}{Krishnamurthy, A.}, \bibinfo{author}{Anderson, T.},
+  \bibinfo{author}{Gao, J.}, \bibinfo{year}{2009}.
+\newblock \bibinfo{title}{Moving beyond end-to-end path information to optimize
+  cdn performance}, in: \bibinfo{booktitle}{Proceedings of the 9th ACM SIGCOMM
+  conference on Internet measurement conference}, \bibinfo{organization}{ACM}.
+  pp. \bibinfo{pages}{190--201}.
+%Type = Article
+\bibitem[{Labovitz 等(2011)Labovitz, Iekel-Johnson, McPherson, Oberheide 和~
+  Jahanian}]{labovitz2011internet}
+\bibinfo{author}{Labovitz, C.}, \bibinfo{author}{Iekel-Johnson, S.},
+  \bibinfo{author}{McPherson, D.}, \bibinfo{author}{Oberheide, J.},
+  \bibinfo{author}{Jahanian, F.}, \bibinfo{year}{2011}.
+\newblock \bibinfo{title}{Internet inter-domain traffic}.
+\newblock \bibinfo{journal}{ACM SIGCOMM Computer Communication Review}
+  \bibinfo{volume}{41}, \bibinfo{pages}{75--86}.
+%Type = Inproceedings
+\bibitem[{Lau 等(2002)Lau, Kumar 和~ Venkatesh}]{lau2002cooperative}
+\bibinfo{author}{Lau, W.}, \bibinfo{author}{Kumar, M.},
+  \bibinfo{author}{Venkatesh, S.}, \bibinfo{year}{2002}.
+\newblock \bibinfo{title}{A cooperative cache architecture in support of
+  caching multimedia objects in manets}, in: \bibinfo{booktitle}{Proceedings of
+  the 5th ACM international workshop on Wireless mobile multimedia},
+  \bibinfo{organization}{ACM}. pp. \bibinfo{pages}{56--63}.
+%Type = Inproceedings
 \bibitem[{Lee 等(2014)Lee, Bengio, Kim, Lebanon 和~ Singer}]{lcr}
 \bibinfo{author}{Lee, J.}, \bibinfo{author}{Bengio, S.}, \bibinfo{author}{Kim,
   S.}, \bibinfo{author}{Lebanon, G.}, \bibinfo{author}{Singer, Y.},
@@ -78,6 +188,53 @@
   rating dimensions with review text}, in: \bibinfo{booktitle}{Proceedings of
   the 7th ACM Conference on Recommender Systems}, \bibinfo{publisher}{ACM},
   \bibinfo{address}{New York, NY, USA}. pp. \bibinfo{pages}{165--172}.
+%Type = Article
+\bibitem[{Mei 等(2011)Mei, Yang, Hua 和~ Li}]{mei2011contextual}
+\bibinfo{author}{Mei, T.}, \bibinfo{author}{Yang, B.}, \bibinfo{author}{Hua,
+  X.S.}, \bibinfo{author}{Li, S.}, \bibinfo{year}{2011}.
+\newblock \bibinfo{title}{Contextual video recommendation by multimodal
+  relevance and user feedback}.
+\newblock \bibinfo{journal}{ACM Transactions on Information Systems (TOIS)}
+  \bibinfo{volume}{29}, \bibinfo{pages}{10}.
+%Type = Article
+\bibitem[{Nygren 等(2010)Nygren, Sitaraman 和~ Sun}]{nygren2010akamai}
+\bibinfo{author}{Nygren, E.}, \bibinfo{author}{Sitaraman, R.K.},
+  \bibinfo{author}{Sun, J.}, \bibinfo{year}{2010}.
+\newblock \bibinfo{title}{The akamai network: a platform for high-performance
+  internet applications}.
+\newblock \bibinfo{journal}{ACM SIGOPS Operating Systems Review}
+  \bibinfo{volume}{44}, \bibinfo{pages}{2--19}.
+%Type = Incollection
+\bibitem[{{\"O}zt{\"u}rk 和~ Cicekli(2011)}]{ozturk2011hybrid}
+\bibinfo{author}{{\"O}zt{\"u}rk, G.}, \bibinfo{author}{Cicekli, N.K.},
+  \bibinfo{year}{2011}.
+\newblock \bibinfo{title}{A hybrid video recommendation system using a
+  graph-based algorithm}, in: \bibinfo{booktitle}{Modern Approaches in Applied
+  Intelligence}. \bibinfo{publisher}{Springer}, pp. \bibinfo{pages}{406--415}.
+%Type = Article
+\bibitem[{Pallis 和~ Vakali(2006)}]{pallis2006insight}
+\bibinfo{author}{Pallis, G.}, \bibinfo{author}{Vakali, A.},
+  \bibinfo{year}{2006}.
+\newblock \bibinfo{title}{Insight and perspectives for content delivery
+  networks}.
+\newblock \bibinfo{journal}{Communications of the ACM} \bibinfo{volume}{49},
+  \bibinfo{pages}{101--106}.
+%Type = Article
+\bibitem[{Park 等(2011)Park, Lee, Lee, Kim, Chung 和~ Lee}]{park2011online}
+\bibinfo{author}{Park, J.}, \bibinfo{author}{Lee, S.J.}, \bibinfo{author}{Lee,
+  S.J.}, \bibinfo{author}{Kim, K.}, \bibinfo{author}{Chung, B.S.},
+  \bibinfo{author}{Lee, Y.K.}, \bibinfo{year}{2011}.
+\newblock \bibinfo{title}{Online video recommendation through tag-cloud
+  aggregation}.
+\newblock \bibinfo{journal}{IEEE MultiMedia} \bibinfo{volume}{18},
+  \bibinfo{pages}{0078}.
+%Type = Article
+\bibitem[{Pathan 和~ Buyya(2007)}]{pathan2007taxonomy}
+\bibinfo{author}{Pathan, A.M.K.}, \bibinfo{author}{Buyya, R.},
+  \bibinfo{year}{2007}.
+\newblock \bibinfo{title}{A taxonomy and survey of content delivery networks}.
+\newblock \bibinfo{journal}{Grid Computing and Distributed Systems Laboratory,
+  University of Melbourne, Technical Report} , \bibinfo{pages}{4}.
 %Type = Inproceedings
 \bibitem[{Rendle 等(2009)Rendle, Freudenthaler, Gantner 和~
   Schmidt-Thieme}]{BPR}
@@ -90,6 +247,37 @@
   \bibinfo{address}{Arlington, Virginia, United States}. pp.
   \bibinfo{pages}{452--461}.
 %Type = Inproceedings
+\bibitem[{Sen 等(1999)Sen, Rexford 和~ Towsley}]{sen1999proxy}
+\bibinfo{author}{Sen, S.}, \bibinfo{author}{Rexford, J.},
+  \bibinfo{author}{Towsley, D.}, \bibinfo{year}{1999}.
+\newblock \bibinfo{title}{Proxy prefix caching for multimedia streams}, in:
+  \bibinfo{booktitle}{INFOCOM'99. Eighteenth Annual Joint Conference of the
+  IEEE Computer and Communications Societies. Proceedings. IEEE},
+  \bibinfo{organization}{IEEE}. pp. \bibinfo{pages}{1310--1319}.
+%Type = Inproceedings
+\bibitem[{Wakamiya 等(2002)Wakamiya, Murata 和~ Miyahara}]{wakamiya2002video}
+\bibinfo{author}{Wakamiya, N.}, \bibinfo{author}{Murata, M.},
+  \bibinfo{author}{Miyahara, H.}, \bibinfo{year}{2002}.
+\newblock \bibinfo{title}{Video streaming systems with cooperative caching
+  mechanisms}, in: \bibinfo{booktitle}{ITCom 2002: The Convergence of
+  Information Technologies and Communications},
+  \bibinfo{organization}{International Society for Optics and Photonics}. pp.
+  \bibinfo{pages}{305--314}.
+%Type = Inproceedings
+\bibitem[{Wang 等(2005)Wang, Du 和~ Srimani}]{wang2005network}
+\bibinfo{author}{Wang, J.Z.}, \bibinfo{author}{Du, Z.},
+  \bibinfo{author}{Srimani, P.K.}, \bibinfo{year}{2005}.
+\newblock \bibinfo{title}{Network cache model for wireless proxy caching}, in:
+  \bibinfo{booktitle}{Modeling, Analysis, and Simulation of Computer and
+  Telecommunication Systems, 2005. 13th IEEE International Symposium on},
+  \bibinfo{organization}{IEEE}. pp. \bibinfo{pages}{311--314}.
+%Type = Incollection
+\bibitem[{Wierzbicki(2002)}]{wierzbicki2002internet}
+\bibinfo{author}{Wierzbicki, A.}, \bibinfo{year}{2002}.
+\newblock \bibinfo{title}{Internet cache location and design of content
+  delivery networks}, in: \bibinfo{booktitle}{Web Engineering and Peer-to-Peer
+  Computing}. \bibinfo{publisher}{Springer}, pp. \bibinfo{pages}{69--82}.
+%Type = Inproceedings
 \bibitem[{Yan 等(2015)Yan, Sang 和~ Xu}]{unified}
 \bibinfo{author}{Yan, M.}, \bibinfo{author}{Sang, J.}, \bibinfo{author}{Xu,
   C.}, \bibinfo{year}{2015}.
@@ -98,6 +286,43 @@
   ACM on International Conference on Multimedia Retrieval},
   \bibinfo{publisher}{ACM}, \bibinfo{address}{New York, NY, USA}. pp.
   \bibinfo{pages}{19--26}.
+%Type = Inproceedings
+\bibitem[{Yang 等(2007)Yang, Mei, Hua, Yang, Yang 和~ Li}]{yang2007online}
+\bibinfo{author}{Yang, B.}, \bibinfo{author}{Mei, T.}, \bibinfo{author}{Hua,
+  X.S.}, \bibinfo{author}{Yang, L.}, \bibinfo{author}{Yang, S.Q.},
+  \bibinfo{author}{Li, M.}, \bibinfo{year}{2007}.
+\newblock \bibinfo{title}{Online video recommendation based on multimodal
+  fusion and relevance feedback}, in: \bibinfo{booktitle}{Proceedings of the
+  6th ACM international conference on Image and video retrieval},
+  \bibinfo{organization}{ACM}. pp. \bibinfo{pages}{73--80}.
+%Type = Article
+\bibitem[{Yiu 等(2007)Yiu, Jin 和~ Chan}]{yiu2007vmesh}
+\bibinfo{author}{Yiu, W.K.}, \bibinfo{author}{Jin, X.}, \bibinfo{author}{Chan,
+  S.G.}, \bibinfo{year}{2007}.
+\newblock \bibinfo{title}{Vmesh: Distributed segment storage for peer-to-peer
+  interactive video streaming}.
+\newblock \bibinfo{journal}{Selected Areas in Communications, IEEE Journal on}
+  \bibinfo{volume}{25}, \bibinfo{pages}{1717--1731}.
+%Type = Inproceedings
+\bibitem[{Zhao 等(2011)Zhao, Li, Wang, Yuan, Zha, Li 和~
+  Chua}]{zhao2011integrating}
+\bibinfo{author}{Zhao, X.}, \bibinfo{author}{Li, G.}, \bibinfo{author}{Wang,
+  M.}, \bibinfo{author}{Yuan, J.}, \bibinfo{author}{Zha, Z.J.},
+  \bibinfo{author}{Li, Z.}, \bibinfo{author}{Chua, T.S.}, \bibinfo{year}{2011}.
+\newblock \bibinfo{title}{Integrating rich information for video recommendation
+  with multi-task rank aggregation}, in: \bibinfo{booktitle}{Proceedings of the
+  19th ACM international conference on Multimedia},
+  \bibinfo{organization}{ACM}. pp. \bibinfo{pages}{1521--1524}.
+%Type = Inproceedings
+\bibitem[{Zhao 等(2012)Zhao, Luan, Cai, Yuan, Chen 和~
+  Li}]{zhao2012personalized}
+\bibinfo{author}{Zhao, X.}, \bibinfo{author}{Luan, H.}, \bibinfo{author}{Cai,
+  J.}, \bibinfo{author}{Yuan, J.}, \bibinfo{author}{Chen, X.},
+  \bibinfo{author}{Li, Z.}, \bibinfo{year}{2012}.
+\newblock \bibinfo{title}{Personalized video recommendation based on viewing
+  history with the study on youtube}, in: \bibinfo{booktitle}{Proceedings of
+  the 4th International Conference on Internet Multimedia Computing and
+  Service}, \bibinfo{organization}{ACM}. pp. \bibinfo{pages}{161--165}.
 %Type = Inproceedings
 \bibitem[{Zheng 等(2010)Zheng, Zheng, Xie 和~ Yang}]{xiexing}
 \bibinfo{author}{Zheng, V.W.}, \bibinfo{author}{Zheng, Y.},
